@@ -1,0 +1,33 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:prod": "NODE_ENV=production npm run build",
+    "deploy:build": "bash scripts/build-production.sh",
+    "deploy:build:win": "scripts\\build-production.bat",
+    "start:prod": "NODE_ENV=production npm start"
+  },
+  "dependencies": {
+    "lucide-react": "^0.539.0",
+    "next": "15.4.6",
+    "postcss": "^8.5.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "react-slick": "^0.31.0",
+    "sass": "^1.90.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "tailwindcss": "^4.1.11"
+  }
+}

@@ -1,0 +1,278 @@
+// Presence Section - Clean redesign to match the shared image
+.presenceSection {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    padding: 60px 30px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 80px 40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 100px 50px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+
+  @media (min-width: 640px) {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 30px;
+
+  @media (min-width: 640px) {
+    font-size: 15px;
+    max-width: 700px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+  background: #fff8e6;
+  border-radius: 12px;
+  padding: 6px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  @media (min-width: 640px) {
+    padding: 8px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px;
+    margin-bottom: 60px;
+  }
+}
+
+.toggleButton {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @media (min-width: 640px) {
+    padding: 14px 20px;
+    font-size: 13px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+
+  &:hover {
+    background: rgba(255, 193, 7, 0.1);
+  }
+}
+
+.activeButton {
+  background: #ffc107 !important;
+  color: #000 !important;
+  font-weight: 700;
+}
+
+.mapContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+
+  @media (min-width: 640px) {
+    padding: 40px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px;
+  }
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  filter: brightness(1.1) contrast(1.1) opacity(0.8);
+  z-index: 1;
+  position: relative;
+}
+
+.locationPin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translate(-50%, -100%) scale(1.1);
+    z-index: 200;
+  }
+
+  &:has(.locationTooltip) {
+    z-index: 500;
+  }
+}
+
+.pinIconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.pinIcon {
+  width: 35px !important;
+  height: 35px !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+
+  @media (min-width: 640px) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  @media (min-width: 768px) {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+.locationLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+
+  @media (min-width: 640px) {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+.locationTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  background: #333;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  white-space: normal;
+  width: 180px;
+  min-height: 60px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 640px) {
+    font-size: 12px;
+    padding: 12px 16px;
+    width: 200px;
+    min-height: 70px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+    padding: 14px 18px;
+    width: 220px;
+    min-height: 80px;
+    margin-bottom: 15px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+  }
+}
+
+// Responsive adjustments for mobile
+@media (max-width: 639px) {
+  .mapContainer {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .locationPin {
+    &:hover {
+      transform: translate(-50%, -100%) scale(1.05);
+    }
+  }
+
+  .locationLabel {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}

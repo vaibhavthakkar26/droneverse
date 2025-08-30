@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "title": "DroneVerse Launches New DGCA-Approved Training Program",
+        "description": "We are excited to announce our latest DGCA-approved drone pilot training program, designed to meet the growing demand for skilled drone operators in India.",
+        "image": "/assets/img/news/news1.jpg",
+        "link": "https://droneverse.com/news/training-program-launch",
+        "is_active": true,
+        "sort_order": 1,
+        "created_at": "2024-01-15T10:00:00Z",
+        "updated_at": "2024-01-15T10:00:00Z"
+    },
+    {
+        "id": 2,
+        "title": "AI-Powered Autonomous Drones: The Future of Defence",
+        "description": "Our latest AI-driven autonomous CsUAS systems are revolutionizing defence operations with advanced capabilities and precision.",
+        "image": "/assets/img/news/news2.jpg",
+        "link": "https://droneverse.com/news/ai-autonomous-drones",
+        "is_active": true,
+        "sort_order": 2,
+        "created_at": "2024-01-10T10:00:00Z",
+        "updated_at": "2024-01-10T10:00:00Z"
+    },
+    {
+        "id": 3,
+        "title": "DroneVerse Recognized in World Book of Records",
+        "description": "We are proud to announce that DroneVerse has been recognized in the esteemed World Book of Records for our contributions to drone training and innovation.",
+        "image": "/assets/img/news/news3.jpg",
+        "link": "https://droneverse.com/news/world-book-records",
+        "is_active": true,
+        "sort_order": 3,
+        "created_at": "2024-01-05T10:00:00Z",
+        "updated_at": "2024-01-05T10:00:00Z"
+    }
+]

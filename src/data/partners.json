@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Defence Research and Development Organisation",
+        "logo": "/assets/img/partners/drdo-logo.png",
+        "website": "https://drdo.gov.in",
+        "is_active": true,
+        "sort_order": 1,
+        "created_at": "2024-01-01T10:00:00Z",
+        "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+        "id": 2,
+        "name": "Hindustan Aeronautics Limited",
+        "logo": "/assets/img/partners/hal-logo.png",
+        "website": "https://hal-india.co.in",
+        "is_active": true,
+        "sort_order": 2,
+        "created_at": "2024-01-01T10:00:00Z",
+        "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+        "id": 3,
+        "name": "Bharat Electronics Limited",
+        "logo": "/assets/img/partners/bel-logo.png",
+        "website": "https://bel-india.in",
+        "is_active": true,
+        "sort_order": 3,
+        "created_at": "2024-01-01T10:00:00Z",
+        "updated_at": "2024-01-01T10:00:00Z"
+    },
+    {
+        "id": 4,
+        "name": "Indian Space Research Organisation",
+        "logo": "/assets/img/partners/isro-logo.png",
+        "website": "https://isro.gov.in",
+        "is_active": true,
+        "sort_order": 4,
+        "created_at": "2024-01-01T10:00:00Z",
+        "updated_at": "2024-01-01T10:00:00Z"
+    }
+]

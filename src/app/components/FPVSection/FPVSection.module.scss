@@ -1,0 +1,175 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #151515;
+    padding: 20px 20px;
+    border-radius: 12px;
+    color: #fff;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 20px;
+    overflow: hidden;
+
+    @media (min-width: 640px) {
+        padding: 30px 30px;
+        border-radius: 16px;
+        gap: 1.75rem;
+        margin-top: 30px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 35px 45px;
+        border-radius: 18px;
+        gap: 2rem;
+        margin-top: 35px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 40px 60px;
+        border-radius: 20px;
+        margin-top: 40px;
+    }
+}
+
+.left {
+    flex: 1 1 300px;
+    min-width: 100%;
+
+    @media (min-width: 768px) {
+        min-width: 50%;
+        flex: 1 1 400px;
+    }
+
+    @media (min-width: 1024px) {
+        flex: 1 1 600px;
+    }
+
+    .heading {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+
+        @media (min-width: 640px) {
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .subtext {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        color: #ccc;
+
+        @media (min-width: 640px) {
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        @media (min-width: 768px) {
+            font-size: 15px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.right {
+    flex: 1 1 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .droneImage {
+        object-fit: contain;
+        max-width: 100%;
+
+        animation: flyDrone 7s ease-in-out infinite;
+        transform-origin: center;
+    }
+}
+
+@keyframes flyDrone {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateY(-10px) translateX(-3px) rotate(-0.5deg) scale(1.01);
+    }
+
+    50% {
+        transform: translateY(6px) translateX(3px) rotate(0.5deg) scale(1.005);
+    }
+
+    75% {
+        transform: translateY(-8px) translateX(-2px) rotate(-0.3deg) scale(1.01);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+}
+
+
+.droneCards {
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media (min-width: 640px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        @media (min-width: 1024px) {
+            gap: 20px;
+        }
+    }
+
+    .card {
+        flex: 1 1 240px;
+        background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.02), #1a1a1a);
+        border-radius: 16px;
+        padding: 80px 20px 20px 20px;
+        background: linear-gradient(to bottom,
+                rgba(255, 255, 255, 0) 10%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 80%,
+                rgba(255, 184, 1, 0.1) 100%,
+                rgba(255, 184, 1, 0.1) 100%);
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #aaa;
+            line-height: 1.2;
+        }
+    }
+
+    .badge {
+        width: 48px;
+        height: 48px;
+        background: #555;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16spx;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 25px;
+    }
+}

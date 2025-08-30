@@ -1,0 +1,345 @@
+[
+    {
+        "slug": "about",
+        "title": "About Us",
+        "content": "<p>We are a company that values innovation and creativity.</p>",
+        "meta": {
+            "title": "About Us - Droneverse | Leading Drone Training & Defence Solutions",
+            "description": "Learn about Droneverse, India's premier drone training and defence solutions provider. Discover our mission, values, and commitment to innovation in autonomous CsUAS technology.",
+            "keywords": "about droneverse, drone training company, defence solutions, autonomous drones, CsUAS technology, India drone industry, drone pilot training",
+            "ogTitle": "About Us - Droneverse",
+            "ogDescription": "Learn about Droneverse, India's premier drone training and defence solutions provider.",
+            "ogImage": "/assets/logo/black-logo.svg",
+            "canonical": "https://droneverse.com/about"
+        }
+    },
+    {
+        "slug": "home",
+        "meta": {
+            "title": "Droneverse - AI-Driven Autonomous CsUAS for Government and Military",
+            "description": "Droneverse is India's leading drone training and defence solutions provider. We offer DGCA-approved drone pilot training, AI-driven autonomous CsUAS systems, and comprehensive defence solutions for government and military applications.",
+            "keywords": "drone training, DGCA approved, autonomous drones, CsUAS, defence solutions, military drones, AI drones, drone pilot certification, India drone training",
+            "ogTitle": "Droneverse - AI-Driven Autonomous CsUAS",
+            "ogDescription": "Leading drone training and defence solutions for government and military applications",
+            "ogImage": "/assets/logo/black-logo.svg",
+            "canonical": "https://droneverse.com"
+        },
+        "hero": {
+            "badge": "For government and military",
+            "heading": "AI-Driven",
+            "highlight1": "Autonomous",
+            "highlight2": "CsUAS",
+            "droneImage": "/assets/img/hero-section/drone.png",
+            "globeVideo": "/assets/videos/globe.mp4"
+        },
+        "about": {
+            "heading": "About droneverse",
+            "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records, we are proud trailblazers in drone training & innovation. Welcome to DroneVerse, where we redefine to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records, we are proud trailblazers in drone training & innovation. Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records, we are proud trailblazers.",
+            "icon": "/assets/icons/about-icon.png",
+            "backgroundVideo": "/assets/videos/about-bg.mp4",
+            "services": [
+                {
+                    "title": "Defence",
+                    "subtitle": "Single Pane of Glass for Complete End-to-End Kill Chain"
+                },
+                {
+                    "title": "Training",
+                    "subtitle": "Single Pane of Glass for Complete End-to-End Kill Chain"
+                },
+                {
+                    "title": "Manufacturing",
+                    "subtitle": "Single Pane of Glass for Complete End-to-End Kill Chain"
+                },
+                {
+                    "title": "Service",
+                    "subtitle": "Single Pane of Glass for Complete End-to-End Kill Chain"
+                }
+            ],
+            "buttons": {
+                "knowMore": "Know more",
+                "getInTouch": "Get in touch"
+            }
+        },
+        "defence": {
+            "heading": "Defence Solutions by DroneVerse",
+            "description": "At DroneVerse, we are redefining modern defence operations with our advanced ecosystem of aerial technologies. From AI-powered counter-drone systems to DGCA-certified drone training for combat forces, we deliver future-ready solutions tailored for tactical advantage. Our core expertise spans surveillance and FPV drones, built for frontline intelligence and real-time mission execution. We also offer full-scale customization labs for defence units and agencies, enabling rapid prototyping, specialized payload integration, and training module setups—all aligned with national security needs and evolving battlefield dynamics.",
+            "fighterJetImage": "/assets/img/defence/fighter-jet.svg",
+            "gridBallsImage": "/assets/img/defence/grid-balls.svg",
+            "fpv": {
+                "heading": "Elevate Defence. Empower Strategy.",
+                "description": "DroneVerse's cutting-edge FPV (First Person View) drones deliver real-time situational awareness, empowering troops in asymmetric warfare. From tactical surveillance to high-speed ops, they redefine control, clarity, and command on the battlefield",
+                "droneImage": "/assets/img/defence/drone.svg",
+                "features": [
+                    {
+                        "number": "1",
+                        "title": "Search and rescue operations",
+                        "description": "Locating missing persons with real-time visuals. Rapid response in natural disaster scenarios. Efficient delivery of medical supplies to remote areas."
+                    },
+                    {
+                        "number": "2",
+                        "title": "Kamikaze Missions",
+                        "description": "Precision strikes with real-time targeting. Tactical reconnaissance for strategic advantage. Quick response missions for immediate threat neutralization."
+                    },
+                    {
+                        "number": "3",
+                        "title": "Surveillance",
+                        "description": "Extended surveillance missions for comprehensive coverage. Border monitoring to enhance national security. Crowd monitoring."
+                    }
+                ]
+            }
+        },
+        "training": {
+            "heading": "Turning passion into professions",
+            "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+            "tabs": [
+                "Defence",
+                "Student",
+                "Training"
+            ],
+            "courses": [
+                {
+                    "tab": "Defence",
+                    "title": "Small Class Drone Pilot Course",
+                    "type": "DGCA approved",
+                    "duration": "5 days | Weight upto 2KG",
+                    "image": "/assets/img/course&instruction/img1.png",
+                    "features": [
+                        "Understand the regulatory framework",
+                        "Learn flight planning, navigation and safety protocols",
+                        "Practical flight training",
+                        "Training on a drone simulator and remote pilot certification"
+                    ]
+                },
+                {
+                    "tab": "Defence",
+                    "title": "Advanced Drone Operations",
+                    "type": "Industry recognized certification",
+                    "duration": "5 days | Weight upto 2KG",
+                    "image": "/assets/img/course&instruction/img2.png",
+                    "features": [
+                        "Understand the regulatory framework",
+                        "Learn flight planning, navigation and safety protocols",
+                        "Practical flight training",
+                        "Training on a drone simulator and remote pilot certification"
+                    ]
+                },
+                {
+                    "tab": "Defence",
+                    "title": "Drone Maintenance & Repair",
+                    "type": "Comprehensive training module",
+                    "duration": "5 days | Weight upto 2KG",
+                    "image": "/assets/img/course&instruction/img3.png",
+                    "features": [
+                        "Learn about drone components",
+                        "Learn flight planning, navigation and safety protocols",
+                        "Practical flight training",
+                        "Training on a drone simulator and remote pilot certification"
+                    ]
+                }
+            ],
+            "instructors": [
+                {
+                    "name": "Ambuj Verma",
+                    "description": "A seasoned veteran with extensive experience in both civilian and military drone operations, bringing over 15 years of expertise in aerial technology and tactical applications.",
+                    "image": "/assets/img/course&instruction/1.png"
+                },
+                {
+                    "name": "Harsh Goel",
+                    "description": "An innovative thinker, pioneering cutting-edge techniques and methodologies in drone technology, with a focus on AI integration and autonomous systems.",
+                    "image": "/assets/img/course&instruction/2.png"
+                }
+            ]
+        },
+        "certification": {
+            "heading": "Our Certifications",
+            "description": "Droneverse offers industry-recognized certifications that validate your expertise and open doors to exciting career opportunities in the drone industry.",
+            "certifications": [
+                {
+                    "title": "DGCA Approved",
+                    "description": "Government-recognized drone pilot certification",
+                    "image": "/assets/img/certification/1.png"
+                },
+                {
+                    "title": "Industry Standard",
+                    "description": "Comprehensive training modules aligned with industry best practices",
+                    "image": "/assets/img/certification/2.png"
+                },
+                {
+                    "title": "International Recognition",
+                    "description": "Globally accepted certifications for international opportunities",
+                    "image": "/assets/img/certification/3.png"
+                }
+            ]
+        },
+        "news": {
+            "heading": "Our latest news",
+            "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+            "bannerImages": [
+                "/assets/img/news/1.png",
+                "/assets/img/news/2.png",
+                "/assets/img/news/3.png",
+                "/assets/img/news/4.png",
+                "/assets/img/news/3.png",
+                "/assets/img/news/2.png"
+            ],
+            "articles": [
+                {
+                    "title": "Defence department",
+                    "image": "/assets/img/news/news1.png",
+                    "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+                    "link": "https://www.linkedin.com"
+                },
+                {
+                    "title": "Defence department",
+                    "image": "/assets/img/news/news1.png",
+                    "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+                    "link": "https://www.linkedin.com"
+                },
+                {
+                    "title": "Defence department",
+                    "image": "/assets/img/news/news1.png",
+                    "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+                    "link": "https://www.linkedin.com"
+                },
+                {
+                    "title": "Defence department",
+                    "image": "/assets/img/news/news1.png",
+                    "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+                    "link": "https://www.linkedin.com"
+                }
+            ]
+        },
+        "partners": {
+            "heading": "Our partners",
+            "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+            "partners": [
+                {
+                    "name": "IndianOil",
+                    "image": "/assets/img/partners/img1.png"
+                },
+                {
+                    "name": "IFFCO",
+                    "image": "/assets/img/partners/img2.png"
+                },
+                {
+                    "name": "Sanshtha Sevak",
+                    "image": "/assets/img/partners/img3.png"
+                },
+                {
+                    "name": "Tata Power",
+                    "image": "/assets/img/partners/img4.png"
+                },
+                {
+                    "name": "Garuda Aerospace",
+                    "image": "/assets/img/partners/img5.png"
+                },
+                {
+                    "name": "Defense Org",
+                    "image": "/assets/img/partners/img6.png"
+                },
+                {
+                    "name": "Air Force",
+                    "image": "/assets/img/partners/img7.png"
+                },
+                {
+                    "name": "CRPF",
+                    "image": "/assets/img/partners/img8.png"
+                },
+                {
+                    "name": "General Aeronautics",
+                    "image": "/assets/img/partners/img9.png"
+                },
+                {
+                    "name": "Go Green",
+                    "image": "/assets/img/partners/img10.png"
+                },
+                {
+                    "name": "SB Jain",
+                    "image": "/assets/img/partners/img11.png"
+                },
+                {
+                    "name": "Agri Wings",
+                    "image": "/assets/img/partners/img12.png"
+                }
+            ]
+        },
+        "presence": {
+            "heading": "Our presence",
+            "description": "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.",
+            "tabs": [
+                "Office",
+                "Institute",
+                "R&D centre"
+            ],
+            "mapImage": "/assets/img/presence/states.svg",
+            "locationIcon": "/assets/img/presence/location.svg",
+            "locations": {
+                "Office": [
+                    {
+                        "name": "Bhopal",
+                        "top": "38%",
+                        "left": "22%",
+                        "address": ""
+                    },
+                    {
+                        "name": "Delhi",
+                        "top": "47%",
+                        "left": "39%",
+                        "address": ""
+                    },
+                    {
+                        "name": "Bangalore",
+                        "top": "72%",
+                        "left": "35%",
+                        "address": ""
+                    },
+                    {
+                        "name": "Gurugram",
+                        "top": "44%",
+                        "left": "43%",
+                        "address": "70A, Delhi - Jaipur Expy, Block A, Sector 34, Gurugram, Haryana 122101"
+                    },
+                    {
+                        "name": "Bihar",
+                        "top": "56%",
+                        "left": "54%",
+                        "address": ""
+                    },
+                    {
+                        "name": "Tamil nadu",
+                        "top": "100%",
+                        "left": "40%",
+                        "address": ""
+                    }
+                ],
+                "Institute": [],
+                "R&D centre": []
+            }
+        }
+    },
+    {
+        "slug": "common",
+        "footer": {
+            "logo": "/assets/logo/white-logo.svg",
+            "backgroundVideo": "/assets/img/footer/bg.mp4",
+            "contact": {
+                "address": "701A, Delhi - Jaipur Exp, Block A, Sector 34, Gurugram, Haryana 122001",
+                "email": "info@droneverse.com",
+                "phone": "+91-98810-12300"
+            },
+            "quickLinks": [
+                "About us",
+                "Defence",
+                "Contact us",
+                "Career",
+                "Blogs"
+            ],
+            "socialLinks": {
+                "facebook": "#",
+                "twitter": "#",
+                "instagram": "#",
+                "linkedin": "#"
+            }
+        }
+    }
+]

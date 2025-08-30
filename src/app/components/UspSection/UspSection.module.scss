@@ -1,0 +1,90 @@
+.wrapper {
+    background-color: #000;
+    color: #fff;
+    padding: 80px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto 50px;
+    flex-wrap: wrap;
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    max-width: 600px;
+}
+
+.ctaButton {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    text-transform: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: #ffb300;
+    }
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.accordionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 30px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.active {
+    background-color: #6817e5; // purple
+}
+
+.accordionTitle {
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordionContent {
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.imageBox {
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+}

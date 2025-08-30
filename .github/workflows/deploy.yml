@@ -1,0 +1,39 @@
+name: Deploy to Hostinger via FTP
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build application for AWS
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: https://admin-droneverse.justdevinfotech.com
+          NEXT_PUBLIC_PRODUCTION_API_URL: https://admin-droneverse.justdevinfotech.com
+          NEXT_PUBLIC_DOMAIN: https://droneverse.justdevinfotech.com
+          NODE_ENV: production
+
+      - name: Verify build artifacts
+        run: |
+          echo "Build completed successfully!"
+          echo "Ready for AWS deployment"
+          echo "API configured for: https://admin-droneverse.justdevinfotech.com"
+          ls -la .next/ 
