@@ -5,6 +5,7 @@ import CertificateSection from '../components/TrainingPage/CertificateSection/pa
 import WhyChoose from '../components/TrainingPage/WhyChooseSection/page';
 import WhoApplySection from '../components/TrainingPage/WhoApplySection/page';
 import ImageSliderSection from '../components/TrainingPage/ImageSliderSection/page';
+import OurPresenceSection from '../components/TrainingPage/OurPresenceSection/page';
 
 const TrainingPage = () => {
 
@@ -15,6 +16,7 @@ const TrainingPage = () => {
             <WhyChoose />
             <WhoApplySection />
             <ImageSliderSection />
+            <OurPresenceSection />
         </>
     )
 }
