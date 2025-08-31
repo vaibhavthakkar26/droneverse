@@ -5,7 +5,8 @@ import classroom from "../../../../../public/assets/img/training/classroom.png";
 import flight from "../../../../../public/assets/img/training/flight.png";
 import flightMode from "../../../../../public/assets/img/training/flight mode.png";
 import drone from "../../../../../public/assets/img/training/drone.png";
-import SectionBg from "../../../../../public/assets/img/training/why-choose-bg.png"
+import SectionBg from "../../../../../public/assets/img/training/why-choose-bg.png";
+import LeftFrame from "../../../../../public/assets/img/training/left-frame.png";
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -75,7 +76,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <div 
+    <div
       className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(${SectionBg.src || SectionBg})`,
@@ -83,12 +84,20 @@ const WhyChoose = () => {
     >
       {/* Optional overlay for better text readability */}
       {/* <div className="absolute inset-0 bg-white/90"></div> */}
-      
+
       {/* Content wrapper with relative positioning */}
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <div className="text-center mb-12 sm:mb-16 w-full max-w-[675px] mx-auto px-4">
-            <div className="inline-block text-2xl sm:text-3xl lg:text-[36px] bg-[#FFC634] w-[675px] text-white text-center justify-center px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8">
+            <div
+              className="inline-block 
+    text-base sm:text-xl md:text-2xl lg:text-[36px] 
+    bg-[#FFC634] text-white text-center 
+    px-4 sm:px-6 lg:px-8 py-2 sm:py-3 
+    rounded-full font-semibold 
+    mb-6 sm:mb-8 
+    w-full sm:w-auto max-w-full"
+            >
               Why choose Droneverse RPTO?
             </div>
           </div>
@@ -96,16 +105,25 @@ const WhyChoose = () => {
           {/* Why Choose Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {whyChooseData.map((item, index) => (
-              <div key={index} className="p-4 sm:p-6 w-full max-w-[430px] mx-auto lg:mx-0">
+              <div
+                key={index}
+                className="p-3 sm:p-4 w-full max-w-full sm:max-w-[430px] mx-auto lg:mx-0"
+              >
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="text-3xl mb-2 flex-shrink-0">
-                    <Image src={item.icon} alt="icon" width={86} height={76} className="w-16 sm:w-20 lg:w-[86px] h-auto" />
+                    <Image
+                      src={item.icon}
+                      alt="icon"
+                      width={86}
+                      height={76}
+                      className="w-16 sm:w-20 lg:w-[86px] h-auto"
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-lg sm:text-xl font-semibold text-black mb-2">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-black text-sm sm:text-base leading-relaxed">
+                    <p className="text-black text-xs sm:text-sm lg:text-base leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -114,7 +132,15 @@ const WhyChoose = () => {
             ))}
           </div>
         </div>
-
+        <div className="absolute top-[50%] left-0 z-20 transform -translate-y-1/2 hidden lg:block">
+          <Image
+            src={LeftFrame}
+            alt="Left Frame"
+            width={350}
+            height={350}
+            className="w-auto h-auto"
+          />
+        </div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 sm:mb-12 px-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
@@ -122,9 +148,9 @@ const WhyChoose = () => {
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg leading-relaxed">
               Welcome to DroneVerse, where we redefine India's drone industry.
-              Driven by a vision to create world-class drone pilots, we go above &
-              beyond in everything we do. Recognized in the esteemed World Book of
-              Records.
+              Driven by a vision to create world-class drone pilots, we go above
+              & beyond in everything we do. Recognized in the esteemed World
+              Book of Records.
             </p>
           </div>
 

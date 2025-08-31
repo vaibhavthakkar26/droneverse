@@ -12,7 +12,8 @@ const LOCATIONS = {
       name: "Gurugram",
       top: "130px",
       left: "44%",
-      address: "70A, Delhi - Jaipur Expy, Block A, Sector 34, Gurugram, Haryana 122101",
+      address:
+        "70A, Delhi - Jaipur Expy, Block A, Sector 34, Gurugram, Haryana 122101",
     },
     { name: "Bihar", top: "120px", left: "60%", address: "Bihar" },
     { name: "Bangalore", bottom: "130px", left: "33%", address: "Banglore" },
@@ -27,7 +28,6 @@ const LOCATIONS = {
     { name: "Hyderabad R&D", top: "65%", left: "50%", address: "Hydrabad R&D" },
   ],
 };
-
 
 const OurPresenceSection = () => {
   const [activeTab, setActiveTab] = useState("Office");
@@ -48,22 +48,23 @@ const OurPresenceSection = () => {
       </div>
 
       {/* Tabs */}
-      <div className="flex justify-center mb-12">
-        <div className="z-10 flex p-2 bg-white border border-black rounded-lg shadow-md">
-          {Object.keys(LOCATIONS).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`text-[16px] px-6 py-2 rounded-md font-medium w-[179px] transition ${activeTab === tab
-                ? "bg-[#FFB801] text-black"
-                : "bg-transparent text-gray-600"
+        <div className="flex justify-center mb-6 sm:mb-8">
+          <div className="bg-white rounded-lg p-1 sm:p-2 shadow-md border border-black flex w-full max-w-md sm:max-w-lg">
+            {["Office", "Institute", "R&D Center"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${
+                  activeTab === tab
+                    ? "bg-[#FFB801] text-black"
+                    : "bg-transparent text-gray-600"
                 }`}
-            >
-              {tab}
-            </button>
-          ))}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
 
       {/* Map */}
       <div className="relative flex justify-center h-full">
@@ -79,7 +80,12 @@ const OurPresenceSection = () => {
           <div
             key={idx}
             className="absolute text-center transition duration-300 group"
-            style={{ top: loc.top, left: loc.left, bottom: loc.bottom, left: loc.left }}
+            style={{
+              top: loc.top,
+              left: loc.left,
+              bottom: loc.bottom,
+              left: loc.left,
+            }}
           >
             <Image src={MapPin} alt="Location Pin" className="w-12 mx-auto" />
             <p className="text-sm font-semibold text-black">{loc.name}</p>
