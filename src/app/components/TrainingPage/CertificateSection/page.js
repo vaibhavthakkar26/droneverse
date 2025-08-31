@@ -60,7 +60,7 @@ const CertificateSection = () => {
                     <Image
                         src={transShape}
                         alt="fill shape"
-                        className="absolute z-0 object-contain bottom-28 size-14 right-28 xl:bottom-56 xl:right-44"
+                        className="absolute z-0 object-contain bottom-28 size-14 right-28 xl:bottom-24 xl:right-44"
                     />
                 </div>
 

@@ -22,7 +22,7 @@ const HeroSection = () => {
                     <Image
                         src={fillShape}
                         alt="fill shape"
-                        className="absolute block object-contain -top-16 -left-[106px] -z-10 size-44"
+                        className="absolute block object-contain top-12 xl:-left-2 -left-20 -z-10 size-44"
                     />
                     {/* Left content */}
                     <div className="relative w-full space-y-6 sm:w-2/3 xl:pb-20 md:w-3/5 ">
