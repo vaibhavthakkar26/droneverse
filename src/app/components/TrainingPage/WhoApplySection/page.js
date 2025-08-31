@@ -15,7 +15,8 @@ const WhoApplySection = () => {
       {
         title: "Small Class Drone Pilot Course",
         subtitle: "DGCA approved",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DronePilot,
         label: "SMALL CLASS",
         points: [
@@ -28,7 +29,8 @@ const WhoApplySection = () => {
       {
         title: "Advanced Drone Operations",
         subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DroneOperation,
         label: "MEDIUM CLASS",
         points: [
@@ -41,7 +43,8 @@ const WhoApplySection = () => {
       {
         title: "Drone Maintenance & Repair",
         subtitle: "Comprehensive training program",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: Maintainance,
         label: "TRAIN THE TRAINER",
         points: [
@@ -54,7 +57,8 @@ const WhoApplySection = () => {
       {
         title: "Small Class Drone Pilot Course",
         subtitle: "DGCA approved",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DronePilot,
         label: "SMALL CLASS",
         points: [
@@ -67,7 +71,8 @@ const WhoApplySection = () => {
       {
         title: "Advanced Drone Operations",
         subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DroneOperation,
         label: "MEDIUM CLASS",
         points: [
@@ -80,7 +85,8 @@ const WhoApplySection = () => {
       {
         title: "Drone Maintenance & Repair",
         subtitle: "Comprehensive training program",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: Maintainance,
         label: "TRAIN THE TRAINER",
         points: [
@@ -95,7 +101,8 @@ const WhoApplySection = () => {
       {
         title: "Small Class Drone Pilot Course",
         subtitle: "DGCA approved",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DronePilot,
         label: "SMALL CLASS",
         points: [
@@ -108,7 +115,8 @@ const WhoApplySection = () => {
       {
         title: "Advanced Drone Operations",
         subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DroneOperation,
         label: "MEDIUM CLASS",
         points: [
@@ -121,7 +129,8 @@ const WhoApplySection = () => {
       {
         title: "Drone Maintenance & Repair",
         subtitle: "Comprehensive training program",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: Maintainance,
         label: "TRAIN THE TRAINER",
         points: [
@@ -136,7 +145,8 @@ const WhoApplySection = () => {
       {
         title: "Small Class Drone Pilot Course",
         subtitle: "DGCA approved",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DronePilot,
         label: "SMALL CLASS",
         points: [
@@ -149,7 +159,8 @@ const WhoApplySection = () => {
       {
         title: "Advanced Drone Operations",
         subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto 2KG",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
         image: DroneOperation,
         label: "MEDIUM CLASS",
         points: [
@@ -210,12 +221,12 @@ const WhoApplySection = () => {
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-lg p-2 shadow-md border border-black flex">
+          <div className="bg-white rounded-lg p-2 shadow-md border border-black flex flex-wrap gap-2 sm:gap-0">
             {["Defence", "Student", "Training"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`text-[16px] px-6 py-2 rounded-md font-medium w-[179px] ${
+                className={`text-[16px] px-6 py-2 rounded-md font-medium lg:w-[179px] md:w-[120px] w-[100px] ${
                   activeTab === tab
                     ? "bg-[#FFB801] text-black"
                     : "bg-transparent text-gray-600"
@@ -228,11 +239,11 @@ const WhoApplySection = () => {
         </div>
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-8 justify-center">
           {courses[activeTab].map((course, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg overflow-hidden border border-[#DADADA] px-3 py-4 rounded-lg w-full max-w-sm mx-auto w-[411px]"
+              className="bg-white rounded-lg overflow-hidden border border-[#DADADA] px-1 py-4 rounded-lg max-w-sm mx-auto w-[411px]"
             >
               <div className="relative px-6 pb-1">
                 <Image
@@ -254,7 +265,7 @@ const WhoApplySection = () => {
                   {course.title}
                 </h3>
                 <div className="flex items-center text-black mb-4">
-                  <span className="flex gap-2 text-[16px]">
+                  <span className="flex gap-1 text-[16px] text-[#5F5F5F]">
                     <svg
                       width="22"
                       height="22"
@@ -267,14 +278,15 @@ const WhoApplySection = () => {
                         fill="black"
                       />
                     </svg>
-                    {course.duration}
+                    {course.duration} 
+                    <span className="text-[#00A32C] font-medium">{course.highlight}</span>
                   </span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   {course.points.map((point, i) => (
                     <li
                       key={i}
-                      className="flex items-start text-sm text-gray-600"
+                      className="flex items-start text-sm text-black"
                     >
                       <span className="mr-2 text-black">
                         <svg
@@ -297,10 +309,10 @@ const WhoApplySection = () => {
                   ))}
                 </ul>
                 <div className="flex gap-2">
-                  <button className="flex-1 border border-[#FFB801] text-black text-[16px] py-2 px-4 rounded-md hover:bg-gray-50">
+                  <button className="flex-1 border border-[#FFB801] text-black text-[16px] py-2 px-4 rounded-md cursor-pointer">
                     Details
                   </button>
-                  <button className="flex-1 bg-[#FFB801] text-black text-[16px] py-2 px-4 rounded-md hover:bg-orange-500">
+                  <button className="flex-1 bg-[#FFB801] text-black text-[16px] py-2 px-4 rounded-md cursor-pointer">
                     Enroll now
                   </button>
                 </div>
