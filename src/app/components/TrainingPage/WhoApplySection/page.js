@@ -171,10 +171,10 @@ const WhoApplySection = () => {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[36px] font-bold text-[#FFB801] mb-1">
+          <h2 className="text-[36px] font-bold text-[#FFB801] mb-1 font-[poppins]">
             Who can apply?
           </h2>
-          <p className="text-black text-[16px] text-poppins">
+          <p className="text-black text-[16px] poppins-medium">
             Basic Requirements to join the Drone Pilot Training Course
           </p>
         </div>
