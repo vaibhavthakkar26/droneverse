@@ -88,7 +88,7 @@ const WhyChoose = () => {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <div className="text-center mb-12 sm:mb-16 w-full max-w-[675px] mx-auto px-4">
-            <div className="inline-block text-2xl sm:text-3xl lg:text-[36px] bg-[#FFC634] text-white text-center justify-center px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8">
+            <div className="inline-block text-2xl sm:text-3xl lg:text-[36px] bg-[#FFC634] w-[675px] text-white text-center justify-center px-6 sm:px-8 py-2 sm:py-3 rounded-full font-semibold mb-6 sm:mb-8">
               Why choose Droneverse RPTO?
             </div>
           </div>
