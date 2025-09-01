@@ -182,13 +182,13 @@ const WhoApplySection = () => {
     >
       <div className="absolute inset-0 bg-white/90" />
 
-      <div className="absolute top-0 right-0 z-20 hidden lg:block">
+      <div className="absolute top-0 right-0 hidden lg:block">
         <Image
           src={RightFrame}
           alt="Right Frame"
           width={350}
           height={350}
-          className="w-32 h-auto"
+          className="h-auto lg:w-28 xl:w-32 -z-[1] lg:translate-y-20 lg:translate-x-5"
         />
       </div>
 
@@ -205,7 +205,7 @@ const WhoApplySection = () => {
 
         {/* Requirements Cards */}
 
-        <div className="grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:mb-16">
+        <div className="relative z-10 grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:mb-16">
           <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg text-center max-w-[300px] mx-auto w-full">
             <div className="flex items-center justify-center mx-auto mb-3 rounded-full">
               <Image src={EighteenPlus} alt="icon" width={43} height={43} />

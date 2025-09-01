@@ -138,7 +138,7 @@ const WhyChoose = () => {
             alt="Left Frame"
             width={350}
             height={350}
-            className="w-20 h-auto -translate-x-6"
+            className="h-auto -translate-x-6 lg:w-16 lg:translate-y-24 xl:w-20"
           />
         </div>
         <div className="mx-auto max-w-7xl">
