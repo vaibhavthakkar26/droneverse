@@ -20,7 +20,7 @@ const CertificateSection = () => {
                     <Image
                         src={transShape}
                         alt="fill shape"
-                        className="absolute z-0 object-contain size-[86px] top-12 xl:top-7 xl:right-24 md:right-16 md:top-16 right-9"
+                        className="absolute z-0 object-contain size-16 lg:size-[86px] top-12 xl:top-7 xl:right-24 md:right-16 md:top-16 right-5"
                     />
 
                     {/* Government Approve Logo */}
@@ -37,7 +37,7 @@ const CertificateSection = () => {
                     </h2>
 
                     {/* Description */}
-                    <p className="leading-relaxed ">
+                    <p className="relative z-10 leading-relaxed">
                         Join Droneverse’s DGCA Certified Drone Pilot Training Course and get
                         your government-approved Remote Pilot Certificate (RPC) in just 5 days.
                         <br />
@@ -60,7 +60,7 @@ const CertificateSection = () => {
                     <Image
                         src={transShape}
                         alt="fill shape"
-                        className="absolute z-0 object-contain bottom-28 size-14 right-28 xl:bottom-24 xl:right-44"
+                        className="absolute -z-[1] object-contain bottom-20 size-14 right-18 xl:bottom-24 xl:right-44"
                     />
                 </div>
 

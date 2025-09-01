@@ -77,7 +77,7 @@ const WhyChoose = () => {
 
   return (
     <div
-      className="relative py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat"
+      className="relative px-4 py-8 bg-center bg-no-repeat bg-cover sm:py-12 lg:py-16 sm:px-6 lg:px-8"
       style={{
         backgroundImage: `url(${SectionBg.src || SectionBg})`,
       }}
@@ -87,14 +87,14 @@ const WhyChoose = () => {
 
       {/* Content wrapper with relative positioning */}
       <div className="relative z-10">
-        <div className="max-w-7xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+        <div className="mx-auto mb-12 max-w-7xl sm:mb-16 lg:mb-20">
           <div className="text-center mb-12 sm:mb-16 w-full max-w-[675px] mx-auto px-4">
             <div
               className="inline-block 
     text-base sm:text-xl md:text-2xl lg:text-[36px] 
     bg-[#FFC634] text-white text-center 
     px-4 sm:px-6 lg:px-8 py-2 sm:py-3 
-    rounded-full font-semibold 
+    rounded-[20px] font-semibold 
     mb-6 sm:mb-8 
     w-full sm:w-auto max-w-full"
             >
@@ -103,14 +103,14 @@ const WhyChoose = () => {
           </div>
 
           {/* Why Choose Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+          <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:mb-16 lg:mb-20">
             {whyChooseData.map((item, index) => (
               <div
                 key={index}
                 className="p-3 sm:p-4 w-full max-w-full sm:max-w-[430px] mx-auto lg:mx-0"
               >
                 <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="text-3xl mb-2 flex-shrink-0">
+                  <div className="flex-shrink-0 mb-2 text-3xl">
                     <Image
                       src={item.icon}
                       alt="icon"
@@ -120,10 +120,10 @@ const WhyChoose = () => {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-black mb-2">
+                    <h3 className="mb-2 text-base font-semibold text-black sm:text-lg lg:text-xl">
                       {item.title}
                     </h3>
-                    <p className="text-black text-xs sm:text-sm lg:text-base leading-relaxed">
+                    <p className="text-xs leading-relaxed text-black sm:text-sm lg:text-base">
                       {item.description}
                     </p>
                   </div>
@@ -138,15 +138,15 @@ const WhyChoose = () => {
             alt="Left Frame"
             width={350}
             height={350}
-            className="w-auto h-auto"
+            className="w-20 h-auto -translate-x-6"
           />
         </div>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12 px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="px-4 mb-8 text-center sm:mb-12">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl sm:mb-6">
               Training Facilities
             </h2>
-            <p className="text-gray-600 max-w-4xl mx-auto text-base sm:text-lg leading-relaxed">
+            <p className="max-w-4xl mx-auto text-base leading-relaxed text-gray-600 sm:text-lg">
               Welcome to DroneVerse, where we redefine India's drone industry.
               Driven by a vision to create world-class drone pilots, we go above
               & beyond in everything we do. Recognized in the esteemed World
@@ -154,20 +154,20 @@ const WhyChoose = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-0">
+          <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
             {trainingFacilities.map((facility, index) => (
               <div
                 key={index}
                 className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full max-w-[302px] mx-auto lg:mx-0"
               >
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 py-4 sm:py-5 px-4">
+                <h3 className="px-4 py-4 text-base font-semibold text-gray-900 sm:text-lg sm:py-5">
                   {facility.title}
                 </h3>
                 <div className="relative w-full h-[140px] sm:h-[162px] overflow-hidden">
                   <Image
                     src={facility.image}
                     alt={facility.title}
-                    className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                     fill
                   />
                 </div>

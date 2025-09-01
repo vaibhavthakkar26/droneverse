@@ -7,6 +7,7 @@ import DroneOperation from "../../../../../public/assets/img/training/drone-oper
 import Maintainance from "../../../../../public/assets/img/training/maintainance.png";
 import WhoApplyBg from "../../../../../public/assets/img/training/who-apply-bg.png";
 import RightFrame from "../../../../../public/assets/img/training/right-frame.png";
+import fillShape from '../../../../../public/assets/img/training/fillShape.png'
 
 const WhoApplySection = () => {
   const [activeTab, setActiveTab] = useState("Defence");
@@ -176,7 +177,7 @@ const WhoApplySection = () => {
 
   return (
     <div
-      className="relative bg-cover bg-center py-8 sm:py-12 lg:py-16 px-4"
+      className="relative px-4 py-8 bg-center bg-cover sm:py-12 lg:py-16"
       style={{ backgroundImage: `url(${WhoApplyBg.src})` }}
     >
       <div className="absolute inset-0 bg-white/90" />
@@ -187,14 +188,14 @@ const WhoApplySection = () => {
           alt="Right Frame"
           width={350}
           height={350}
-          className="w-auto h-auto"
+          className="w-32 h-auto"
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative mx-auto max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#FFB801] mb-1 font-[poppins]">
+        <div className="mb-8 text-center sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#FFB801] mb-1 font-[poppins] poppins-bold ">
             Who can apply?
           </h2>
           <p className="text-black text-sm sm:text-base lg:text-[16px] poppins-medium px-4">
@@ -203,9 +204,10 @@ const WhoApplySection = () => {
         </div>
 
         {/* Requirements Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
+
+        <div className="grid grid-cols-1 gap-4 mb-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 lg:gap-8 sm:mb-16">
           <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg text-center max-w-[300px] mx-auto w-full">
-            <div className="rounded-full flex items-center justify-center mx-auto mb-3">
+            <div className="flex items-center justify-center mx-auto mb-3 rounded-full">
               <Image src={EighteenPlus} alt="icon" width={43} height={43} />
             </div>
             <h3 className="font-bold text-black text-lg sm:text-[18px] mb-2">
@@ -215,7 +217,7 @@ const WhoApplySection = () => {
           </div>
 
           <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg text-center max-w-[300px] mx-auto w-full">
-            <div className="rounded-full flex items-center justify-center mx-auto mb-3">
+            <div className="flex items-center justify-center mx-auto mb-3 rounded-full">
               <Image src={EighteenPlus} alt="icon" width={43} height={43} />
             </div>
             <h3 className="font-bold text-black text-lg sm:text-[18px] mb-2">
@@ -225,7 +227,7 @@ const WhoApplySection = () => {
           </div>
 
           <div className="bg-white rounded-lg p-4 sm:p-6 shadow-lg text-center max-w-[300px] mx-auto w-full sm:col-span-2 lg:col-span-1">
-            <div className="rounded-full flex items-center justify-center mx-auto mb-3">
+            <div className="flex items-center justify-center mx-auto mb-3 rounded-full">
               <Image src={EighteenPlus} alt="icon" width={43} height={43} />
             </div>
             <h3 className="font-bold text-black text-lg sm:text-[18px] mb-2">
@@ -238,8 +240,9 @@ const WhoApplySection = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="bg-white rounded-lg p-1 sm:p-2 shadow-md border border-black flex w-full max-w-md sm:max-w-lg">
+        <div className="relative flex justify-center mb-6 sm:mb-8">
+          <Image src={fillShape} alt="shape" className="absolute w-40 -left-6 -top-5" />
+          <div className="relative z-10 flex w-full max-w-md p-1 bg-white border border-black rounded-lg shadow-md sm:p-2 sm:max-w-lg">
             {["Defence", "Student", "Training"].map((tab) => (
               <button
                 key={tab}
@@ -257,13 +260,13 @@ const WhoApplySection = () => {
         </div>
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center">
+        <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
           {courses[activeTab].map((course, idx) => (
             <div
               key={idx}
               className="bg-white rounded-lg overflow-hidden border border-[#DADADA] px-3 sm:px-4 lg:px-1 py-4 max-w-sm mx-auto w-full"
             >
-              <div className="relative px-2 sm:px-4 lg:px-6 pb-1">
+              <div className="relative px-2 pb-1 sm:px-4 lg:px-6">
                 <Image
                   src={course.image}
                   alt={course.title}
@@ -282,7 +285,7 @@ const WhoApplySection = () => {
                 <h3 className="text-lg sm:text-xl lg:text-[20px] font-bold text-black mb-3 sm:mb-4 leading-tight">
                   {course.title}
                 </h3>
-                <div className="flex items-center text-black mb-3 sm:mb-4">
+                <div className="flex items-center mb-3 text-black sm:mb-4">
                   <span className="flex gap-1 text-sm sm:text-[16px] text-[#5F5F5F] items-center">
                     <svg
                       width="18"
@@ -303,11 +306,11 @@ const WhoApplySection = () => {
                     </span>
                   </span>
                 </div>
-                <ul className="space-y-2 mb-4 sm:mb-6">
+                <ul className="mb-4 space-y-2 sm:mb-6">
                   {course.points.map((point, i) => (
                     <li
                       key={i}
-                      className="flex items-start text-xs sm:text-sm text-black"
+                      className="flex items-start text-xs text-black sm:text-sm"
                     >
                       <span className="mr-2 text-black flex-shrink-0 mt-0.5">
                         <svg
@@ -330,7 +333,7 @@ const WhoApplySection = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-col sm:flex-row gap-2">
+                <div className="flex flex-col gap-2 sm:flex-row">
                   <button className="flex-1 border border-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-10 transition-colors">
                     Details
                   </button>

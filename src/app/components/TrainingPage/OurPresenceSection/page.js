@@ -49,7 +49,7 @@ const OurPresenceSection = () => {
 
       {/* Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="bg-white rounded-lg p-1 sm:p-2 shadow-md border border-black flex w-full max-w-md sm:max-w-lg">
+          <div className="relative z-10 flex w-full max-w-md p-1 bg-white border border-black rounded-lg shadow-md sm:p-2 sm:max-w-lg">
             {["Office", "Institute", "R&D Center"].map((tab) => (
               <button
                 key={tab}
@@ -71,7 +71,7 @@ const OurPresenceSection = () => {
         <Image
           src={IndiaMap2}
           alt="India Map"
-          className="object-contain w-full h-[800px] max-w-7xl opacity-20 -mt-52"
+          className="object-contain w-full h-[800px] max-w-7xl opacity-20  -mt-52"
           priority
         />
 
