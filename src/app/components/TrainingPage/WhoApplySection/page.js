@@ -334,7 +334,7 @@ const WhoApplySection = () => {
                   ))}
                 </ul>
                 <div className="flex flex-col gap-2 sm:flex-row">
-                  <button className="flex-1 border border-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-10 transition-colors">
+                    <button className="flex-1 border border-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-10 transition-colors">
                     Details
                   </button>
                   <button className="flex-1 bg-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-90 transition-colors">
