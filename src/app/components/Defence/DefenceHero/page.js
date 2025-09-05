@@ -6,6 +6,8 @@ import radarImg1 from "../../../../../public/assets/img/defence/raddar1.png";
 import radarImg2 from "../../../../../public/assets/img/defence/radaar2.png";
 import jammerImg from "../../../../../public/assets/img/defence/jammer.png";
 
+import jammerImg1 from "../../../../../public/assets/img/defence/jammar-1.png";
+
 const DefenceHero = () => {
     return (
         <section className="relative w-full">
@@ -19,39 +21,37 @@ const DefenceHero = () => {
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 to-transparent"></div>
 
             {/* Content */}
-            <div className="flex flex-col items-center justify-between gap-10 py-20 mx-auto max-w-7xl lg:pt-36 lg:pb-48 xl:px-0 lg:flex-row sm:px-6 lg:px-6">
+            <div className="flex flex-col items-center justify-between gap-10 px-4 py-20 mx-auto max-w-7xl lg:pt-36 lg:pb-48 xl:px-0 lg:flex-row sm:px-6 lg:px-6">
                 {/* Left Section */}
                 <div className="flex-1 text-left">
-                    <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
+                    <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
                         VEHICLE MOUNTED <br />
                         <span className="text-[var(--color-primary)] w-3/4 block">
                             COUNTER DRONE PROTECTION
                         </span>
                     </h1>
 
-                    <button className="mt-8 lg:mt-12 inline-block px-4 py-2 rounded-lg bg-[var(--color-primary)] font-medium shadow-lg hover:opacity-90 transition">
+                    <button className="mt-8 lg:mt-12 inline-block px-3  sm:px-4 py-2 rounded-lg bg-[var(--color-primary)] font-medium shadow-lg hover:opacity-90 transition text-xs sm:text-sm md:text-base">
                         Learn more
                     </button>
                 </div>
 
                 {/* Right Section (Images) */}
-                <div className="absolute bottom-0 flex w-full justify-end md:w-4/5 lg:w-[62%] gap-2 lg:-translate-x-1/2 -z-10 lg:left-1/2 right-0 md:left-1/2 md:-translate-x-1/2">
-                    <div className="flex items-center gap-0 -mr-0 xl:-me-44 md:-me-24">
+                <div className="absolute bottom-0 flex justify-end sm:justify-start w-full md:w-4/5 lg:w-[65%] gap-2 lg:-translate-x-1/2 -z-10 lg:left-1/2 right-0 md:left-1/2 md:-translate-x-1/2 left-0 xl:justify-center">
                         <Image
                             src={radarImg2}
                             alt="Radar"
-                            className="object-contain w-36 sm:w-36 md:w-20 lg:w-44"
+                            className="hidden object-contain w-16 sm:block md:w-20 lg:w-40 lg:-me-10 lg:-mb-10 md:translate-x-16 lg:translate-x-2"
                         />
                         <Image
                             src={radarImg1}
                             alt="Radar"
-                            className="object-contain w-44 sm:w-40 md:w-40 lg:w-[300px]"
+                            className="object-contain w-28 sm:w-28 md:w-36 lg:w-72 lg:-mb-10 lg:-me-4 translate-x-9"
                         />
-                    </div>
                     <Image
-                        src={jammerImg}
+                        src={jammerImg1}
                         alt="Jammer"
-                        className="object-contain w-80 sm:w-40 md:w-3/5 lg:w-full -me-10"
+                        className="object-contain w-48 sm:w-40 md:w-52 lg:w-sm"
                     />
                 </div>
             </div>
