@@ -1,4 +1,6 @@
 import React from "react";
+import featureIcon from '../../../../public/assets/img/defence/feature-icon.png'
+import Image from "next/image";
 
 const numeric_values = [
   {
@@ -58,48 +60,60 @@ const icon_values = [
 
 const key_features = [
   {
-    title: "Global Streaming Capability",
-    icon: "🌐", // Icon placeholder
+    title: "Freestyle FPV PNP drone.",
+    icon: featureIcon, // Icon placeholder
     description:
-      "Secure live footage streaming with global access via AES-256 encrypted links.",
+      "",
   },
   {
-    title: "Covert Operation",
-    icon: "🔇", // Icon placeholder
-    description: "Ultra-low sound and visibility profile.",
+    title: "Size: 5″ class.",
+    icon: featureIcon,
+    description: "",
   },
   {
-    title: "Payload Flexibility",
-    icon: "🔧", // Icon placeholder
-    description: "Modular design to support customer-specific payloads.",
+    title: "Agile and robust built using a custom carbon fibre frame.",
+    icon: featureIcon,
+    description: "",
   },
   {
-    title: "All-Weather Performance",
-    icon: "☔", // Icon placeholder
-    description: "Operates in wind gusts up to 45 knots.",
+    title: "Modular and customizable.",
+    icon: featureIcon,
+    description: "",
   },
   {
-    title: "GNSS-Denied Navigation",
-    icon: "🛰️", // Icon placeholder
+    title: "Freestyle and racing capabilities.",
+    icon: featureIcon,
     description:
-      "Functions in denied environments via dead reckoning and autonomous GPS-based navigation.",
+      "",
   },
   {
-    title: "Flexible Control Options",
-    icon: "🎮", // Icon placeholder
+    title: "Easy learning curve from beginner to pro.",
+    icon: featureIcon,
     description:
-      "Compatible with handheld controllers, FPV goggles, or laptop-based command stations.",
+      "",
   },
   {
-    title: "Secure Communications",
-    icon: "🔒", // Icon placeholder
-    description: "Equipped with proprietary AES-256 encrypted radio systems.",
+    title: "Flight modes: Stabilized, Horizon (stabilized with flips), Acro.",
+    icon: featureIcon,
+    description: "",
   },
   {
-    title: "Network Versatility",
-    icon: "📡", // Icon placeholder
+    title: "Analog or digital FPV video feed transmission (based on requirement)",
+    icon: featureIcon,
     description:
-      "Adapts to cellular networks, MANET radio modules, and satellite links.",
+      "",
+  },
+   {
+    title: "Onboard and offboard recording with livestream at 4k 60FPS max (Digital version).",
+    icon: featureIcon,
+    description:
+      "",
+  },
+   {
+    title: "Hassle-free battery installation: 4S to 6S LiPo battery",
+    icon: featureIcon,
+    description:
+      "",
   },
 ];
 
@@ -151,29 +165,29 @@ const DefenceDataSection = ({
   return (
     <div>
       {showNumeric && numeric_values && (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
-          <div className="max-w-7xl w-full">
-            <div className="bg-black/20 rounded-2xl p-8">
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="flex items-center justify-center min-h-screen p-4 bg-gray-900">
+          <div className="w-full max-w-7xl">
+            <div className="p-8 bg-black/20 rounded-2xl">
+              <div className="grid max-w-6xl grid-cols-2 gap-8 mx-auto lg:grid-cols-3">
                 {numeric_values.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center text-white text-center space-y-2"
+                    className="flex flex-col items-center space-y-2 text-center text-white"
                   >
                     {/* Number and Unit Container */}
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                      <span className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
                         {item.value}
                       </span>
                       {item.unit && (
-                        <span className="text-lg md:text-xl lg:text-2xl font-medium text-white ml-1 uppercase">
+                        <span className="ml-1 text-lg font-medium text-white uppercase md:text-xl lg:text-2xl">
                           {item.unit}
                         </span>
                       )}
                     </div>
 
                     {/* Subtitle */}
-                    <div className="text-sm md:text-base text-gray-300 max-w-48 leading-relaxed">
+                    <div className="text-sm leading-relaxed text-gray-300 md:text-base max-w-48">
                       {item.subtitle}
                     </div>
                   </div>
@@ -187,27 +201,27 @@ const DefenceDataSection = ({
       {showIcons && icon_values && (
         <>
           {/* Features Section */}
-          <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-4 space-y-16">
-            <div className="max-w-6xl w-full">
-              <div className="bg-black/20 rounded-2xl p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-col items-center justify-center py-4 space-y-0 ">
+            <div className="w-full">
+              <div className="p-8 bg-[#1A1A1A] rounded-2xl">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                   {icon_values.map((item, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-center text-center space-y-4"
+                      className="flex flex-col items-center space-y-4 text-center"
                     >
                       {/* Icon */}
-                      <div className="text-5xl md:text-6xl mb-2">
+                      <div className="mb-2 text-5xl md:text-6xl">
                         {item.icon}
                       </div>
 
                       {/* Title */}
-                      <div className="text-white font-semibold text-lg">
+                      <div className="text-lg font-semibold text-white">
                         {item.title}
                       </div>
 
                       {/* Description */}
-                      <div className="text-gray-400 text-sm leading-relaxed max-w-48">
+                      <div className="text-sm leading-relaxed text-gray-400 max-w-48">
                         {item.description}
                       </div>
                     </div>
@@ -220,29 +234,33 @@ const DefenceDataSection = ({
       )}
 
       {showKeyFeatures && key_features && (
-        <section className="py-12 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-2xl sm:text-3xl font-bold text-start justify-start mb-10 text-gray-900">
+        <section className="py-12 ">
+          <div className="py-0 mx-auto">
+            <h2 className="justify-start mb-10 text-2xl font-bold text-gray-900 sm:text-3xl text-start">
               Key Features
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {key_features.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center bg-white rounded-xl overflow-hidden shadow-md border border-gray-200"
+                  className="relative flex flex-col items-center overflow-hidden  border shadow-md border-[#F4F4F4] rounded-xl"
                 >
-                  <div className="w-full flex flex-col items-center p-6">
-                    <div className="text-5xl mb-4 text-yellow-500">
-                      {item.icon}
+                  <div className="relative z-10 flex flex-col items-center w-full p-6 pt-10 pb-18">
+                    <div className="mb-6 text-5xl text-yellow-500">
+                      {typeof item.icon === "string" ? (
+                        <span className="text-5xl">{item.icon}</span>  // if emoji
+                      ) : (
+                        <Image src={item.icon} alt={item.title} width={50} height={50} />
+                      )}
                     </div>
-                    <h3 className="text-lg font-semibold text-center text-gray-900 mb-2">
+                    <h3 className="mb-2 text-lg font-semibold text-center text-gray-900">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-gray-600 text-center">
+                    <p className="text-sm text-center text-gray-600">
                       {item.description}
                     </p>
                   </div>
-                  <div className="w-full h-2 bg-gradient-to-r from-gray-100 via-gray-300 to-gray-100" />
+                  <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#ffffff00] from-0% to-[#E6E6E6] to-100%'" />
                 </div>
               ))}
             </div>
@@ -251,16 +269,16 @@ const DefenceDataSection = ({
       )}
 
       {showSpecifications && technical_specifications && (
-        <section className="py-10 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
+        <section className="py-0 ">
+          <div className="mx-auto">
             <div className="overflow-x-auto rounded-lg shadow">
               <table className="min-w-full bg-white border border-gray-200">
-                <thead className="bg-gray-100 text-gray-800">
+                <thead className="text-gray-800 bg-gray-100">
                   <tr>
-                    <th className="text-left text-sm sm:text-base font-semibold px-4 py-3 border-b border-gray-200">
+                    <th className="px-4 py-3 text-sm font-semibold text-left border-b border-gray-200 sm:text-base">
                       Technical Specifications
                     </th>
-                    <th className="text-left text-sm sm:text-base font-semibold px-4 py-3 border-b border-gray-200">
+                    <th className="px-4 py-3 text-sm font-semibold text-left border-b border-gray-200 sm:text-base">
                       Details
                     </th>
                   </tr>
@@ -271,10 +289,10 @@ const DefenceDataSection = ({
                       key={index}
                       className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
                     >
-                      <td className="text-sm text-gray-700 px-4 py-3 border-b border-gray-200">
+                      <td className="px-4 py-3 text-sm text-gray-700 border-b border-gray-200">
                         {item.spec}
                       </td>
-                      <td className="text-sm text-gray-700 px-4 py-3 border-b border-gray-200">
+                      <td className="px-4 py-3 text-sm text-gray-700 border-b border-gray-200">
                         {item.detail}
                       </td>
                     </tr>
@@ -286,24 +304,24 @@ const DefenceDataSection = ({
         </section>
       )}
 
-      {showOperatingModes &&operating_modes && (
-        <section className="py-12 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-10 text-left">
+      {showOperatingModes && operating_modes && (
+        <section className="py-12 ">
+          <div className="mx-auto">
+            <h2 className="mb-10 text-2xl font-bold text-left text-gray-900">
               Operating Modes:
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
               {operating_modes.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center text-center px-4"
+                  className="flex flex-col items-center px-4 text-center"
                 >
                   <div className="mb-4 text-4xl">{item.icon}</div>
-                  <div className="text-lg font-semibold text-black mb-2">
+                  <div className="mb-2 text-lg font-semibold text-black">
                     {item.title}
                   </div>
-                  <p className="text-sm text-gray-600 max-w-xs">
+                  <p className="max-w-xs text-sm text-gray-600">
                     {item.description}
                   </p>
                 </div>

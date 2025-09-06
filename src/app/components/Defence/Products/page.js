@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useState } from "react";
 import Image from "next/image";
 import paternsbg from "../../../../../public/assets/img/defence/paterns.png";
 import dvHourspic from "../../../../../public/assets/img/defence/dvHours.png";
@@ -19,8 +19,12 @@ import icon5 from "../../../../../public/assets/img/defence/icon5.png";
 import icon6 from "../../../../../public/assets/img/defence/icon6.png";
 
 import Link from "next/link";
+import DefenceDataSection from "../../DefenceDataSection/page";
 
 const DefenceProducts = () => {
+
+  const [showMore, setShowMore] = useState(false);
+
   const products = [
     {
       id: "dv-horus",
@@ -74,9 +78,8 @@ const DefenceProducts = () => {
       {products.map((product, productIndex) => (
         <section
           key={product.id}
-          className={`relative pt-[75px] pb-[116px] overflow-hidden ${
-            product.theme === "black" ? "bg-black text-white" : ""
-          }`}
+          className={`relative pt-[75px] pb-[116px] overflow-hidden ${product.theme === "black" ? "bg-black text-white" : ""
+            }`}
         >
           <div
             className="absolute inset-0 bg-center bg-cover -z-10 opacity-10"
@@ -91,16 +94,14 @@ const DefenceProducts = () => {
               />
             </div>
             <div
-              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${
-                product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
+                }`}
             >
               {/* Left Side - Content */}
               <div className="relative z-0 w-full space-y-6 xl:w-4/6 md:w-full ">
                 <h3
-                  className={`text-base poppins-medium uppercase ${
-                    product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
-                  }`}
+                  className={`text-base poppins-medium uppercase ${product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
+                    }`}
                 >
                   {product.category}
                 </h3>
@@ -108,22 +109,20 @@ const DefenceProducts = () => {
                   {product.title}
                 </h2>
                 <p
-                  className={`text-lg w-full md:w-full lg:w-4/5 ${
-                    product.theme === "black"
-                      ? "text-gray-300"
-                      : "text-[#5F5F5F]"
-                  }`}
+                  className={`text-lg w-full md:w-full lg:w-4/5 ${product.theme === "black"
+                    ? "text-gray-300"
+                    : "text-[#5F5F5F]"
+                    }`}
                 >
                   {product.description}
                 </p>
 
                 {/* Features */}
                 <ul
-                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${
-                    product.theme === "black"
-                      ? "text-gray-300"
-                      : "text-[#5F5F5F]"
-                  }`}
+                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${product.theme === "black"
+                    ? "text-gray-300"
+                    : "text-[#5F5F5F]"
+                    }`}
                 >
                   {product.features.map((feature, index) => (
                     <li
@@ -145,8 +144,30 @@ const DefenceProducts = () => {
                   ))}
                 </ul>
 
+                 {showMore && (
+                  <DefenceDataSection
+                    showKeyFeatures={true}
+                    showSpecifications={true}
+                    showNumeric={false}
+                    showIcons={false}
+                    showOperatingModes={false}
+                  />
+                )}
+
                 {/* Contact Us Button */}
-                {product.prodBtns?.map((btn, index) => (
+                <div className="mb-12 space-x-6">
+                  <button className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] bg-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-black hover:text-white">
+                    Contact Us
+                  </button>
+                  <button
+                    onClick={() => setShowMore(!showMore)}
+                    className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] border border-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-[#FFB800] hover:text-black"
+                  >
+                    {showMore ? "Show Less" : "Show More"}
+                  </button>
+                </div>
+
+                {/* {product.prodBtns?.map((btn, index) => (
                   <Link
                     key={index}
                     href={btn.link}
@@ -154,7 +175,8 @@ const DefenceProducts = () => {
                   >
                     {btn.label}
                   </Link>
-                ))}
+                ))} */}
+
               </div>
 
               {/* Right Side - Image Space */}
@@ -209,11 +231,10 @@ const DefenceProducts = () => {
                 {product.buttons.map((btn, index) => (
                   <button
                     key={index}
-                    className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${
-                      product.theme === "black"
-                        ? "text-white bg-transparent border-white hover:bg-gray-800"
-                        : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
-                    }`}
+                    className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${product.theme === "black"
+                      ? "text-white bg-transparent border-white hover:bg-gray-800"
+                      : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
+                      }`}
                   >
                     {btn}
 

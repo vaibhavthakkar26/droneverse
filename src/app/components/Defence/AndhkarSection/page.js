@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import droneImage from "../../../../../public/assets/img/defence/andhkar-img.png";
 import Image from "next/image";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
@@ -9,8 +9,12 @@ import icon3 from "../../../../../public/assets/img/defence/iicon3.png";
 import icon4 from "../../../../../public/assets/img/defence/icon4.png";
 import icon5 from "../../../../../public/assets/img/defence/icon5.png";
 import icon6 from "../../../../../public/assets/img/defence/icon6.png";
+import DefenceDataSection from "../../DefenceDataSection/page";
 
 const AndhkarSection = () => {
+
+  const [showMore, setShowMore] = useState(false)
+
   const features = [
     {
       icon: icon1,
@@ -93,9 +97,8 @@ const AndhkarSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${
-                    index === 4 ? "sm:col-span-2" : ""
-                  }`}
+                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${index === 4 ? "sm:col-span-2" : ""
+                    }`}
                 >
                   <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 md:w-12 md:h-12">
                     <Image
@@ -114,20 +117,43 @@ const AndhkarSection = () => {
                 </div>
               ))}
             </div>
-            {/* Contact Button - Centered */}
-            <div className="mb-0 md:mb-0 space-x-6">
-              <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
-                Contact Us
-              </button>
-              <button className="bg-black border border-[#FFB801] text-[#FFB801] hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
-                Show More
-              </button>
-            </div>
-          </div>
+          </div> 
         </div>
 
+       {showMore && (
+            <DefenceDataSection
+              showKeyFeatures={true}
+              showSpecifications={true}
+              showNumeric={false}
+              showIcons={true}
+              showOperatingModes={false}
+            />
+          )}
+
+        <div className="mt-16 mb-12 space-x-6">
+          <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
+            Contact Us
+          </button>
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="bg-black border border-[#FFB801] text-[#FFB801] hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base"
+          >
+            {showMore ? "Show Less" : "Show More"}
+          </button>
+        </div>
+
+        {/* Contact Button - Centered
+        <div className="mt-16 mb-0 space-x-6 md:mb-0">
+          <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
+            Contact Us
+          </button>
+          <button className="bg-black border border-[#FFB801] text-[#FFB801] hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
+            Show More
+          </button>
+        </div> */}
+
         {/* Navigation Tabs - Horizontal Scrollable */}
-        <div className="relative">
+        <div className="relative mt-6">
           {/* All screen sizes: Scrollable container */}
           <div className="flex gap-3 pb-2 overflow-x-auto scrollbar-hide">
             <div className="flex gap-3 min-w-max">
@@ -136,10 +162,9 @@ const AndhkarSection = () => {
                   key={index}
                   className={`
                     w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[260px] h-[60px] sm:h-[68px] md:h-[76px] lg:h-[82px] xl:h-[86px] border px-3 sm:px-4 md:px-6 py-3 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-semibold transition-colors duration-200 rounded-tr-3xl whitespace-nowrap flex-shrink-0
-                    ${
-                      tab.active
-                        ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
-                        : "border-white text-white hover:bg-white hover:text-black"
+                    ${tab.active
+                      ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
+                      : "border-white text-white hover:bg-white hover:text-black"
                     }
                   `}
                   disabled={tab.active}

@@ -18,12 +18,15 @@ const HoursSection = () => {
 
     highlights: [
       { text: "Flight Time 30–45 mins", icon: icon1 },
-      { text: "Range 7km+", icon: icon2 },
       { text: "Flying in wind speeds 35 knots", icon: icon3 },
-      { text: "MTOW", icon: icon4 },
+      { text: "Range 7km+", icon: icon2 },
       { text: "Flying at speeds up to 120 kph", icon: icon5 },
-      { text: "Payload Capacity", icon: icon6 },
+      { text: "Flying at speeds up to 120 kph", icon: icon5 },
+      { text: "Payload Capacity", icon: icon4 },
+      { text: "MTOW", icon: icon6 },
     ],
+
+    keyFeaturesHeading: "Key Features :",
 
     keyFeatures: [
       { keyIcon: featureIcon, title: "Global Streaming Capability", desc: "Secure live footage streaming with global access via AES-256 encrypted links." },
@@ -69,12 +72,11 @@ const HoursSection = () => {
   return (
     <>
       <section className='relative bg-center bg-repeat-y bg-cover border-t-2 border-t-red-500' style={{ backgroundImage: `url(${PatternBg.src})` }}>
-        {/* <div className="absolute inset-0 bg-gradient-to-b 
-    from-black/80 from-[10%] 
-    via-transparent via-[90%] 
-    to-black/80 to-[100%]">
-        </div> */}
-        <div className='relative px-4 pt-24 mx-auto max-w-7xl md:px-6 lg:px-8'>
+        <div className="absolute -z-10 inset-0 bg-gradient-to-b 
+    from-black/100 from-[10%]  
+    to-white to-[100%]  h-32">
+        </div>
+        <div className='relative px-4 pb-20 mx-auto pt-28 max-w-7xl md:px-6 lg:px-8'>
           <div className='w-3/5 mb-5 lg:mb-8 md:mb-6'>
             <h4 className='mb-4 text-sm text-black/70 lg:text-base poppins-medium'>{dvHorusData.subtitle}</h4>
             <h2 className='mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest'>{dvHorusData.title}</h2>
@@ -94,14 +96,32 @@ const HoursSection = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 mt-4">
+          <div className='w-full mt-8'>
+            <h3 className='mb-4 text-2xl uppercase poppins-semibold'>{dvHorusData.keyFeaturesHeading}</h3>
+
+            <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+              {dvHorusData.keyFeatures.map((keyEle, keyIdx) => (
+                <div key={keyIdx} className='flex flex-col items-center gap-4 px-4 pt-6 pb-12 border border-black/5 lg:pt-10 rounded-2xl bg-gradient-to-b from-[#fff] from-0% to-[#E6E6E6] to-100%'>
+                  <img src={keyEle.keyIcon.src} alt={keyEle.title} className="object-contain mx-auto mb-6 size-16" />
+                  <div className='text-center'>
+                    <h4 className='mb-4 text-sm font-medium md:text-base lg:text-xl'>{keyEle.title}</h4>
+                    <p className='text-sm lg:text-base poppins-regular'>{keyEle.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className='pt-10 pb-12 text-sm lg:text-base poppins-regular'>Whether used for ISR (Intelligence, Surveillance, Reconnaissance), tactical overwatch, or payload delivery, Horus ensures mission readiness in minutes — wherever the mission takes you.</p>
+
+          <div className="flex gap-4 mt-8">
             {dvHorusData.buttons.map((btn, index) => (
               <Link
                 key={index}
                 href={btn.link}
                 className={`px-5 py-2 rounded-lg shadow transition ${btn.type === "primary"
-                    ? "bg-blue-600 text-white hover:bg-blue-700"
-                    : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  ? "text-xs md:text-sm lg:text-base rounded-lg py-2 px-3 lg:px-6 md:px-5 sm:px-4 bg-[var(--color-primary)] border border-transparent hover:border-[var(--color-primary)] hover:bg-transparent hover:text-[var(--color-primary)] duration-300 poppins-medium transition-all"
+                  : "text-xs md:text-sm lg:text-base rounded-lg py-2 px-3 lg:px-6 md:px-5 sm:px-4 bg-white border border-[var(--color-primary)] hover:bg-transparent hover:text-[var(--color-primary)] duration-300 poppins-medium"
                   }`}
               >
                 {btn.text}

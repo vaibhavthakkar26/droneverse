@@ -77,6 +77,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
 import droneImage from "../../../../../public/assets/img/defence/rattler-drone.png";
 import technicalDrawing from "../../../../../public/assets/img/defence/rattler-drawing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
@@ -85,8 +86,9 @@ const RattlerProduct = () => {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="relative px-4 py-12 mx-auto max-w-7xl md:px-8 lg:px-8">
+    <div className='relative bg-center bg-repeat-y bg-contain' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+
+      <div className="relative px-4 py-12 pb-32 mx-auto max-w-7xl md:px-8 lg:px-8">
         {/* Header + Drone Image */}
         <div className="grid items-start grid-cols-1 gap-8 mb-12 lg:grid-cols-2 lg:gap-12">
           {/* Left Content */}
@@ -137,7 +139,7 @@ const RattlerProduct = () => {
         )}
 
         {/* Contact Button */}
-        <div className="mb-12 space-x-6">
+        <div className="mt-16 mb-12 space-x-6">
           <button className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] bg-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-black hover:text-white">
             Contact Us
           </button>
@@ -165,6 +167,9 @@ const RattlerProduct = () => {
             DV VIPER
           </button>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 z-20 w-full h-14 bg-gradient-to-b from-white 0% to-black 10%">
       </div>
     </div>
   );

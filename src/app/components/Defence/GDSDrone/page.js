@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 // Import your images here - update these paths according to your project structure
@@ -16,8 +16,12 @@ import icon6 from "../../../../../public/assets/img/defence/icon6.png";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
 import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
 import Link from "next/link";
+import DefenceDataSection from "../../DefenceDataSection/page";
 
 const GDSDrones = () => {
+
+  const [showMore, setShowMore] = useState(false)
+
   const gdsData = {
     title: "GDS DRONES",
     category: "Gunshot Detection System",
@@ -357,7 +361,7 @@ const GDSDrones = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="relative z-10 flex flex-wrap items-center w-full gap-8 mt-16 sm:gap-5 md:mt-12">
+          {/* <div className="relative z-10 flex flex-wrap items-center w-full gap-8 mt-16 sm:gap-5 md:mt-12">
             <Image
               src={gdsData.mainImage}
               alt={gdsData.title}
@@ -377,7 +381,7 @@ const GDSDrones = () => {
               src={phoneInterface}
               alt="phone interface"
               className="object-contain xl:w-[337px] lg:ms-4  lg:-mt-72 w-1/2 sm:w-44 lg:w-64 md:w-1/3"
-            />
+            /> */}
 
             {/* {gdsData.bottomSection.map((item, index) => (
               <div key={index} className={`${item.maxW, item.revTop} relative`}>
@@ -388,9 +392,32 @@ const GDSDrones = () => {
                 />
               </div> 
             ))}*/}
+          {/* </div> */}
+
+          {showMore && (
+            <DefenceDataSection
+              showKeyFeatures={true}
+              showOperatingModes={true}
+              showSpecifications={false}
+              showNumeric={false}
+              showIcons={false}
+            />
+          )}
+
+          {/* Contact Button */}
+          <div className="mt-16 mb-12 space-x-6">
+            <button className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] bg-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-black hover:text-white">
+              Contact Us
+            </button>
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] border border-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-[#FFB800] hover:text-black"
+            >
+              {showMore ? "Show Less" : "Show More"}
+            </button>
           </div>
 
-          {/* Button */}
+          {/* Button
           <Link
             href={gdsData.buttonLink}
             className="inline-block px-7 py-2 md:mt-5 mt-10 text-dark transition bg-[var(--color-primary)] rounded-lg shadow"
@@ -402,7 +429,7 @@ const GDSDrones = () => {
             className="inline-block px-7 py-2 md:mt-5 mt-10 text-dark transition border border-[#FFB801] mx-6 hover:bg-[var(--color-primary)] rounded-lg shadow"
           >
             Show More
-          </button>
+          </button> */}
 
           {/* Full Wing */}
           <div className="relative">
