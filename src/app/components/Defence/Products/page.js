@@ -40,6 +40,7 @@ const DefenceProducts = () => {
       image: dvHourspic,
       buttons: ["DV HORUS", "DV HUNTSMEN", "DV BUG"],
       theme: "white",
+      shape: fullWing, // 👈 yaha add kiya
     },
     {
       id: "dv-irongrid",
@@ -50,7 +51,7 @@ const DefenceProducts = () => {
       features: [
         { text: "450+ Models", icon: icon1 },
         {
-          text: "99.99% Identification & Classification with Near 0 false alarms  ",
+          text: "99.99% Identification & Classification with Near 0 false alarms",
           icon: icon2,
         },
         { text: "Detection Range 35km+", icon: icon3 },
@@ -63,18 +64,19 @@ const DefenceProducts = () => {
       imageTwo: dvIrongridPicTwo,
       buttons: ["DV IRONGRID", "DV SKYLOAD", "DV SKYGUARD"],
       theme: "black",
-      imagePosition: "left", // New prop to control image position
+      imagePosition: "left",
+      shape: fillShape, // 👈 yaha add kiya
     },
   ];
+
 
   return (
     <>
       {products.map((product, productIndex) => (
         <section
           key={product.id}
-          className={`relative pt-[75px] pb-[116px] overflow-hidden ${
-            product.theme === "black" ? "bg-black text-white" : ""
-          }`}
+          className={`relative pt-[75px] pb-[116px] overflow-hidden ${product.theme === "black" ? "bg-black text-white" : ""
+            }`}
         >
           <div
             className="absolute inset-0 bg-center bg-cover -z-10 opacity-10"
@@ -89,16 +91,14 @@ const DefenceProducts = () => {
               />
             </div>
             <div
-              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${
-                product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
+                }`}
             >
               {/* Left Side - Content */}
               <div className="relative z-0 w-full space-y-6 xl:w-4/6 md:w-full ">
                 <h3
-                  className={`text-base poppins-medium uppercase ${
-                    product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
-                  }`}
+                  className={`text-base poppins-medium uppercase ${product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
+                    }`}
                 >
                   {product.category}
                 </h3>
@@ -106,22 +106,20 @@ const DefenceProducts = () => {
                   {product.title}
                 </h2>
                 <p
-                  className={`text-lg w-full md:w-full lg:w-4/5 ${
-                    product.theme === "black"
+                  className={`text-lg w-full md:w-full lg:w-4/5 ${product.theme === "black"
                       ? "text-gray-300"
                       : "text-[#5F5F5F]"
-                  }`}
+                    }`}
                 >
                   {product.description}
                 </p>
 
                 {/* Features */}
                 <ul
-                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${
-                    product.theme === "black"
+                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${product.theme === "black"
                       ? "text-gray-300"
                       : "text-[#5F5F5F]"
-                  }`}
+                    }`}
                 >
                   {product.features.map((feature, index) => (
                     <li
@@ -154,7 +152,7 @@ const DefenceProducts = () => {
                   </Link>
                 ))}
 
-               
+
               </div>
 
               {/* Right Side - Image Space */}
@@ -203,41 +201,44 @@ const DefenceProducts = () => {
                 </div>
               )}
             </div>
-               {/* Buttons */}
-                <div className="pt-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
-                  <div className="flex gap-3 w-max sm:w-full">
-                    {product.buttons.map((btn, index) => (
-                      <button
-                        key={index}
-                        className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${
-                          product.theme === "black"
-                            ? "text-white bg-transparent border-white hover:bg-gray-800"
-                            : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
-                        }`}
-                      >
-                        {btn}
+            {/* Buttons */}
+            <div className="pt-8 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
+              <div className="flex gap-3 w-max sm:w-full">
+                {product.buttons.map((btn, index) => (
+                  <button
+                    key={index}
+                    className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${product.theme === "black"
+                        ? "text-white bg-transparent border-white hover:bg-gray-800"
+                        : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
+                      }`}
+                  >
+                    {btn}
 
-                        {/* Shape image */}
-                        <div className="absolute bottom-[1px] w-6 h-6 transition-opacity duration-300 opacity-0 left-[1px] group-hover:opacity-100">
-                          <Image
-                            src={btnShape}
-                            alt="Shape"
-                            fill
-                            className="object-contain w-full"
-                          />
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-            <div className="relative">
-              <Image
-                src={fillShape}
-                alt="fill shape"
-                className="absolute bottom-0 right-0 hidden object-contain sm:block md:-right-10 md:-bottom-10 lg:-bottom-20 lg:-right-20"
-              />
+                    {/* Shape image */}
+                    <div className="absolute bottom-[1px] w-6 h-6 transition-opacity duration-300 opacity-0 left-[1px] group-hover:opacity-100">
+                      <Image
+                        src={btnShape}
+                        alt="Shape"
+                        fill
+                        className="object-contain w-full"
+                      />
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* Bottom Shape */}
+            <div className="relative">
+              {product.shape && (
+                <Image
+                  src={product.shape}
+                  alt="shape"
+                  className="absolute bottom-0 right-0 hidden object-contain sm:block md:-right-10 md:-bottom-10 lg:-bottom-20 lg:-right-20"
+                />
+              )}
+            </div>
+
           </div>
         </section>
       ))}
