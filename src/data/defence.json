@@ -1,0 +1,314 @@
+{
+  "drone_slug": "dv-hours",
+  "key_features": [
+    {
+      "title": "Global Streaming Capability",
+      "icon": "icon-placeholder",
+      "description": "Equipped with UAT/RTK proprietary AES-256 encrypted video streaming."
+    },
+    {
+      "title": "Covert Operation",
+      "icon": "icon-placeholder",
+      "description": "Secure low-noise operation with global coverage using AES-256 encrypted links."
+    },
+    {
+      "title": "Payload Flexibility",
+      "icon": "icon-placeholder",
+      "description": "Modular design to support customer-specific principles."
+    },
+    {
+      "title": "All-Weather Performance",
+      "icon": "icon-placeholder",
+      "description": "Operates in extreme gusty weather conditions (up to 45 km/h winds)."
+    },
+    {
+      "title": "GNSS-Denied Navigation",
+      "icon": "icon-placeholder",
+      "description": "Functions in challenging environments such as remote or obstructed areas without GPS."
+    },
+    {
+      "title": "Flexible Control Options",
+      "icon": "icon-placeholder",
+      "description": "Multiple control interfaces for ease of use in different operational environments."
+    },
+    {
+      "title": "Secure Communications",
+      "icon": "icon-placeholder",
+      "description": "Uses secure AES-256 encrypted data communication channels."
+    },
+    {
+      "title": "Network Versatility",
+      "icon": "icon-placeholder",
+      "description": "Adapts to various wireless networks, ensuring robust and reliable connectivity."
+    }
+  ],
+  "technical_specifications": [
+    {
+      "spec": "Product Size",
+      "detail": "HONOR-GIS"
+    },
+    {
+      "spec": "Dimensions (Overall Size with Arm)",
+      "detail": "1527mm (L) x 461mm (W) x 805mm (H)"
+    },
+    {
+      "spec": "Aircraft Weight (with added batteries)",
+      "detail": "15.5 kg (Aircraft Only) / 18.5 kg (Full Payload)"
+    },
+    {
+      "spec": "Max Payload (Airframe + Max Payload)",
+      "detail": "10 kg"
+    },
+    {
+      "spec": "Flight Time",
+      "detail": "Up to 3 hours"
+    },
+    {
+      "spec": "Max Windspeed",
+      "detail": "35 m/s (gusting 60 km/h), Beaufort 8"
+    },
+    {
+      "spec": "Operating Temperature Range",
+      "detail": "-20°C to +45°C"
+    },
+    {
+      "spec": "Launch/Recovery Options",
+      "detail": "Hand / Ground / Vehicle / Boat"
+    },
+    {
+      "spec": "Frequency (Data Link)",
+      "detail": "1.5 GHz"
+    },
+    {
+      "spec": "Autonomous Mission Capability",
+      "detail": "Yes"
+    },
+    {
+      "spec": "UAV Take-off Type",
+      "detail": "Handheld / Assisted (optional)"
+    },
+    {
+      "spec": "GNSS Capability",
+      "detail": "Operational in denser (spoofed) environments"
+    },
+    {
+      "spec": "Electronic Weather Resistance",
+      "detail": "Uncompromised in 4G and 5G mobile systems"
+    },
+    {
+      "spec": "Aircraft Carriage",
+      "detail": "Advanced soft electrical luggage"
+    }
+  ],
+  "short_description": "Secure UAV for streaming, covert operations, and flexible payload configurations in challenging environments."
+},
+{
+  "drone_slug": "dv-irongrid",
+  "numeric_values": [
+    { "value": "35", "unit": "km" },
+    { "value": "450+", "unit": "models" },
+    { "value": "99.9", "unit": "%" },
+    { "value": "120+", "unit": "drones" },
+    { "value": "360", "unit": "degrees" },
+    { "value": "5.8", "unit": "kg" }
+  ],
+  "key_features": [
+    {
+      "title": "At Work",
+      "icon": "icon-placeholder",
+      "description": "Long-range detection of unmanned aerial devices in the field."
+    },
+    {
+      "title": "All Platforms Access",
+      "icon": "icon-placeholder",
+      "description": "Access through multiple platforms including mobile, desktop, and web applications."
+    },
+    {
+      "title": "Drone Swarm Detection",
+      "icon": "icon-placeholder",
+      "description": "Detects drone swarms for real-time monitoring and management."
+    },
+    {
+      "title": "Direction & Location Findings",
+      "icon": "icon-placeholder",
+      "description": "Accurate location and directional tracking of drones in real-time."
+    }
+  ],
+  "technical_specifications": [
+    {
+      "spec": "Weight",
+      "detail": "5.8 kg"
+    },
+    {
+      "spec": "Dimensions",
+      "detail": "350mm (L) x 320mm (W) x 240mm (H)"
+    },
+    {
+      "spec": "Power",
+      "detail": "100+ Watts"
+    },
+    {
+      "spec": "Dynamic Range",
+      "detail": "150dB"
+    },
+    {
+      "spec": "Ingress Protection Rating",
+      "detail": "IP65"
+    },
+    {
+      "spec": "Operating Temperature",
+      "detail": "-20°C to +50°C"
+    },
+    {
+      "spec": "Detection Methodology",
+      "detail": "Passive detection of radio frequency (RF) signals"
+    },
+    {
+      "spec": "Detection Range",
+      "detail": "Up to 2500 meters"
+    },
+    {
+      "spec": "Frequency Bands",
+      "detail": "Consumer and commercial GSM frequencies"
+    }
+  ]
+},
+{
+  "drone_slug": "dv-andhkar",
+  "icon_values": [
+    { "icon": "icon", "value": "km" },
+    { "icon": "icon", "value": "models" },
+    { "icon": "icon", "value": "%" },
+    { "icon": "icon", "value": "drones" },
+  ],
+  "key_features": [
+    {
+      "title": "At Work",
+      "icon": "icon-placeholder",
+      "description": "Long-range detection of unmanned aerial devices in the field."
+    },
+    {
+      "title": "All Platforms Access",
+      "icon": "icon-placeholder",
+      "description": "Access through multiple platforms including mobile, desktop, and web applications."
+    },
+    {
+      "title": "Drone Swarm Detection",
+      "icon": "icon-placeholder",
+      "description": "Detects drone swarms for real-time monitoring and management."
+    },
+    {
+      "title": "Direction & Location Findings",
+      "icon": "icon-placeholder",
+      "description": "Accurate location and directional tracking of drones in real-time."
+    }
+  ],
+  "technical_specifications": [
+    {
+      "spec": "Weight",
+      "detail": "5.8 kg"
+    },
+    {
+      "spec": "Dimensions",
+      "detail": "350mm (L) x 320mm (W) x 240mm (H)"
+    },
+    {
+      "spec": "Power",
+      "detail": "100+ Watts"
+    },
+    {
+      "spec": "Dynamic Range",
+      "detail": "150dB"
+    },
+    {
+      "spec": "Ingress Protection Rating",
+      "detail": "IP65"
+    },
+    {
+      "spec": "Operating Temperature",
+      "detail": "-20°C to +50°C"
+    },
+    {
+      "spec": "Detection Methodology",
+      "detail": "Passive detection of radio frequency (RF) signals"
+    },
+    {
+      "spec": "Detection Range",
+      "detail": "Up to 2500 meters"
+    },
+    {
+      "spec": "Frequency Bands",
+      "detail": "Consumer and commercial GSM frequencies"
+    }
+  ]
+},
+{
+  "drone_slug": "gunshot",
+  "key_features": [
+    {
+      "title": "At Work",
+      "icon": "icon-placeholder",
+      "description": "Long-range detection of unmanned aerial devices in the field."
+    },
+    {
+      "title": "All Platforms Access",
+      "icon": "icon-placeholder",
+      "description": "Access through multiple platforms including mobile, desktop, and web applications."
+    },
+    {
+      "title": "Drone Swarm Detection",
+      "icon": "icon-placeholder",
+      "description": "Detects drone swarms for real-time monitoring and management."
+    },
+    {
+      "title": "Direction & Location Findings",
+      "icon": "icon-placeholder",
+      "description": "Accurate location and directional tracking of drones in real-time."
+    }
+  ],
+  "operating_modes": [
+    {
+      "title": "At Work",
+      "icon": "icon-placeholder",
+      "description": "Long-range detection of unmanned aerial devices in the field."
+    },
+    {
+      "title": "All Platforms Access",
+      "icon": "icon-placeholder",
+      "description": "Access through multiple platforms including mobile, desktop, and web applications."
+    },
+    {
+      "title": "Drone Swarm Detection",
+      "icon": "icon-placeholder",
+      "description": "Detects drone swarms for real-time monitoring and management."
+    },
+    {
+      "title": "Direction & Location Findings",
+      "icon": "icon-placeholder",
+      "description": "Accurate location and directional tracking of drones in real-time."
+    }
+  ],
+  "impacts": [
+    {
+      "title": "At Work",
+      "icon": "icon-placeholder",
+      "description": "Long-range detection of unmanned aerial devices in the field."
+    },
+    {
+      "title": "All Platforms Access",
+      "icon": "icon-placeholder",
+      "description": "Access through multiple platforms including mobile, desktop, and web applications."
+    },
+    {
+      "title": "Drone Swarm Detection",
+      "icon": "icon-placeholder",
+      "description": "Detects drone swarms for real-time monitoring and management."
+    },
+    {
+      "title": "Direction & Location Findings",
+      "icon": "icon-placeholder",
+      "description": "Accurate location and directional tracking of drones in real-time."
+    }
+  ],
+}
+
