@@ -8,6 +8,14 @@ import dvIrongridPicTwo from "../../../../../public/assets/img/defence/gold-mic.
 import btnShape from "../../../../../public/assets/img/defence/Subtract.png";
 import leftWing from '../../../../../public/assets/img/defence/leftWings.png'
 import fullWing from '../../../../../public/assets/img/defence/fullWings.png'
+
+import icon1 from '../../../../../public/assets/img/defence/icon1.png'
+import icon2 from '../../../../../public/assets/img/defence/icon2.png'
+import icon3 from '../../../../../public/assets/img/defence/iicon3.png'
+import icon4 from '../../../../../public/assets/img/defence/icon4.png'
+import icon5 from '../../../../../public/assets/img/defence/icon5.png'
+import icon6 from '../../../../../public/assets/img/defence/icon6.png'
+
 import Link from "next/link";
 
 const DefenceProducts = () => {
@@ -19,12 +27,12 @@ const DefenceProducts = () => {
             description:
                 "DroneVerse's cutting-edge FPV (First Person View) drones deliver real-time situational awareness, empowering troops in asymmetric warfare. From tactical surveillance to high-speed ops, they redefine control, clarity, and command on the battlefield",
             features: [
-                "Flight Time 30-45 mins",
-                "Range 7km+",
-                "Flying in wind speeds 35 knots",
-                "MTOW",
-                "Flying at speeds up to 120 kph",
-                "Payload Capacity",
+                { text: "Flight Time 30-45 mins", icon: icon1 },
+                { text: "Range 7km+", icon: icon2 },
+                { text: "Flying in wind speeds 35 knots", icon: icon3 },
+                { text: "MTOW", icon: icon4 },
+                { text: "Flying at speeds up to 120 kph", icon: icon5 },
+                { text: "Payload Capacity", icon: icon6 },
             ],
             prodBtns: [{ label: "Contact Us", link: "/" },],
             image: dvHourspic,
@@ -93,15 +101,29 @@ const DefenceProducts = () => {
 
                                 {/* Features */}
                                 <ul
-                                    className={`grid grid-cols-1 gap-2 list-disc list-inside sm:grid-cols-2 ${product.theme === "black"
-                                        ? "text-gray-300"
-                                        : "text-[#5F5F5F]"
+                                    className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${product.theme === "black" ? "text-gray-300" : "text-[#5F5F5F]"
                                         }`}
                                 >
                                     {product.features.map((feature, index) => (
-                                        <li key={index}>{feature}</li>
+                                        <li
+                                            key={index}
+                                            className="flex items-center gap-3 text-base md:text-lg"
+                                        >
+                                            {/* Icon */}
+                                            {feature.icon && (
+                                                <Image
+                                                    src={feature.icon}
+                                                    alt={`feature-icon-${index}`}
+                                                    className="flex-shrink-0 object-contain w-12"
+                                                />
+                                            )}
+
+                                            {/* Text */}
+                                            <span>{feature.text}</span>
+                                        </li>
                                     ))}
                                 </ul>
+
 
                                 {products.map((product) => (
                                     <div key={product.id}>
@@ -124,9 +146,9 @@ const DefenceProducts = () => {
                                         {product.buttons.map((btn, index) => (
                                             <button
                                                 key={index}
-                                                className={`group flex-shrink-0 w-64 sm:w-1/3 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden ${product.theme === "black"
-                                                        ? "text-white bg-transparent border-white hover:bg-gray-800"
-                                                        : "text-black bg-transparent border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
+                                                className={`group flex-shrink-0 w-64 sm:w-1/3 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${product.theme === "black"
+                                                    ? "text-white bg-transparent border-white hover:bg-gray-800"
+                                                    : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
                                                     }`}
                                             >
                                                 {btn}
@@ -148,7 +170,7 @@ const DefenceProducts = () => {
                             </div>
 
                             {/* Right Side - Image Space */}
-                            <div className="md:min-w-1/5 sm:min-w-1/12">
+                            <div className="md:min-w-0 sm:min-w-1/12 ">
                                 {/* Image space reserved for manual addition */}
                             </div>
 

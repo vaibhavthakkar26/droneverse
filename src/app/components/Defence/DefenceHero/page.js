@@ -41,7 +41,7 @@ const DefenceHero = () => {
                         <Image
                             src={radarImg2}
                             alt="Radar"
-                            className="hidden object-contain w-16 sm:block md:w-20 lg:w-40 lg:-me-10 lg:-mb-10 md:translate-x-16 lg:translate-x-2"
+                            className="object-contain w-14 translate-x-14 sm:block md:w-20 lg:w-40 lg:-me-10 lg:-mb-10 md:translate-x-16 lg:translate-x-2"
                         />
                         <Image
                             src={radarImg1}
@@ -51,7 +51,7 @@ const DefenceHero = () => {
                     <Image
                         src={jammerImg1}
                         alt="Jammer"
-                        className="object-contain w-48 sm:w-40 md:w-52 lg:w-sm"
+                        className="object-contain w-40 sm:w-40 md:w-52 lg:w-sm"
                     />
                 </div>
             </div>
