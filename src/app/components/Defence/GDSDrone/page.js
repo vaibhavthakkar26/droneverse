@@ -306,7 +306,7 @@ const GDSDrones = () => {
     <>
       <section className="relative pt-[75px] pb-[116px] overflow-hidden">
 
-        <div className="px-4 mx-auto max-w-7xl">
+        <div className="px-4 mx-auto max-w-7xl lg:px-8">
           <div className="relative">
             <Image
               src={leftWing}

@@ -21,7 +21,7 @@ const DefenceHero = () => {
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 to-transparent"></div>
 
             {/* Content */}
-            <div className="flex flex-col items-center justify-between gap-10 px-4 py-20 mx-auto max-w-7xl lg:pt-36 lg:pb-48 xl:px-0 lg:flex-row sm:px-6 lg:px-6">
+            <div className="flex flex-col items-center justify-between gap-10 px-4 py-20 mx-auto max-w-7xl lg:pt-36 lg:pb-48 lg:flex-row sm:px-6 lg:px-8">
                 {/* Left Section */}
                 <div className="flex-1 text-left">
                     <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
