@@ -9,7 +9,7 @@ import btnShape from "../../../../../public/assets/img/defence/Subtract.png";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
 import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
 
-import fillShape from '../../../../../public/assets/img/defence/fillShape.png'
+import fillShape from "../../../../../public/assets/img/defence/fillShape.png";
 
 import icon1 from "../../../../../public/assets/img/defence/icon1.png";
 import icon2 from "../../../../../public/assets/img/defence/icon2.png";
@@ -69,14 +69,14 @@ const DefenceProducts = () => {
     },
   ];
 
-
   return (
     <>
       {products.map((product, productIndex) => (
         <section
           key={product.id}
-          className={`relative pt-[75px] pb-[116px] overflow-hidden ${product.theme === "black" ? "bg-black text-white" : ""
-            }`}
+          className={`relative pt-[75px] pb-[116px] overflow-hidden ${
+            product.theme === "black" ? "bg-black text-white" : ""
+          }`}
         >
           <div
             className="absolute inset-0 bg-center bg-cover -z-10 opacity-10"
@@ -91,14 +91,16 @@ const DefenceProducts = () => {
               />
             </div>
             <div
-              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
-                }`}
+              className={`flex flex-col-reverse gap-8 md:flex-col-reverse ${
+                product.imagePosition === "left" ? "lg:flex-row-reverse" : ""
+              }`}
             >
               {/* Left Side - Content */}
               <div className="relative z-0 w-full space-y-6 xl:w-4/6 md:w-full ">
                 <h3
-                  className={`text-base poppins-medium uppercase ${product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
-                    }`}
+                  className={`text-base poppins-medium uppercase ${
+                    product.theme === "black" ? "text-white" : "text-[#5F5F5F]"
+                  }`}
                 >
                   {product.category}
                 </h3>
@@ -106,20 +108,22 @@ const DefenceProducts = () => {
                   {product.title}
                 </h2>
                 <p
-                  className={`text-lg w-full md:w-full lg:w-4/5 ${product.theme === "black"
+                  className={`text-lg w-full md:w-full lg:w-4/5 ${
+                    product.theme === "black"
                       ? "text-gray-300"
                       : "text-[#5F5F5F]"
-                    }`}
+                  }`}
                 >
                   {product.description}
                 </p>
 
                 {/* Features */}
                 <ul
-                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${product.theme === "black"
+                  className={`grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 ${
+                    product.theme === "black"
                       ? "text-gray-300"
                       : "text-[#5F5F5F]"
-                    }`}
+                  }`}
                 >
                   {product.features.map((feature, index) => (
                     <li
@@ -151,8 +155,6 @@ const DefenceProducts = () => {
                     {btn.label}
                   </Link>
                 ))}
-
-
               </div>
 
               {/* Right Side - Image Space */}
@@ -207,10 +209,11 @@ const DefenceProducts = () => {
                 {product.buttons.map((btn, index) => (
                   <button
                     key={index}
-                    className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${product.theme === "black"
+                    className={`group flex-shrink-0 w-64 sm:w-1/3 md:w-64 relative px-4 py-5 transition border rounded-tr-[20px] text-2xl poppins-medium overflow-hidden snap-start ${
+                      product.theme === "black"
                         ? "text-white bg-transparent border-white hover:bg-gray-800"
                         : "text-black bg-white border-[#26212c] hover:border-[#e6e6e6] hover:bg-[#e6e6e6]"
-                      }`}
+                    }`}
                   >
                     {btn}
 
@@ -238,7 +241,6 @@ const DefenceProducts = () => {
                 />
               )}
             </div>
-
           </div>
         </section>
       ))}

@@ -141,10 +141,16 @@ const operating_modes = [
   },
 ];
 
-const DefenceDataSection = () => {
+const DefenceDataSection = ({
+  showNumeric = true,
+  showIcons = true,
+  showKeyFeatures = true,
+  showSpecifications = true,
+  showOperatingModes = true,
+}) => {
   return (
     <div>
-      {numeric_values && (
+      {showNumeric && numeric_values && (
         <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
           <div className="max-w-7xl w-full">
             <div className="bg-black/20 rounded-2xl p-8">
@@ -178,7 +184,7 @@ const DefenceDataSection = () => {
         </div>
       )}
 
-      {icon_values && (
+      {showIcons && icon_values && (
         <>
           {/* Features Section */}
           <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center p-4 space-y-16">
@@ -213,7 +219,7 @@ const DefenceDataSection = () => {
         </>
       )}
 
-      {key_features && (
+      {showKeyFeatures && key_features && (
         <section className="py-12 bg-white">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-start justify-start mb-10 text-gray-900">
@@ -244,7 +250,7 @@ const DefenceDataSection = () => {
         </section>
       )}
 
-      {technical_specifications && (
+      {showSpecifications && technical_specifications && (
         <section className="py-10 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <div className="overflow-x-auto rounded-lg shadow">
@@ -280,7 +286,7 @@ const DefenceDataSection = () => {
         </section>
       )}
 
-      {operating_modes && (
+      {showOperatingModes &&operating_modes && (
         <section className="py-12 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-10 text-left">

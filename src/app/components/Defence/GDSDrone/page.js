@@ -1,25 +1,23 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 // Import your images here - update these paths according to your project structure
-import droneCase from '../../../../../public/assets/img/defence/drone-case.png'; // Update path
-import tabletInterface from '../../../../../public/assets/img/defence/tablet-interface.png'
-import phoneInterface from '../../../../../public/assets/img/defence/phone-interface.png'
-import networkDiagram from '../../../../../public/assets/img/defence/network-diagram.png'
-import droneIcon from '../../../../../public/assets/img/defence/drone.svg'; // Update path
-import icon1 from '../../../../../public/assets/img/defence/icon1.png'
-import icon2 from '../../../../../public/assets/img/defence/icon2.png'
-import icon3 from '../../../../../public/assets/img/defence/iicon3.png'
-import icon4 from '../../../../../public/assets/img/defence/icon4.png'
-import icon5 from '../../../../../public/assets/img/defence/icon5.png'
-import icon6 from '../../../../../public/assets/img/defence/icon6.png'
-import leftWing from '../../../../../public/assets/img/defence/leftWings.png'
-import fullWing from '../../../../../public/assets/img/defence/fullWings.png'
-import Link from 'next/link';
-
+import droneCase from "../../../../../public/assets/img/defence/drone-case.png"; // Update path
+import tabletInterface from "../../../../../public/assets/img/defence/tablet-interface.png";
+import phoneInterface from "../../../../../public/assets/img/defence/phone-interface.png";
+import networkDiagram from "../../../../../public/assets/img/defence/network-diagram.png";
+import droneIcon from "../../../../../public/assets/img/defence/drone.svg"; // Update path
+import icon1 from "../../../../../public/assets/img/defence/icon1.png";
+import icon2 from "../../../../../public/assets/img/defence/icon2.png";
+import icon3 from "../../../../../public/assets/img/defence/iicon3.png";
+import icon4 from "../../../../../public/assets/img/defence/icon4.png";
+import icon5 from "../../../../../public/assets/img/defence/icon5.png";
+import icon6 from "../../../../../public/assets/img/defence/icon6.png";
+import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
+import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
+import Link from "next/link";
 
 const GDSDrones = () => {
-
   const gdsData = {
     title: "GDS DRONES",
     category: "Gunshot Detection System",
@@ -64,8 +62,8 @@ const GDSDrones = () => {
     //         GDS DRONES
     //       </h1>
     //       <p className="max-w-md leading-relaxed text-gray-600">
-    //         Rattler is our 5 inch FPV Drone, built around the intrepid minds FPV parts 
-    //         ecosystem to allow the platform to configured with the ideal system based 
+    //         Rattler is our 5 inch FPV Drone, built around the intrepid minds FPV parts
+    //         ecosystem to allow the platform to configured with the ideal system based
     //         on the use case requirements.
     //       </p>
     //     </div>
@@ -305,7 +303,6 @@ const GDSDrones = () => {
     // </div>
     <>
       <section className="relative pt-[75px] pb-[116px] overflow-hidden">
-
         <div className="px-4 mx-auto max-w-7xl lg:px-8">
           <div className="relative">
             <Image
@@ -347,7 +344,6 @@ const GDSDrones = () => {
                   </li>
                 ))}
               </ul>
-
             </div>
 
             {/* Right - Main Image */}
@@ -363,13 +359,25 @@ const GDSDrones = () => {
           {/* Bottom Section */}
           <div className="relative z-10 flex flex-wrap items-center w-full gap-8 mt-16 sm:gap-5 md:mt-12">
             <Image
-                src={gdsData.mainImage}
-                alt={gdsData.title}
-                className="relative hidden object-contain lg:-translate-x-12 lg:hidden md:block md:w-2/4"
-              />
-            <Image src={networkDiagram} alt='network map' className='object-contain w-[418px] md:w-2/5 lg:w-96 sm:w-96' />
-            <Image src={tabletInterface} alt='tablet interface' className='object-contain lg:w-[233px] xl:ms-16  sm:w-64 lg:ms-10 w-32 md:w-[40%]' />
-            <Image src={phoneInterface} alt='phone interface' className='object-contain xl:w-[337px] lg:ms-4  lg:-mt-72 w-1/2 sm:w-44 lg:w-64 md:w-1/3' />
+              src={gdsData.mainImage}
+              alt={gdsData.title}
+              className="relative hidden object-contain lg:-translate-x-12 lg:hidden md:block md:w-2/4"
+            />
+            <Image
+              src={networkDiagram}
+              alt="network map"
+              className="object-contain w-[418px] md:w-2/5 lg:w-96 sm:w-96"
+            />
+            <Image
+              src={tabletInterface}
+              alt="tablet interface"
+              className="object-contain lg:w-[233px] xl:ms-16  sm:w-64 lg:ms-10 w-32 md:w-[40%]"
+            />
+            <Image
+              src={phoneInterface}
+              alt="phone interface"
+              className="object-contain xl:w-[337px] lg:ms-4  lg:-mt-72 w-1/2 sm:w-44 lg:w-64 md:w-1/3"
+            />
 
             {/* {gdsData.bottomSection.map((item, index) => (
               <div key={index} className={`${item.maxW, item.revTop} relative`}>
@@ -389,6 +397,12 @@ const GDSDrones = () => {
           >
             {gdsData.buttonText}
           </Link>
+
+          <button
+            className="inline-block px-7 py-2 md:mt-5 mt-10 text-dark transition border border-[#FFB801] mx-6 hover:bg-[var(--color-primary)] rounded-lg shadow"
+          >
+            Show More
+          </button>
 
           {/* Full Wing */}
           <div className="relative">

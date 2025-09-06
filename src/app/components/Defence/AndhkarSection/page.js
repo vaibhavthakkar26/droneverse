@@ -81,11 +81,10 @@ const AndhkarSection = () => {
             {/* Description */}
             <div className="text-left">
               <p className="text-white text-sm md:text-[18px] lg:text-[18px] leading-relaxed mb-6 md:mb-8">
-                DroneVerse's cutting-edge FPV (First Person View) drones
-                deliver real-time situational awareness, empowering troops in
-                asymmetric warfare. From tactical surveillance to high-speed
-                ops, they redefine control, clarity, and command on the
-                battlefield.
+                DroneVerse's cutting-edge FPV (First Person View) drones deliver
+                real-time situational awareness, empowering troops in asymmetric
+                warfare. From tactical surveillance to high-speed ops, they
+                redefine control, clarity, and command on the battlefield.
               </p>
             </div>
 
@@ -94,8 +93,9 @@ const AndhkarSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${index === 4 ? "sm:col-span-2" : ""
-                    }`}
+                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${
+                    index === 4 ? "sm:col-span-2" : ""
+                  }`}
                 >
                   <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 md:w-12 md:h-12">
                     <Image
@@ -112,19 +112,19 @@ const AndhkarSection = () => {
                     </p>
                   </div>
                 </div>
-
               ))}
             </div>
             {/* Contact Button - Centered */}
-            <div className="mb-0 md:mb-0">
+            <div className="mb-0 md:mb-0 space-x-6">
               <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
                 Contact Us
+              </button>
+              <button className="bg-black border border-[#FFB801] text-[#FFB801] hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
+                Show More
               </button>
             </div>
           </div>
         </div>
-
-
 
         {/* Navigation Tabs - Horizontal Scrollable */}
         <div className="relative">
@@ -136,9 +136,10 @@ const AndhkarSection = () => {
                   key={index}
                   className={`
                     w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[260px] h-[60px] sm:h-[68px] md:h-[76px] lg:h-[82px] xl:h-[86px] border px-3 sm:px-4 md:px-6 py-3 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-semibold transition-colors duration-200 rounded-tr-3xl whitespace-nowrap flex-shrink-0
-                    ${tab.active
-                      ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
-                      : "border-white text-white hover:bg-white hover:text-black"
+                    ${
+                      tab.active
+                        ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
+                        : "border-white text-white hover:bg-white hover:text-black"
                     }
                   `}
                   disabled={tab.active}
