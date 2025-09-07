@@ -331,7 +331,7 @@ const GDSDrones = () => {
         {/* <div className="absolute top-0 z-[1] w-full h-20 bg-gradient-to-t from-white 0% to-black 20%">
         </div> */}
 
-        <div className={`absolute top-0 left-0 w-full h-40`} style={{backgroundImage: `url(${topGradbg.src})`}}></div>
+        <div className={`absolute top-0 left-0 w-full h-40`} style={{ backgroundImage: `url(${topGradbg.src})` }}></div>
 
         <div className='relative'>
           <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain -top-7 md:block md:w-9 lg:w-16' />
@@ -423,6 +423,7 @@ const GDSDrones = () => {
               showSpecifications={false}
               showNumeric={false}
               showIcons={false}
+              showIcons2={false}
               showGunViolence={true}
             />
           )}

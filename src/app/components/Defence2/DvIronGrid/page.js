@@ -76,6 +76,7 @@ const IronGridSection = () => {
               showSpecifications={true}
               showNumeric={true}
               showIcons={true}
+              showIcons2={false}
               showOperatingModes={false}
               showGunViolence={false}
               myTitleColor="text-white"

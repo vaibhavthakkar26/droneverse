@@ -144,6 +144,7 @@ const RattlerProduct = () => {
             showSpecifications={true}
             showNumeric={false}
             showIcons={false}
+                          showIcons2={false}
             showOperatingModes={false}
             showGunViolence={false}
           />
