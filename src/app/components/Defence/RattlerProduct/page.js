@@ -75,6 +75,7 @@
 
 // export default RattlerProduct;
 
+"use client"
 import React, { useState } from "react";
 import Image from "next/image";
 import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'

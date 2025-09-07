@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import PatternBg from '../../../../../public/assets/img/defence/PatternDark.png'
 import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'

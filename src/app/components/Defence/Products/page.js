@@ -1,3 +1,4 @@
+'use client'
 import React, { use, useState } from "react";
 import Image from "next/image";
 import paternsbg from "../../../../../public/assets/img/defence/paterns.png";

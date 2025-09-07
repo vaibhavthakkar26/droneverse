@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import droneImage from "../../../../../public/assets/img/defence/andhkar-img.png";
 import Image from "next/image";

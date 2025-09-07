@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import SliderOne from "../../../../../public/assets/img/training/sliderOne.png";
 import SliderTwo from "../../../../../public/assets/img/training/sliderTwo.png";
