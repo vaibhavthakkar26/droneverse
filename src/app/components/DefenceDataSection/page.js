@@ -65,6 +65,25 @@ const icon_values = [
   },
 ];
 
+const icon_values2 = [
+  {
+    icon: iconVal1,
+    title: "Visual (VIS)",
+  },
+  {
+    icon: iconVal2,
+    title: "Short-Wave infrared (SWIR) ",
+  },
+  {
+    icon: iconVal3,
+    title: "Near Infrared (NIR)",
+  },
+  {
+    icon: iconVal4,
+    title: "Thermal Infrared (TIR)",
+  },
+];
+
 const key_features = [
   {
     title: "Global Streaming Capability",
@@ -183,6 +202,7 @@ const gun_violence = [
 const DefenceDataSection = ({
   showNumeric = true,
   showIcons = true,
+  showIcons2 =true,
   showKeyFeatures = true,
   showSpecifications = true,
   showOperatingModes = true,
@@ -211,18 +231,18 @@ const DefenceDataSection = ({
                   >
                     {/* Number and Unit Container */}
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+                      <span className="text-4xl font-bold text-white md:text-5xl lg:text-6xl poppins-medium">
                         {item.value}
                       </span>
                       {item.unit && (
-                        <span className="ml-1 text-lg font-medium text-white uppercase md:text-xl lg:text-2xl">
+                        <span className="ml-1 text-lg font-medium text-white uppercase md:text-xl lg:text-2xl poppins-medium">
                           {item.unit}
                         </span>
                       )}
                     </div>
 
                     {/* Subtitle */}
-                    <div className="text-sm leading-relaxed text-gray-300 md:text-base max-w-48">
+                    <div className="text-sm leading-relaxed text-[#BABABA] md:text-base max-w-48 poppins-medium">
                       {item.subtitle}
                     </div>
                   </div>
@@ -238,7 +258,7 @@ const DefenceDataSection = ({
           {/* Features Section */}
           <div className="flex flex-col items-center justify-center py-0 pb-4 space-y-0">
             <div className="w-full">
-              <div className="pt-12.5 pb-7.5 px-7 bg-[#1A1A1A] rounded-2xl">
+              <div className="pt-12.5 pb-7.5 px-7 bg-white/10 rounded-2xl">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                   {icon_values.map((item, index) => (
                     <div
@@ -261,9 +281,45 @@ const DefenceDataSection = ({
                       </div>
 
                       {/* Description */}
-                      <div className="mt-4 text-sm leading-relaxed text-white max-w-48">
+                      <div className="mt-4 text-sm leading-relaxed text-[#BABABA] max-w-48">
                         {item.description}
                       </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {showIcons2 && icon_values2 && (
+        <>
+          {/* Features Section */}
+          <div className="flex flex-col items-center justify-center py-0 pb-4 space-y-0">
+            <div className="w-full">
+              <div className="pt-12.5 pb-7.5 px-7 bg-[#1A1A1A] rounded-2xl">
+                <div className="grid grid-cols-2 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                  {icon_values2.map((item, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center space-y-4 text-center"
+                    >
+                      {/* Icon */}
+                      <div className="mb-4.5 text-5xl md:text-6xl">
+                        {/* {item.icon} */}
+                        {typeof item.icon === "string" ? (
+                          <span className="text-5xl">{item.icon}</span>  // if emoji
+                        ) : (
+                          <Image src={item.icon} alt={item.title} width={70} height={70} className="object-contain size-[70px]" />
+                        )}
+                      </div>
+
+                      {/* Title */}
+                      <div className="mb-0 text-base font-medium text-white md:text-lg lg:text-xl poppins-medium">
+                        {item.title}
+                      </div>
+
                     </div>
                   ))}
                 </div>

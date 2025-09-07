@@ -37,14 +37,14 @@ const IronGridSection = () => {
 
   return (
     <>
-      <section className='relative bg-black ' >
-        <div className="absolute top-0 left-0 w-full h-full">
-          <Image src={PatternBg} alt='bg' className="w-full opacity-60 bg-blend-luminosity mix-blend-luminosity" />
-        </div>
+      <section className='relative pt-10 bg-black bg-center bg-repeat-y bg-size-[100%] mix-blend-luminosity bg-blend-luminosity' style={{ backgroundImage: `url(${PatternBg.src})` }} >
+        {/* <div className="absolute top-0 left-0 w-full h-full">
+          <Image src={PatternBg} alt='bg' className="w-full h-full bg-repeat-y opacity-60 bg-blend-luminosity mix-blend-luminosity" />
+        </div> */}
         <div className='relative'>
           <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20' />
         </div>
-        <div className="pt-10 mx-auto pb-28 max-w-7xl px-4 lg:px-8 relative z-[1]">
+        <div className="pt-10 mx-auto pb-16 max-w-7xl px-4 lg:px-8 relative z-[1]">
           <div className='grid grid-cols-12'>
 
             <div className='relative row-start-1 mb-10 md:col-span-5 lg:col-span-4 lg:row-span-2 col-span-full md:mb-0'>
@@ -92,7 +92,7 @@ const IronGridSection = () => {
 
           {/* Contact Button */}
           <div className="mt-8 space-x-4">
-            <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer poppins-medium">
+            <button className="border border-[#FFB801] hover:border-[#FFB801] bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer poppins-medium">
               Contact Us
             </button>
             <button

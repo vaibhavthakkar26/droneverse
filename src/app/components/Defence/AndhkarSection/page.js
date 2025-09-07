@@ -49,15 +49,15 @@ const AndhkarSection = () => {
   ];
 
   return (
-    //  bg-center bg-repeat-y bg-cover bg-blend-luminosity   style={{ backgroundImage: `url(${PatternBg.src})` }}
-    <div className='relative bg-black ' >
-      <div className="absolute top-0 left-0 w-full h-full">
+    //   bg-center bg-repeat-y bg-cover bg-blend-luminosity   style={{ backgroundImage: `url(${PatternBg.src})` }}
+    <div  className='relative pt-8 pb-0 bg-black bg-center bg-repeat-y mix-blend-luminosity bg-blend-luminosity bg-size-[100%]' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+      {/* <div className="absolute top-0 left-0 w-full h-full">
         <Image src={PatternBg} alt='bg' className="opacity-60 bg-blend-luminosity mix-blend-luminosity" />
-      </div>
+      </div> */}
       <div className='relative'>
         <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20' />
       </div>
-      <div className="pt-10 mx-auto pb-28 max-w-7xl px-4 lg:px-8 relative z-[1]">
+      <div className="pt-10 mx-auto pb-18 max-w-7xl px-4 lg:px-8 relative z-[1]">
         {/* Main Content Grid */}
         <div className="grid items-start grid-cols-1 gap-2 mb-8 lg:grid-cols-5 md:mb-8">
           {/* Left Column - Drone Image */}
@@ -75,7 +75,7 @@ const AndhkarSection = () => {
           {/* Right Column - Header, Description and Features */}
           <div className="order-2 col-span-3 space-y-6 lg:order-2">
             {/* Header */}
-            <div className="mb-6 text-left sm:mb-8 md:mb-10 lg:mb-12">
+            <div className="mt-6 mb-6 text-left sm:mb-8 md:mb-10 lg:mb-12">
               <p className="text-[16px] md:text-[16px] text-[#F4F4F4] uppercase tracking-wider mb-2">
                 ANTI DRONE CLOAK
               </p>
@@ -127,7 +127,8 @@ const AndhkarSection = () => {
             showKeyFeatures={true}
             showSpecifications={true}
             showNumeric={false}
-            showIcons={true}
+            showIcons={false}
+            showIcons2={true}
             showOperatingModes={false}
             showGunViolence={false}
             myTitleColor="text-white"
@@ -144,7 +145,7 @@ const AndhkarSection = () => {
 
         {/* Contact Button */}
         <div className="mt-8 space-x-6">
-          <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
+          <button className="border border-[#FFB801] hover:border-[#FFB801] bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
             Contact Us
           </button>
           <button

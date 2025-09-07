@@ -53,19 +53,19 @@ const GDSDrones = () => {
 
     works: [{
       step: 1,
-      title: "Gunshot Fired",
+      title: "A Gunshot is fired.",
     },
     {
       step: 2,
-      title: "Acoustic Fingerprint Detected"
+      title: "The acoustic Fingerprint is detected."
     },
     {
       step: 3,
-      title: "Detection Forwarded to Backend"
+      title: "The Detection Forwarded to Backend."
     },
     {
       step: 4,
-      title: "Location & Gunshot Information Extracted"
+      title: "Location & Gunshot Information is detected."
     }],
   };
 
@@ -336,7 +336,7 @@ const GDSDrones = () => {
         <div className='relative'>
           <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain -top-7 md:block md:w-9 lg:w-16' />
         </div>
-        <div className="px-4 mx-auto max-w-7xl lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl lg:px-8 relative z-[1]">
 
           {/* Flex Layout */}
           <div className="flex flex-col gap-4 md:flex-row">
@@ -345,7 +345,7 @@ const GDSDrones = () => {
               <h3 className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
                 {gdsData.category}
               </h3>
-              <h2 className="mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest">
+              <h2 className="mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest lg:leading-24 leading-12 md:leading-16">
                 {gdsData.title}
               </h2>
               <p className="w-full text-lg  xl:mb-[72px] lg:mb-12 mb-12  text-[#5F5F5F] md:w-full lg:w-4/5">
@@ -373,11 +373,11 @@ const GDSDrones = () => {
             </div>
 
             {/* Right - Main Image */}
-            <div className="relative flex items-start justify-center lg:w-2/5 sm:hidden lg:block">
+            <div className="relative flex items-start justify-center lg:w-2/5 ">
               <Image
                 src={gdsData.mainImage}
                 alt={gdsData.title}
-                className="relative object-contain w-[406px] lg:-translate-x-12 md:hidden lg:block lg:w-[406px]"
+                className="relative object-contain w-[406px] lg:-translate-x-12  md:block lg:w-[406px]"
               />
             </div>
           </div>
@@ -428,11 +428,11 @@ const GDSDrones = () => {
           )}
 
           <div className="px-9 pt-10 pb-6 bg-[#CB7428] rounded-[20px] mt-8">
-            <h2 className="pb-8 text-5xl text-center text-white poppins-semibold">How Does it Works?</h2>
+            <h2 className="pb-8 text-3xl text-center text-white md:text-4xl lg:text-5xl poppins-semibold">How Does it Works?</h2>
 
-            <div className="flex items-center">
-              <div className="w-3/5">
-                <ul className="pl-16 list-disc space-y-7 marker:text-white">
+            <div className="flex flex-col items-center gap-8 md:flex-row">
+              <div className="w-full md:w-3/5">
+                <ul className="pl-5 space-y-4 list-disc lg:pl-16 lg:space-y-7 marker:text-white md:pl-8 md:space-y-5">
                   {gdsData.works.map((step, index) => (
                     <li key={index}>
                       <p className="text-sm text-white md:text-base lg:text-xl poppins-medium">{step.title}</p>
@@ -440,7 +440,7 @@ const GDSDrones = () => {
                   ))}
                 </ul>
               </div>
-              <div className="w-2/5">
+              <div className="w-full md:w-2/5">
                 <Image src={howWorks} alt="network Diagram" className="object-center w-[400px]" />
               </div>
             </div>
