@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
 import icon1 from '../../../../../public/assets/img/Defence2/highLight-icon-1.png'
 import icon2 from '../../../../../public/assets/img/Defence2/highLight-icon-2.png'
@@ -13,8 +13,11 @@ import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
 import rightFlap from '../../../../../public/assets/img/Defence2/RightWing.png'
 import Link from 'next/link'
 import Image from 'next/image'
+import DefenceDataSection from '../../DefenceDataSection/page'
 
 const HoursSection = () => {
+
+  const [showMore, setShowMore] = useState(false);
 
   const dvHorusData = {
     subtitle: "SURVELLIENCE  DRONES",
@@ -83,18 +86,18 @@ const HoursSection = () => {
         </div>
 
         <div className='relative'>
-          <Image src={leftFlap} alt='left wing' className='absolute left-0 object-contain w-14 top-20' />
+          <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20' />
         </div>
 
         <div className='relative'>
-          <Image src={rightFlap} alt="right flap" className='absolute right-0 bottom-auto object-contain w-20 top-96' />
+          <Image src={rightFlap} alt="right flap" className='absolute hidden right-0 bottom-auto md:block object-contain md:w-12   lg:w-16 lg:top-[520px] md:top-[620px] ' />
         </div>
         <div className='relative'>
           <Image src={dvhoursDrone} alt="dv Hours Drone" className="absolute right-0 object-contain w-2/5 lg:top-12 top-20" />
         </div>
 
-        <div className='relative px-4 pt-32 pb-20 mx-auto max-w-7xl md:px-6 lg:px-8'>
-          <div className='w-full mb-5 md:w-3/5 lg:mb-8 md:mb-6'>
+        <div className='relative px-4 pt-32 mx-auto pb-36 max-w-7xl md:px-6 lg:px-8 z-[1]'>
+          <div className='w-full mb-5 md:w-3/4 lg:w-2/3 lg:mb-8 md:mb-6'>
             <h4 className='mb-4 text-sm text-black/70 lg:text-base poppins-medium'>{dvHorusData.subtitle}</h4>
             <h2 className='mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest'>{dvHorusData.title}</h2>
             <p className='text-sm text-black/70 md:text-base poppins-regular'>{dvHorusData.description}</p>
@@ -102,10 +105,10 @@ const HoursSection = () => {
 
           {/* highlight data */}
 
-          <div className='w-full md:w-2/3 '>
-            <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-2">
+          <div className='w-full lg:w-2/3 '>
+            <div className="grid grid-cols-1 gap-2 mt-6 md:gap-4 md:grid-cols-2">
               {dvHorusData.highlights.map((item, i) => (
-                <div key={i} className="flex items-center gap-2">
+                <div key={i} className="flex items-center gap-2 text-sm md:text-base poppins-regular">
                   <img src={item.icon.src} alt={item.text} className="object-contain size-12" />
                   <span>{item.text}</span>
                 </div>
@@ -113,7 +116,8 @@ const HoursSection = () => {
             </div>
           </div>
 
-          <div className='w-full mt-8'>
+          {/* Ket feature Manual */}
+          {/* <div className='w-full mt-8'>
             <h3 className='mb-4 text-2xl uppercase poppins-semibold'>{dvHorusData.keyFeaturesHeading}</h3>
 
             <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
@@ -127,31 +131,41 @@ const HoursSection = () => {
                 </div>
               ))}
             </div>
+          </div> */}
+
+          {/* <p className='pt-10 pb-12 text-sm lg:text-base poppins-regular'>Whether used for ISR (Intelligence, Surveillance, Reconnaissance), tactical overwatch, or payload delivery, Horus ensures mission readiness in minutes — wherever the mission takes you.</p> */}
+
+          {showMore && (
+            <DefenceDataSection
+              showKeyFeatures={true}
+              showSpecifications={true}
+              showNumeric={false}
+              showIcons={false}
+              showOperatingModes={false}
+              showGunViolence={false}
+            />
+          )}
+
+          {/* Contact Button */}
+          <div className="mt-8 space-x-4">
+            <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer poppins-medium">
+              Contact Us
+            </button>
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-black font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer  poppins-medium"
+            >
+              {showMore ? "Show Less" : "Show More"}
+            </button>
           </div>
 
-          <p className='pt-10 pb-12 text-sm lg:text-base poppins-regular'>Whether used for ISR (Intelligence, Surveillance, Reconnaissance), tactical overwatch, or payload delivery, Horus ensures mission readiness in minutes — wherever the mission takes you.</p>
-
-          <div className="flex gap-4 mt-8">
-            {dvHorusData.buttons.map((btn, index) => (
-              <Link
-                key={index}
-                href={btn.link}
-                className={`px-5 py-2 rounded-lg shadow transition ${btn.type === "primary"
-                  ? "text-xs md:text-sm lg:text-base rounded-lg py-2 px-3 lg:px-6 md:px-5 sm:px-4 bg-[var(--color-primary)] border border-transparent hover:border-[var(--color-primary)] hover:bg-transparent hover:text-[var(--color-primary)] duration-300 poppins-medium transition-all"
-                  : "text-xs md:text-sm lg:text-base rounded-lg py-2 px-3 lg:px-6 md:px-5 sm:px-4 bg-white border border-[var(--color-primary)] hover:bg-transparent hover:text-[var(--color-primary)] duration-300 poppins-medium"
-                  }`}
-              >
-                {btn.text}
-              </Link>
-            ))}
-          </div>
 
           {/* Foote Btn */}
 
-          <div className="pt-6.5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
+          <div className="pt-6.5 overflow-x-auto relative sm:overflow-visible snap-x snap-mandatory">
             <div className="flex gap-3 w-max sm:w-full">
               {dvHorusData.footerNav.map((footbtns, idx) => (
-                <button key={idx} className='group w-72 bg-white hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base sm:text-lg md:text-xl lg:text-2xl rounded-tr-4xl lg:rounded-tr-[40px] px-3 py-6 relative snap-start'>
+                <button key={idx} className='group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium'>
                   <img
                     src={shapeBtn.src}
                     alt="icon"
@@ -162,7 +176,13 @@ const HoursSection = () => {
               ))}
             </div>
           </div>
-          
+
+        </div>
+        <div className='relative'>
+          <div className="absolute bottom-0  w-full  bg-gradient-to-t 
+    from-black/100 from-[10%]  
+    to-white to-[100%]  h-20">
+          </div>
         </div>
       </section>
     </>

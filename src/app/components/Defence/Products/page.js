@@ -151,6 +151,7 @@ const DefenceProducts = () => {
                     showNumeric={false}
                     showIcons={false}
                     showOperatingModes={false}
+                     showGunViolence={false}
                   />
                 )}
 

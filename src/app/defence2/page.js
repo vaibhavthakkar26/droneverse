@@ -13,9 +13,9 @@ const Defence2 = () => {
             <HeroDefenceSection />
             <HoursSection />
             <IronGridSection />
-            <RattlerSection />
-            <AndhkaarSection />
-            <GdsSection />
+            {/* <RattlerSection /> */}
+            {/* <AndhkaarSection /> */}
+            {/* <GdsSection /> */}
         </div>
     )
 }

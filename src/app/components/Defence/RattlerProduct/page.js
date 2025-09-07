@@ -78,7 +78,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
-import droneImage from "../../../../../public/assets/img/defence/rattler-drone.png";
+import droneImage from "../../../../../public/assets/img/defence/dvRattlerDrone.png";
+import droneImageOld from "../../../../../public/assets/img/defence/rattler-drone.png";
 import technicalDrawing from "../../../../../public/assets/img/defence/rattler-drawing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
 import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
@@ -97,18 +98,18 @@ const RattlerProduct = () => {
   return (
     <div className='relative bg-center bg-repeat-y bg-contain' style={{ backgroundImage: `url(${PatternBg.src})` }}>
 
-      <div className="relative px-4 py-12 pb-40 mx-auto max-w-7xl md:px-8 lg:px-8">
+      <div className="relative px-4 py-12 pt-16 pb-40 mx-auto lg:pt-32 xl:pt-40 max-w-7xl md:px-8 lg:px-8 md:pt-24">
         {/* Header + Drone Image */}
         <div className="grid items-start grid-cols-1 gap-8 mb-12 lg:grid-cols-2 lg:gap-12">
           {/* Left Content */}
-          <div>
-            <p className="text-[14px] md:text-[16px] text-[#5F5F5F] uppercase tracking-wider mb-2">
+          <div className="">
+            <p className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
               FPV DRONES
             </p>
-            <h1 className="text-[32px] sm:text-[40px] md:text-[52px] lg:text-[64px] font-bold text-black mb-6 leading-tight">
+            <h1 className="mb-10  text-4xl md:text-5xl xl:text-[64px] poppins-extrabold tracking-widest">
               DV RATTLER
             </h1>
-            <p className="text-[#5F5F5F] text-[15px] sm:text-[16px] md:text-[18px] leading-relaxed mb-6 max-w-lg">
+            <p className="mb-3 text-sm md:mb-6 lg:mb-8 text-black/70 md:text-base poppins-regular">
               Rattler is our 5 inch FPV Drone, built around the intrepid minds
               FPV parts ecosystem to allow the platform to configured with the
               ideal system based on the use case requirements.
@@ -131,7 +132,7 @@ const RattlerProduct = () => {
             <Image
               src={droneImage}
               alt="DV Rattler Drone"
-              className="w-[280px] sm:w-[400px] md:w-[550px] lg:w-[824px] h-auto object-contain"
+              className="w-[280px] sm:w-[400px] md:w-[500px] lg:w-[824px] h-auto object-contain"
               priority
             />
           </div>
@@ -144,6 +145,7 @@ const RattlerProduct = () => {
             showNumeric={false}
             showIcons={false}
             showOperatingModes={false}
+            showGunViolence={false}
           />
         )}
 
@@ -154,7 +156,7 @@ const RattlerProduct = () => {
           </button>
           <button
             onClick={() => setShowMore(!showMore)}
-            className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
+            className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-black font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
           >
             {showMore ? "Show Less" : "Show More"}
           </button>
@@ -165,7 +167,7 @@ const RattlerProduct = () => {
         <div className="pt-6.5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
           <div className="flex gap-3 w-max sm:w-full">
             {RattlersData.footerNav.map((footbtns, idx) => (
-              <button key={idx} className='group w-72 bg-white hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base sm:text-lg md:text-xl lg:text-2xl rounded-tr-4xl lg:rounded-tr-[40px] px-3 py-6 relative snap-start'>
+              <button key={idx} className='group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium'>
                 <img
                   src={shapeBtn.src}
                   alt="icon"

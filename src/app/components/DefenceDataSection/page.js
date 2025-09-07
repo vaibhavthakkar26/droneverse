@@ -67,60 +67,48 @@ const icon_values = [
 
 const key_features = [
   {
-    title: "Freestyle FPV PNP drone.",
+    title: "Global Streaming Capability",
     icon: featureIcon, // Icon placeholder
     description:
-      "",
+      "Secure live footage streaming with global access via AES-256 encrypted links.",
   },
   {
-    title: "Size: 5″ class.",
+    title: "Covert Operation",
     icon: featureIcon,
-    description: "",
+    description: " Ultra-low sound and visibility profile.",
   },
   {
-    title: "Agile and robust built using a custom carbon fibre frame.",
+    title: "Payload Flexibility",
     icon: featureIcon,
-    description: "",
+    description: "Modular design to support customer-specific payloads.",
   },
   {
-    title: "Modular and customizable.",
+    title: "All-Weather Performance",
     icon: featureIcon,
-    description: "",
+    description: "Operates in wind gusts up to 45 knots.",
   },
   {
-    title: "Freestyle and racing capabilities.",
-    icon: featureIcon,
-    description:
-      "",
-  },
-  {
-    title: "Easy learning curve from beginner to pro.",
+    title: "GNSS-Denied Navigation",
     icon: featureIcon,
     description:
-      "",
+      "Functions in denied environments via dead reckoning and autonomous GPS-based navigation.",
   },
   {
-    title: "Flight modes: Stabilized, Horizon (stabilized with flips), Acro.",
-    icon: featureIcon,
-    description: "",
-  },
-  {
-    title: "Analog or digital FPV video feed transmission (based on requirement)",
+    title: "Flexible Control Options",
     icon: featureIcon,
     description:
-      "",
+      "Compatible with handheld controllers, FPV goggles, or laptop-based command stations",
   },
   {
-    title: "Onboard and offboard recording with livestream at 4k 60FPS max (Digital version).",
+    title: "Secure Communications ",
     icon: featureIcon,
-    description:
-      "",
+    description: "Equipped with UAVTEK’s proprietary AES-256 encrypted radio system.",
   },
   {
-    title: "Hassle-free battery installation: 4S to 6S LiPo battery",
+    title: "Network Versatility",
     icon: featureIcon,
     description:
-      "",
+      "Adaptable to cellular networks, MANET radio modules, and satellite links for reliable urban and remote operations.",
   },
 ];
 
@@ -207,15 +195,15 @@ const DefenceDataSection = ({
   myTableBB = 'border-[#E6E6E6]',
   featureText = "text-black",
   featureBorder = 'border-[#F4F4F4]',
-  featureBg = "bg-gradient-to-b from-[#ffffff00] from-0% to-[#E6E6E6b3] to-100%", //bg-[#303030]
+  featureBg = "bg-gradient-to-b from-[#ffffff00] from-30% to-[#E6E6E6a1] to-100%", //bg-[#303030]
 }) => {
   return (
     <div>
       {showNumeric && numeric_values && (
-        <div className="flex items-center justify-center min-h-screen p-4 bg-gray-900">
+        <div className="flex items-center mt-10 mb-8 justify-center p-4 bg-white/10 rounded-[20px]">
           <div className="w-full max-w-7xl">
-            <div className="p-8 bg-black/20 rounded-2xl">
-              <div className="grid max-w-6xl grid-cols-2 gap-8 mx-auto lg:grid-cols-3">
+            <div className="p-8 rounded-2xl">
+              <div className="grid max-w-6xl gap-8 mx-auto grid-col-1 sm:grid-cols-2 lg:grid-cols-3">
                 {numeric_values.map((item, index) => (
                   <div
                     key={index}
@@ -248,7 +236,7 @@ const DefenceDataSection = ({
       {showIcons && icon_values && (
         <>
           {/* Features Section */}
-          <div className="flex flex-col items-center justify-center py-4 space-y-0 ">
+          <div className="flex flex-col items-center justify-center py-0 pb-4 space-y-0">
             <div className="w-full">
               <div className="pt-12.5 pb-7.5 px-7 bg-[#1A1A1A] rounded-2xl">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -268,13 +256,13 @@ const DefenceDataSection = ({
                       </div>
 
                       {/* Title */}
-                      <div className="text-base font-medium text-white md:text-lg lg:text-xl poppins-medium">
+                      <div className="mb-0 text-base font-medium text-white md:text-lg lg:text-xl poppins-medium">
                         {item.title}
                       </div>
 
                       {/* Description */}
-                      <div className="text-sm leading-relaxed text-black/40 max-w-48">
-                        {/* {item.description} */}
+                      <div className="mt-4 text-sm leading-relaxed text-white max-w-48">
+                        {item.description}
                       </div>
                     </div>
                   ))}
@@ -288,7 +276,7 @@ const DefenceDataSection = ({
       {showKeyFeatures && key_features && (
         <section className="py-0 mt-8">
           <div className="py-0 mx-auto">
-            <h2 className={`justify-start mb-10 text-2xl font-bold sm:text-3xl text-start ${myTitleColor}`}>
+            <h2 className={`justify-start mb-4 uppercase text-2xl text-start poppins-semibold ${myTitleColor}`}>
               Key Features
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -305,10 +293,10 @@ const DefenceDataSection = ({
                         <Image src={item.icon} alt={item.title} width={64} height={64} className="object-contain size-16" />
                       )}
                     </div>
-                    <h3 className={`mb-2 text-xl font-medium text-center poppins-medium ${featureText}`}>
+                    <h3 className={`mb-2 text-lg lg:text-xl font-medium text-center poppins-medium ${featureText}`}>
                       {item.title}
                     </h3>
-                    <p className={`text-sm text-center ${featureText}`}>
+                    <p className={`text-sm md:text-base text-center ${featureText}`}>
                       {item.description}
                     </p>
                   </div>
@@ -323,8 +311,8 @@ const DefenceDataSection = ({
       {showSpecifications && technical_specifications && (
         <section className="py-0 mt-8">
           <div className="mx-auto">
-            <div className={`overflow-x-auto rounded-lg shadow`}>
-              <table className={`min-w-full border rounded-[20px] overflow-hidden border-gray-200 ${myTablebg}`}>
+            <div className={`overflow-x-auto rounded-[20px]`}>
+              <table className={`min-w-full border rounded-[20px] overflow-hidden border-[#E6E6E6] ${myTablebg}`}>
                 <thead className={`text-left ${myTableHeader} rounded-t-[20px]`}>
                   <tr>
                     <th className={`px-7 py-5 text-sm md:text-base  poppins-medium ${myTableHeaderTitle}`}>
@@ -339,12 +327,12 @@ const DefenceDataSection = ({
                   {technical_specifications.map((item, index) => (
                     <tr
                       key={index}
-                      className={`border-b mx-10 ${myTableBB}  index % 2 === 0 ? "" : ""`}
+                      className={`border-b mx-10 pb-6 ${myTableBB}  index % 2 === 0 ? "" : ""`}
                     >
-                      <td className={`px-4 mx-10 py-3 text-sm ${myTableBodyTitle}`}>
+                      <td className={`px-6 mx-10 w-1/2 py-4  text-sm md:text-base poppins-medium ${myTableBodyTitle}`}>
                         {item.spec}
                       </td>
-                      <td className={`px-4 py-3 text-sm ${myTableBodyTitle}`}>
+                      <td className={`px-6 py-4  w-1/2 text-sm md:text-base poppins-medium ${myTableBodyTitle}`}>
                         {item.detail}
                       </td>
                     </tr>
@@ -376,10 +364,10 @@ const DefenceDataSection = ({
                       <Image src={item.icon} alt={item.title} width={50} height={50} />
                     )}
                   </div>
-                  <div className="mb-2 text-lg font-semibold text-black">
+                  <div className="mb-2 text-xl text-black poppins-medium">
                     {item.title}
                   </div>
-                  <p className="max-w-xs text-sm text-gray-600">
+                  <p className="max-w-xs text-base text-[#BABABA] poppins-regular">
                     {item.description}
                   </p>
                 </div>
@@ -392,7 +380,7 @@ const DefenceDataSection = ({
       {showGunViolence && gun_violence && (
         <section className="py-0 mt-8">
           <div className="py-0 mx-auto">
-            <h2 className={`justify-start mb-10 text-2xl font-bold sm:text-3xl text-start ${myTitleColor}`}>
+            <h2 className={`justify-start mb-6 text-2xl font-bold sm:text-3xl text-start ${myTitleColor}`}>
               Impact  Of ShotSpotter on Gun Violence
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

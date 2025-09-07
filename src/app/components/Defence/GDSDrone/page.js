@@ -16,16 +16,19 @@ import icon6 from "../../../../../public/assets/img/defence/icon6.png";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
 import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
 import Link from "next/link";
+import howWorks from '../../../../../public/assets/img/defence/how-work.png'
 import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
+import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
 import DefenceDataSection from "../../DefenceDataSection/page";
+import topGradbg from '../../../../../public/assets/img/defence/topGrad.png'
 
 const GDSDrones = () => {
 
   const [showMore, setShowMore] = useState(false)
 
   const gdsData = {
-    title: "GDS DRONES",
-    category: "Gunshot Detection System",
+    title: "Gunshot Detection DRONES",
+    category: "GUNSHOT DETECTION SYSTEM ",
     description:
       "Rattler is our 5 inch FPV Drone, built around the intrepid minds FPV parts ecosystem to allow the platform to be configured with the ideal system based on the use case requirements.",
 
@@ -324,27 +327,25 @@ const GDSDrones = () => {
     //   </div>
     // </div>
     <>
-      <section className='relative bg-center bg-repeat-y bg-contain pt-28 pb-[85px]' style={{ backgroundImage: `url(${PatternBg.src})` }}>
-        <div className="absolute top-0 z-[1] w-full h-20 bg-gradient-to-t from-white 0% to-black 20%">
-        </div>
+      <section className='relative pb-24 bg-center bg-repeat-y bg-contain pt-28' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+        {/* <div className="absolute top-0 z-[1] w-full h-20 bg-gradient-to-t from-white 0% to-black 20%">
+        </div> */}
 
-        <div className="relative">
-          <Image
-            src={leftWing}
-            alt="leftWing"
-            className="absolute top-0 left-0 hidden object-contain lg:w-28 md:w-20 -z-10 lg:block"
-          />
+        <div className={`absolute top-0 left-0 w-full h-40`} style={{backgroundImage: `url(${topGradbg.src})`}}></div>
+
+        <div className='relative'>
+          <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain -top-7 md:block md:w-9 lg:w-16' />
         </div>
         <div className="px-4 mx-auto max-w-7xl lg:px-8">
 
           {/* Flex Layout */}
           <div className="flex flex-col gap-4 md:flex-row">
             {/* Left - Content */}
-            <div className="relative z-0 w-full space-y-6 lg:w-4/6 md:w-full">
-              <h3 className="text-base uppercase poppins-medium text-[#5F5F5F] mb-4">
+            <div className="w-full mb-5 md:w-3/4 lg:w-4/5 lg:mb-8 md:mb-6">
+              <h3 className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
                 {gdsData.category}
               </h3>
-              <h2 className="text-5xl lg:text-6xl lg:pb-12 md:pb-8 md:mb-0 poppins-extrabold">
+              <h2 className="mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest">
                 {gdsData.title}
               </h2>
               <p className="w-full text-lg  xl:mb-[72px] lg:mb-12 mb-12  text-[#5F5F5F] md:w-full lg:w-4/5">
@@ -352,11 +353,11 @@ const GDSDrones = () => {
               </p>
 
               {/* Features */}
-              <ul className="grid grid-cols-1 gap-3 mt-6 text-black sm:grid-cols-2">
+              {/* <ul className="grid grid-cols-1 gap-2 mt-6 md:gap-4 md:grid-cols-2">
                 {gdsData.features.map((feature, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 text-sm md:text-base"
+                    className="flex items-center gap-2 text-sm md:text-base poppins-regular"
                   >
                     {feature.icon && (
                       <Image
@@ -368,7 +369,7 @@ const GDSDrones = () => {
                     <span>{feature.text}</span>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
 
             {/* Right - Main Image */}
@@ -426,12 +427,12 @@ const GDSDrones = () => {
             />
           )}
 
-          <div className="p-10 bg-[#CB7428] rounded-[20px] mt-8">
-            <h2 className="text-5xl font-semibold text-center text-white pb-14">How Does it Works?</h2>
+          <div className="px-9 pt-10 pb-6 bg-[#CB7428] rounded-[20px] mt-8">
+            <h2 className="pb-8 text-5xl text-center text-white poppins-semibold">How Does it Works?</h2>
 
             <div className="flex items-center">
               <div className="w-3/5">
-                <ul className="pl-10 space-y-4 list-disc marker:text-white">
+                <ul className="pl-16 list-disc space-y-7 marker:text-white">
                   {gdsData.works.map((step, index) => (
                     <li key={index}>
                       <p className="text-sm text-white md:text-base lg:text-xl poppins-medium">{step.title}</p>
@@ -440,7 +441,7 @@ const GDSDrones = () => {
                 </ul>
               </div>
               <div className="w-2/5">
-                <Image src={networkDiagram} alt="network Diagram" className="w-auto" />
+                <Image src={howWorks} alt="network Diagram" className="object-center w-[400px]" />
               </div>
             </div>
           </div>
@@ -452,7 +453,7 @@ const GDSDrones = () => {
             </button>
             <button
               onClick={() => setShowMore(!showMore)}
-              className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
+              className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-black font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
             >
               {showMore ? "Show Less" : "Show More"}
             </button>

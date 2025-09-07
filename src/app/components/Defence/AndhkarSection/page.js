@@ -9,6 +9,8 @@ import icon3 from "../../../../../public/assets/img/defence/iicon3.png";
 import icon4 from "../../../../../public/assets/img/defence/icon4.png";
 import icon5 from "../../../../../public/assets/img/defence/icon5.png";
 import icon6 from "../../../../../public/assets/img/defence/icon6.png";
+import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
+import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
 import DefenceDataSection from "../../DefenceDataSection/page";
 
 const AndhkarSection = () => {
@@ -50,20 +52,16 @@ const AndhkarSection = () => {
     //  bg-center bg-repeat-y bg-cover bg-blend-luminosity   style={{ backgroundImage: `url(${PatternBg.src})` }}
     <div className='relative bg-black ' >
       <div className="absolute top-0 left-0 w-full h-full">
-        <Image src={PatternBg} alt='bg' className="opacity-30 bg-blend-luminosity mix-blend-luminosity" />
+        <Image src={PatternBg} alt='bg' className="opacity-60 bg-blend-luminosity mix-blend-luminosity" />
       </div>
-      <div className="relative">
-        <Image
-          src={leftWing}
-          alt="leftWing"
-          className="absolute left-0 z-0 hidden object-contain -top-4 lg:w-28 md:w-20 lg:block"
-        />
+      <div className='relative'>
+        <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20' />
       </div>
-      <div className="pt-10 mx-auto pb-28 max-w-7xl lg:px-8 relative z-[1]">
+      <div className="pt-10 mx-auto pb-28 max-w-7xl px-4 lg:px-8 relative z-[1]">
         {/* Main Content Grid */}
-        <div className="grid items-start grid-cols-1 gap-6 mb-8 lg:grid-cols-2 md:gap-8 lg:gap-12 md:mb-12">
+        <div className="grid items-start grid-cols-1 gap-2 mb-8 lg:grid-cols-5 md:mb-8">
           {/* Left Column - Drone Image */}
-          <div className="order-1 mt-8 lg:order-1 sm:mt-12 md:mt-16 lg:mt-36 xl:mt-40">
+          <div className="order-1 col-span-2 mt-8 lg:order-1 sm:mt-12 md:mt-16 lg:mt-36 xl:mt-40">
             <div className="relative overflow-hidden rounded-lg">
               <Image
                 src={droneImage}
@@ -75,7 +73,7 @@ const AndhkarSection = () => {
           </div>
 
           {/* Right Column - Header, Description and Features */}
-          <div className="order-2 space-y-6 lg:order-2">
+          <div className="order-2 col-span-3 space-y-6 lg:order-2">
             {/* Header */}
             <div className="mb-6 text-left sm:mb-8 md:mb-10 lg:mb-12">
               <p className="text-[16px] md:text-[16px] text-[#F4F4F4] uppercase tracking-wider mb-2">
@@ -131,25 +129,27 @@ const AndhkarSection = () => {
             showNumeric={false}
             showIcons={true}
             showOperatingModes={false}
+            showGunViolence={false}
             myTitleColor="text-white"
             myTablebg="bg-[#1A1A1A]"
             myTableHeader="bg-[#5F5F5F]"
             myTableHeaderTitle='text-white'
             myTableBodyTitle='text-white'
-            myTableBB = 'border-[#5F5F5F66]'
+            myTableBB='border-[#5F5F5F66]'
             featureBg="bg-[#303030]"
             featureBorder="border-[#303030]"
             featureText="text-white"
           />
         )}
 
-        <div className="mt-16 mb-12 space-x-6">
-          <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
+        {/* Contact Button */}
+        <div className="mt-8 space-x-6">
+          <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
             Contact Us
           </button>
           <button
             onClick={() => setShowMore(!showMore)}
-            className="bg-black border border-[#FFB801] text-white hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
+            className="border border-[#FFB801] hover:bg-[#FFB801] text-white hover:text-black font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
           >
             {showMore ? "Show Less" : "Show More"}
           </button>
@@ -174,14 +174,19 @@ const AndhkarSection = () => {
                 <button
                   key={index}
                   className={`
-                    w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[260px] h-[60px] sm:h-[68px] md:h-[76px] lg:h-[82px] xl:h-[86px] border px-3 sm:px-4 md:px-6 py-3 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[20px] font-semibold transition-colors duration-200 rounded-tr-3xl whitespace-nowrap flex-shrink-0
+                   group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium
                     ${tab.active
                       ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
-                      : "border-white text-white hover:bg-white hover:text-black"
+                      : "border-white text-black hover:bg-[#E6E6E6] hover:text-black"
                     }
                   `}
                   disabled={tab.active}
                 >
+                  <img
+                    src={shapeBtn.src}
+                    alt="icon"
+                    className="absolute w-6 h-6 transition-opacity duration-300 opacity-0 left-px bottom-px group-hover:opacity-100"
+                  />
                   {tab.name}
                 </button>
               ))}
