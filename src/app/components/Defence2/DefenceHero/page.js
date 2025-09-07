@@ -31,13 +31,13 @@ const HeroDefenceSection = () => {
             </div>
 
             <div className='flex items-center justify-center'>
-              <div className='w-1/4 -me-32'>
+              <div className='w-1/4 -me-12 md:-me-24 lg:-me-32'>
                 <Image src={LeftRaddar} alt="left Raddar" className='object-center w-full' />
               </div>
               <div className='w-1/2'>
                 <Image src={IronGrid} alt="Iron Grid" className="object-contain w-full" />
               </div>
-              <div className='w-1/4 -ms-32'>
+              <div className='w-1/4 -ms-12 md:-ms-24 lg:-ms-32'>
                 <Image src={RigthRaddar} alt="right Raddar" className='object-center w-full' />
               </div>
             </div>

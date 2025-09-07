@@ -1,5 +1,12 @@
 import React from "react";
 import featureIcon from '../../../../public/assets/img/defence/feature-icon.png'
+import modeIcon1 from '../../../../public/assets/img/defence/modesIcon-1.png'
+import modeIcon2 from '../../../../public/assets/img/defence/modesIcon-2.png'
+import modeIcon3 from '../../../../public/assets/img/defence/modesIcon-3.png'
+import iconVal1 from '../../../../public/assets/img/defence/iconVal-1.png'
+import iconVal2 from '../../../../public/assets/img/defence/iconVal-2.png'
+import iconVal3 from '../../../../public/assets/img/defence/iconVal-3.png'
+import iconVal4 from '../../../../public/assets/img/defence/iconVal-4.png'
 import Image from "next/image";
 
 const numeric_values = [
@@ -37,22 +44,22 @@ const numeric_values = [
 
 const icon_values = [
   {
-    icon: "🤖",
+    icon: iconVal1,
     title: "AI at Work",
-    description: "True AI fingerprinting of unknown drones",
+    description: "True AI fingerprinting of unknown dronesv",
   },
   {
-    icon: "🎯",
+    icon: iconVal2,
     title: "All Platforms Access",
-    description: "Remote and Mobile access smartphone, tablet, and computer",
+    description: "Remote and Mobile access: smartphone, tablet, and computer",
   },
   {
-    icon: "💻",
+    icon: iconVal3,
     title: "Drone Swarm Detection",
     description: "Detect and alarm drone swarm attack",
   },
   {
-    icon: "🔍",
+    icon: iconVal4,
     title: "Direction & Location Findings",
     description: "Detect the direction and location of drones",
   },
@@ -103,13 +110,13 @@ const key_features = [
     description:
       "",
   },
-   {
+  {
     title: "Onboard and offboard recording with livestream at 4k 60FPS max (Digital version).",
     icon: featureIcon,
     description:
       "",
   },
-   {
+  {
     title: "Hassle-free battery installation: 4S to 6S LiPo battery",
     icon: featureIcon,
     description:
@@ -137,23 +144,53 @@ const technical_specifications = [
 const operating_modes = [
   {
     title: "Fixed Sensors",
-    icon: "🔒", // Icon placeholder
+    icon: modeIcon1,
     description:
       "Fixed installations for permanent surveillance of high-risk objects or critical areas. Sensors are mounted in discrete housings & connected to external powers.",
   },
   {
     title: "Deployed Sensors",
-    icon: "🎯", // Icon placeholder
+    icon: modeIcon2,
     description:
       "Temporary surveillance under an operation. The sensors are deployed in the environment running on own battery power.",
   },
   {
     title: "Roaming Sensors",
-    icon: "🚶", // Icon placeholder
+    icon: modeIcon3,
     description:
-      "Mobile surveillance under an operation or as an expansion of a fixed installation. Roaming sensors on personnel provides continuous gunshot positioned around a team.",
+      "Mobile survelliance under an operation or as an expansion of a fixed installation. Roaming sensors on personnel provides continuous gunshot positoned around a team.",
   },
 ];
+
+const gun_violence = [
+  {
+    title: "Reporting",
+    icon: featureIcon, // Icon placeholder
+    description:
+      "",
+  },
+  {
+    title: "Size: 5″ class.",
+    icon: featureIcon,
+    description: "",
+  },
+  {
+    title: "Agile and robust built using a custom carbon fibre frame.",
+    icon: featureIcon,
+    description: "",
+  },
+  {
+    title: "Modular and customizable.",
+    icon: featureIcon,
+    description: "",
+  },
+  {
+    title: "Freestyle and racing capabilities.",
+    icon: featureIcon,
+    description:
+      "",
+  },
+]
 
 const DefenceDataSection = ({
   showNumeric = true,
@@ -161,6 +198,16 @@ const DefenceDataSection = ({
   showKeyFeatures = true,
   showSpecifications = true,
   showOperatingModes = true,
+  showGunViolence = true,
+  myTitleColor = "text-black",
+  myTablebg = "bg-[#FBFCFC]",
+  myTableHeader = "bg-[#5F5F5F]",
+  myTableHeaderTitle = 'text-white',
+  myTableBodyTitle = 'text-black',
+  myTableBB = 'border-[#E6E6E6]',
+  featureText = "text-black",
+  featureBorder = 'border-[#F4F4F4]',
+  featureBg = "bg-gradient-to-b from-[#ffffff00] from-0% to-[#E6E6E6b3] to-100%", //bg-[#303030]
 }) => {
   return (
     <div>
@@ -203,7 +250,7 @@ const DefenceDataSection = ({
           {/* Features Section */}
           <div className="flex flex-col items-center justify-center py-4 space-y-0 ">
             <div className="w-full">
-              <div className="p-8 bg-[#1A1A1A] rounded-2xl">
+              <div className="pt-12.5 pb-7.5 px-7 bg-[#1A1A1A] rounded-2xl">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                   {icon_values.map((item, index) => (
                     <div
@@ -211,18 +258,23 @@ const DefenceDataSection = ({
                       className="flex flex-col items-center space-y-4 text-center"
                     >
                       {/* Icon */}
-                      <div className="mb-2 text-5xl md:text-6xl">
-                        {item.icon}
+                      <div className="mb-4.5 text-5xl md:text-6xl">
+                        {/* {item.icon} */}
+                        {typeof item.icon === "string" ? (
+                          <span className="text-5xl">{item.icon}</span>  // if emoji
+                        ) : (
+                          <Image src={item.icon} alt={item.title} width={70} height={70} className="object-contain size-[70px]" />
+                        )}
                       </div>
 
                       {/* Title */}
-                      <div className="text-lg font-semibold text-white">
+                      <div className="text-base font-medium text-white md:text-lg lg:text-xl poppins-medium">
                         {item.title}
                       </div>
 
                       {/* Description */}
-                      <div className="text-sm leading-relaxed text-gray-400 max-w-48">
-                        {item.description}
+                      <div className="text-sm leading-relaxed text-black/40 max-w-48">
+                        {/* {item.description} */}
                       </div>
                     </div>
                   ))}
@@ -234,33 +286,33 @@ const DefenceDataSection = ({
       )}
 
       {showKeyFeatures && key_features && (
-        <section className="py-12 ">
+        <section className="py-0 mt-8">
           <div className="py-0 mx-auto">
-            <h2 className="justify-start mb-10 text-2xl font-bold text-gray-900 sm:text-3xl text-start">
+            <h2 className={`justify-start mb-10 text-2xl font-bold sm:text-3xl text-start ${myTitleColor}`}>
               Key Features
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {key_features.map((item, index) => (
                 <div
                   key={index}
-                  className="relative flex flex-col items-center overflow-hidden  border shadow-md border-[#F4F4F4] rounded-xl"
+                  className={`relative flex flex-col items-center overflow-hidden  border shadow-md ${featureBorder} rounded-xl ${featureBg}`}
                 >
                   <div className="relative z-10 flex flex-col items-center w-full p-6 pt-10 pb-18">
                     <div className="mb-6 text-5xl text-yellow-500">
                       {typeof item.icon === "string" ? (
                         <span className="text-5xl">{item.icon}</span>  // if emoji
                       ) : (
-                        <Image src={item.icon} alt={item.title} width={50} height={50} />
+                        <Image src={item.icon} alt={item.title} width={64} height={64} className="object-contain size-16" />
                       )}
                     </div>
-                    <h3 className="mb-2 text-lg font-semibold text-center text-gray-900">
+                    <h3 className={`mb-2 text-xl font-medium text-center poppins-medium ${featureText}`}>
                       {item.title}
                     </h3>
-                    <p className="text-sm text-center text-gray-600">
+                    <p className={`text-sm text-center ${featureText}`}>
                       {item.description}
                     </p>
                   </div>
-                  <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b from-[#ffffff00] from-0% to-[#E6E6E6] to-100%'" />
+                  <div className={`w-full h-full absolute top-0 left-0 ${featureBg}`} />
                 </div>
               ))}
             </div>
@@ -269,30 +321,30 @@ const DefenceDataSection = ({
       )}
 
       {showSpecifications && technical_specifications && (
-        <section className="py-0 ">
+        <section className="py-0 mt-8">
           <div className="mx-auto">
-            <div className="overflow-x-auto rounded-lg shadow">
-              <table className="min-w-full bg-white border border-gray-200">
-                <thead className="text-gray-800 bg-gray-100">
+            <div className={`overflow-x-auto rounded-lg shadow`}>
+              <table className={`min-w-full border rounded-[20px] overflow-hidden border-gray-200 ${myTablebg}`}>
+                <thead className={`text-left ${myTableHeader} rounded-t-[20px]`}>
                   <tr>
-                    <th className="px-4 py-3 text-sm font-semibold text-left border-b border-gray-200 sm:text-base">
+                    <th className={`px-7 py-5 text-sm md:text-base  poppins-medium ${myTableHeaderTitle}`}>
                       Technical Specifications
                     </th>
-                    <th className="px-4 py-3 text-sm font-semibold text-left border-b border-gray-200 sm:text-base">
+                    <th className={`px-7 py-5 text-sm md:text-base  poppins-medium ${myTableHeaderTitle}`}>
                       Details
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="space-x-10 space-y-6">
                   {technical_specifications.map((item, index) => (
                     <tr
                       key={index}
-                      className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                      className={`border-b mx-10 ${myTableBB}  index % 2 === 0 ? "" : ""`}
                     >
-                      <td className="px-4 py-3 text-sm text-gray-700 border-b border-gray-200">
+                      <td className={`px-4 mx-10 py-3 text-sm ${myTableBodyTitle}`}>
                         {item.spec}
                       </td>
-                      <td className="px-4 py-3 text-sm text-gray-700 border-b border-gray-200">
+                      <td className={`px-4 py-3 text-sm ${myTableBodyTitle}`}>
                         {item.detail}
                       </td>
                     </tr>
@@ -305,7 +357,7 @@ const DefenceDataSection = ({
       )}
 
       {showOperatingModes && operating_modes && (
-        <section className="py-12 ">
+        <section className="py-0 mt-8">
           <div className="mx-auto">
             <h2 className="mb-10 text-2xl font-bold text-left text-gray-900">
               Operating Modes:
@@ -317,13 +369,54 @@ const DefenceDataSection = ({
                   key={index}
                   className="flex flex-col items-center px-4 text-center"
                 >
-                  <div className="mb-4 text-4xl">{item.icon}</div>
+                  <div className="mb-4 text-4xl">
+                    {typeof item.icon === "string" ? (
+                      <span className="text-5xl">{item.icon}</span>  // if emoji
+                    ) : (
+                      <Image src={item.icon} alt={item.title} width={50} height={50} />
+                    )}
+                  </div>
                   <div className="mb-2 text-lg font-semibold text-black">
                     {item.title}
                   </div>
                   <p className="max-w-xs text-sm text-gray-600">
                     {item.description}
                   </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {showGunViolence && gun_violence && (
+        <section className="py-0 mt-8">
+          <div className="py-0 mx-auto">
+            <h2 className={`justify-start mb-10 text-2xl font-bold sm:text-3xl text-start ${myTitleColor}`}>
+              Impact  Of ShotSpotter on Gun Violence
+            </h2>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {gun_violence.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative flex flex-col items-center overflow-hidden  border shadow-md ${featureBorder} rounded-xl ${featureBg}`}
+                >
+                  <div className="relative z-10 flex flex-col items-center w-full p-6 pt-10 pb-18">
+                    <div className="mb-6 text-5xl text-yellow-500">
+                      {typeof item.icon === "string" ? (
+                        <span className="text-5xl">{item.icon}</span>  // if emoji
+                      ) : (
+                        <Image src={item.icon} alt={item.title} width={64} height={64} className="object-contain size-16" />
+                      )}
+                    </div>
+                    <h3 className={`mb-2 text-xl font-medium text-center poppins-medium ${featureText}`}>
+                      {item.title}
+                    </h3>
+                    <p className={`text-sm text-center ${featureText}`}>
+                      {item.description}
+                    </p>
+                  </div>
+                  <div className={`w-full h-full absolute top-0 left-0 ${featureBg}`} />
                 </div>
               ))}
             </div>

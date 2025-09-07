@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import droneImage from "../../../../../public/assets/img/defence/andhkar-img.png";
 import Image from "next/image";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
-
+import PatternBg from '../../../../../public/assets/img/defence/PatternDark.png'
 import icon1 from "../../../../../public/assets/img/defence/icon1.png";
 import icon2 from "../../../../../public/assets/img/defence/icon2.png";
 import icon3 from "../../../../../public/assets/img/defence/iicon3.png";
@@ -47,15 +47,19 @@ const AndhkarSection = () => {
   ];
 
   return (
-    <div className="min-h-screen p-4 bg-black md:p-6 lg:p-8">
-      <div className="mx-auto max-w-7xl lg:px-8">
-        <div className="relative">
-          <Image
-            src={leftWing}
-            alt="leftWing"
-            className="absolute z-0 hidden object-contain -top-4 lg:w-28 md:w-20 lg:-left-32 md-left-0 lg:block"
-          />
-        </div>
+    //  bg-center bg-repeat-y bg-cover bg-blend-luminosity   style={{ backgroundImage: `url(${PatternBg.src})` }}
+    <div className='relative bg-black ' >
+      <div className="absolute top-0 left-0 w-full h-full">
+        <Image src={PatternBg} alt='bg' className="opacity-30 bg-blend-luminosity mix-blend-luminosity" />
+      </div>
+      <div className="relative">
+        <Image
+          src={leftWing}
+          alt="leftWing"
+          className="absolute left-0 z-0 hidden object-contain -top-4 lg:w-28 md:w-20 lg:block"
+        />
+      </div>
+      <div className="pt-10 mx-auto pb-28 max-w-7xl lg:px-8 relative z-[1]">
         {/* Main Content Grid */}
         <div className="grid items-start grid-cols-1 gap-6 mb-8 lg:grid-cols-2 md:gap-8 lg:gap-12 md:mb-12">
           {/* Left Column - Drone Image */}
@@ -117,26 +121,35 @@ const AndhkarSection = () => {
                 </div>
               ))}
             </div>
-          </div> 
+          </div>
         </div>
 
-       {showMore && (
-            <DefenceDataSection
-              showKeyFeatures={true}
-              showSpecifications={true}
-              showNumeric={false}
-              showIcons={true}
-              showOperatingModes={false}
-            />
-          )}
+        {showMore && (
+          <DefenceDataSection
+            showKeyFeatures={true}
+            showSpecifications={true}
+            showNumeric={false}
+            showIcons={true}
+            showOperatingModes={false}
+            myTitleColor="text-white"
+            myTablebg="bg-[#1A1A1A]"
+            myTableHeader="bg-[#5F5F5F]"
+            myTableHeaderTitle='text-white'
+            myTableBodyTitle='text-white'
+            myTableBB = 'border-[#5F5F5F66]'
+            featureBg="bg-[#303030]"
+            featureBorder="border-[#303030]"
+            featureText="text-white"
+          />
+        )}
 
         <div className="mt-16 mb-12 space-x-6">
-          <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base">
+          <button className="bg-[#FFB801] text-black font-semibold px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
             Contact Us
           </button>
           <button
             onClick={() => setShowMore(!showMore)}
-            className="bg-black border border-[#FFB801] text-[#FFB801] hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base"
+            className="bg-black border border-[#FFB801] text-white hover:bg-[#FFB801] hover:text-black font-semibold px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
           >
             {showMore ? "Show Less" : "Show More"}
           </button>

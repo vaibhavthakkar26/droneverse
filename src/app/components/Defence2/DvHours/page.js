@@ -7,7 +7,12 @@ import icon4 from '../../../../../public/assets/img/Defence2/highLight-icon-4.pn
 import icon5 from '../../../../../public/assets/img/Defence2/highLight-icon-5.png'
 import icon6 from '../../../../../public/assets/img/Defence2/highLight-icon-6.png'
 import featureIcon from '../../../../../public/assets/img/Defence2/feature-icon.png'
+import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
+import dvhoursDrone from '../../../../../public/assets/img/Defence2/DroneHours.png'
+import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
+import rightFlap from '../../../../../public/assets/img/Defence2/RightWing.png'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const HoursSection = () => {
 
@@ -71,13 +76,25 @@ const HoursSection = () => {
 
   return (
     <>
-      <section className='relative bg-center bg-repeat-y bg-cover border-t-2 border-t-red-500' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+      <section className='relative bg-center bg-repeat-y bg-contain' style={{ backgroundImage: `url(${PatternBg.src})` }}>
         <div className="absolute -z-10 inset-0 bg-gradient-to-b 
     from-black/100 from-[10%]  
-    to-white to-[100%]  h-32">
+    to-white to-[100%]  h-20">
         </div>
-        <div className='relative px-4 pb-20 mx-auto pt-28 max-w-7xl md:px-6 lg:px-8'>
-          <div className='w-3/5 mb-5 lg:mb-8 md:mb-6'>
+
+        <div className='relative'>
+          <Image src={leftFlap} alt='left wing' className='absolute left-0 object-contain w-14 top-20' />
+        </div>
+
+        <div className='relative'>
+          <Image src={rightFlap} alt="right flap" className='absolute right-0 bottom-auto object-contain w-20 top-96' />
+        </div>
+        <div className='relative'>
+          <Image src={dvhoursDrone} alt="dv Hours Drone" className="absolute right-0 object-contain w-2/5 lg:top-12 top-20" />
+        </div>
+
+        <div className='relative px-4 pt-32 pb-20 mx-auto max-w-7xl md:px-6 lg:px-8'>
+          <div className='w-full mb-5 md:w-3/5 lg:mb-8 md:mb-6'>
             <h4 className='mb-4 text-sm text-black/70 lg:text-base poppins-medium'>{dvHorusData.subtitle}</h4>
             <h2 className='mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest'>{dvHorusData.title}</h2>
             <p className='text-sm text-black/70 md:text-base poppins-regular'>{dvHorusData.description}</p>
@@ -85,7 +102,7 @@ const HoursSection = () => {
 
           {/* highlight data */}
 
-          <div className='w-2/3'>
+          <div className='w-full md:w-2/3 '>
             <div className="grid grid-cols-2 gap-4 mt-6 md:grid-cols-2">
               {dvHorusData.highlights.map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
@@ -129,6 +146,23 @@ const HoursSection = () => {
             ))}
           </div>
 
+          {/* Foote Btn */}
+
+          <div className="pt-6.5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
+            <div className="flex gap-3 w-max sm:w-full">
+              {dvHorusData.footerNav.map((footbtns, idx) => (
+                <button key={idx} className='group w-72 bg-white hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base sm:text-lg md:text-xl lg:text-2xl rounded-tr-4xl lg:rounded-tr-[40px] px-3 py-6 relative snap-start'>
+                  <img
+                    src={shapeBtn.src}
+                    alt="icon"
+                    className="absolute w-6 h-6 transition-opacity duration-300 opacity-0 left-px bottom-px group-hover:opacity-100"
+                  />
+                  {footbtns.text}
+                </button>
+              ))}
+            </div>
+          </div>
+          
         </div>
       </section>
     </>

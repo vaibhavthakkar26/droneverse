@@ -81,14 +81,23 @@ import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
 import droneImage from "../../../../../public/assets/img/defence/rattler-drone.png";
 import technicalDrawing from "../../../../../public/assets/img/defence/rattler-drawing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
+import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
 
 const RattlerProduct = () => {
   const [showMore, setShowMore] = useState(false);
 
+  const RattlersData = {
+    footerNav: [
+      { text: "DV COBRA", link: "#" },
+      { text: "DV  RATTLER", link: "#" },
+      { text: "DV VIPER", link: "#" },
+    ],
+  }
+
   return (
     <div className='relative bg-center bg-repeat-y bg-contain' style={{ backgroundImage: `url(${PatternBg.src})` }}>
 
-      <div className="relative px-4 py-12 pb-32 mx-auto max-w-7xl md:px-8 lg:px-8">
+      <div className="relative px-4 py-12 pb-40 mx-auto max-w-7xl md:px-8 lg:px-8">
         {/* Header + Drone Image */}
         <div className="grid items-start grid-cols-1 gap-8 mb-12 lg:grid-cols-2 lg:gap-12">
           {/* Left Content */}
@@ -139,37 +148,37 @@ const RattlerProduct = () => {
         )}
 
         {/* Contact Button */}
-        <div className="mt-16 mb-12 space-x-6">
-          <button className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] bg-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-black hover:text-white">
+        <div className="mt-8 space-x-6">
+          <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
             Contact Us
           </button>
           <button
             onClick={() => setShowMore(!showMore)}
-            className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] border border-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-[#FFB800] hover:text-black"
+            className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
           >
             {showMore ? "Show Less" : "Show More"}
           </button>
         </div>
 
-        {/* Navigation Tabs */}
-        <div className="flex flex-col flex-wrap justify-center gap-4 sm:flex-row sm:gap-6 lg:justify-start">
-          <button className="w-full sm:w-[240px] md:w-[260px] lg:w-[301px] h-[64px] sm:h-[72px] md:h-[80px] lg:h-[86px] border border-black text-black px-6 sm:px-8 py-3 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-semibold transition-colors duration-200 hover:bg-black hover:text-white rounded-tr-3xl">
-            DV COBRA
-          </button>
+        {/* Foote Btn */}
 
-          <div className="bg-black rounded-tr-3xl">
-            <button className="w-full sm:w-[240px] md:w-[260px] lg:w-[301px] h-[64px] sm:h-[72px] md:h-[80px] lg:h-[86px] border border-[#E6E6E6] bg-[#E6E6E6] text-black px-6 sm:px-8 py-3 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-semibold cursor-not-allowed rounded-tr-3xl rounded-bl-2xl">
-              DV RATTLER
-            </button>
+        <div className="pt-6.5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
+          <div className="flex gap-3 w-max sm:w-full">
+            {RattlersData.footerNav.map((footbtns, idx) => (
+              <button key={idx} className='group w-72 bg-white hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base sm:text-lg md:text-xl lg:text-2xl rounded-tr-4xl lg:rounded-tr-[40px] px-3 py-6 relative snap-start'>
+                <img
+                  src={shapeBtn.src}
+                  alt="icon"
+                  className="absolute w-6 h-6 transition-opacity duration-300 opacity-0 left-px bottom-px group-hover:opacity-100"
+                />
+                {footbtns.text}
+              </button>
+            ))}
           </div>
-
-          <button className="w-full sm:w-[240px] md:w-[260px] lg:w-[301px] h-[64px] sm:h-[72px] md:h-[80px] lg:h-[86px] border border-black text-black px-6 sm:px-8 py-3 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] font-semibold hover:bg-black hover:text-white transition-colors duration-200 rounded-tr-3xl">
-            DV VIPER
-          </button>
         </div>
       </div>
 
-      <div className="absolute bottom-0 z-20 w-full h-14 bg-gradient-to-b from-white 0% to-black 10%">
+      <div className="absolute bottom-0 z-20 w-full h-20 bg-gradient-to-b from-white 0% to-black 20%">
       </div>
     </div>
   );

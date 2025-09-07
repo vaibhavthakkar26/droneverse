@@ -16,6 +16,7 @@ import icon6 from "../../../../../public/assets/img/defence/icon6.png";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
 import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
 import Link from "next/link";
+import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
 import DefenceDataSection from "../../DefenceDataSection/page";
 
 const GDSDrones = () => {
@@ -46,6 +47,23 @@ const GDSDrones = () => {
 
     buttonText: "Contact Us",
     buttonLink: "/",
+
+    works: [{
+      step: 1,
+      title: "Gunshot Fired",
+    },
+    {
+      step: 2,
+      title: "Acoustic Fingerprint Detected"
+    },
+    {
+      step: 3,
+      title: "Detection Forwarded to Backend"
+    },
+    {
+      step: 4,
+      title: "Location & Gunshot Information Extracted"
+    }],
   };
 
   return (
@@ -306,15 +324,18 @@ const GDSDrones = () => {
     //   </div>
     // </div>
     <>
-      <section className="relative pt-[75px] pb-[116px] overflow-hidden">
+      <section className='relative bg-center bg-repeat-y bg-contain pt-28 pb-[85px]' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+        <div className="absolute top-0 z-[1] w-full h-20 bg-gradient-to-t from-white 0% to-black 20%">
+        </div>
+
+        <div className="relative">
+          <Image
+            src={leftWing}
+            alt="leftWing"
+            className="absolute top-0 left-0 hidden object-contain lg:w-28 md:w-20 -z-10 lg:block"
+          />
+        </div>
         <div className="px-4 mx-auto max-w-7xl lg:px-8">
-          <div className="relative">
-            <Image
-              src={leftWing}
-              alt="leftWing"
-              className="absolute hidden object-contain lg:w-28 md:w-20 -top-16 lg:-left-32 -z-10 md-left-0 lg:block"
-            />
-          </div>
 
           {/* Flex Layout */}
           <div className="flex flex-col gap-4 md:flex-row">
@@ -383,7 +404,7 @@ const GDSDrones = () => {
               className="object-contain xl:w-[337px] lg:ms-4  lg:-mt-72 w-1/2 sm:w-44 lg:w-64 md:w-1/3"
             /> */}
 
-            {/* {gdsData.bottomSection.map((item, index) => (
+          {/* {gdsData.bottomSection.map((item, index) => (
               <div key={index} className={`${item.maxW, item.revTop} relative`}>
                 <Image
                   src={item.img}
@@ -401,44 +422,42 @@ const GDSDrones = () => {
               showSpecifications={false}
               showNumeric={false}
               showIcons={false}
+              showGunViolence={true}
             />
           )}
 
+          <div className="p-10 bg-[#CB7428] rounded-[20px] mt-8">
+            <h2 className="text-5xl font-semibold text-center text-white pb-14">How Does it Works?</h2>
+
+            <div className="flex items-center">
+              <div className="w-3/5">
+                <ul className="pl-10 space-y-4 list-disc marker:text-white">
+                  {gdsData.works.map((step, index) => (
+                    <li key={index}>
+                      <p className="text-sm text-white md:text-base lg:text-xl poppins-medium">{step.title}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="w-2/5">
+                <Image src={networkDiagram} alt="network Diagram" className="w-auto" />
+              </div>
+            </div>
+          </div>
+
           {/* Contact Button */}
-          <div className="mt-16 mb-12 space-x-6">
-            <button className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] bg-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-black hover:text-white">
+          <div className="mt-8 space-x-6">
+            <button className="border border-[#FFB801] hover:border-black bg-[#FFB801] hover:bg-black text-black hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer">
               Contact Us
             </button>
             <button
               onClick={() => setShowMore(!showMore)}
-              className="w-[180px] sm:w-[220px] md:w-[240px] h-[50px] sm:h-[60px] md:h-[64px] border border-[#FFB800] text-black font-semibold text-[14px] sm:text-[16px] md:text-[18px] rounded-md transition-colors duration-200 hover:bg-[#FFB800] hover:text-black"
+              className="border border-[#FFB801] hover:bg-[#FFB801] hover:text-white font-medium px-6 md:px-8 py-2 md:py-2.5 rounded-lg transition-colors duration-200 shadow-sm text-sm md:text-base cursor-pointer"
             >
               {showMore ? "Show Less" : "Show More"}
             </button>
           </div>
 
-          {/* Button
-          <Link
-            href={gdsData.buttonLink}
-            className="inline-block px-7 py-2 md:mt-5 mt-10 text-dark transition bg-[var(--color-primary)] rounded-lg shadow"
-          >
-            {gdsData.buttonText}
-          </Link>
-
-          <button
-            className="inline-block px-7 py-2 md:mt-5 mt-10 text-dark transition border border-[#FFB801] mx-6 hover:bg-[var(--color-primary)] rounded-lg shadow"
-          >
-            Show More
-          </button> */}
-
-          {/* Full Wing */}
-          <div className="relative">
-            <Image
-              src={fullWing}
-              alt="fullWing"
-              className="absolute object-contain lg:-bottom-24 lg:w-80 md:w-72 lg:-right-52 md:-bottom-20 -z-10 md:-right-48 w-60 -bottom-20 xl:-right-64 -right-40"
-            />
-          </div>
         </div>
       </section>
     </>
