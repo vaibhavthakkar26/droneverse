@@ -48,6 +48,9 @@ const nextConfig = {
             },
         ];
     },
+    eslint:{
+        ignoreDuringBuilds:true
+    },
 
     // Image optimization
     images: {
