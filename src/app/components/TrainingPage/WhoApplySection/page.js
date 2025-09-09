@@ -8,6 +8,10 @@ import Maintainance from "../../../../../public/assets/img/training/maintainance
 import WhoApplyBg from "../../../../../public/assets/img/training/who-apply-bg.png";
 import RightFrame from "../../../../../public/assets/img/training/right-frame.png";
 import fillShape from '../../../../../public/assets/img/training/fillShape.png'
+import classroom from "../../../../../public/assets/img/training/classroom.png";
+import flight from "../../../../../public/assets/img/training/flight.png";
+import flightMode from "../../../../../public/assets/img/training/flight mode.png";
+import drone from "../../../../../public/assets/img/training/drone.png";
 
 const WhoApplySection = () => {
   const [activeTab, setActiveTab] = useState("Defence");
@@ -174,7 +178,32 @@ const WhoApplySection = () => {
       },
     ],
   };
-
+  const trainingFacilities = [
+    {
+      title: "Flight Zones",
+      image: flight,
+      description:
+        "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots.",
+    },
+    {
+      title: "Dedicated Flight-modes",
+      image: flightMode,
+      description:
+        "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots.",
+    },
+    {
+      title: "Classrooms & labs",
+      image: classroom,
+      description:
+        "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots.",
+    },
+    {
+      title: "Drone Maintenance Workshop",
+      image: drone,
+      description:
+        "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots.",
+    },
+  ];
   return (
     <div
       className="relative px-4 py-8 bg-center bg-cover sm:py-12 lg:py-16"
@@ -239,6 +268,47 @@ const WhoApplySection = () => {
           </div>
         </div>
 
+        <div className="pb-12 mx-auto max-w-7xl">
+          <div className="px-4 mb-8 text-center sm:mb-12">
+            <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl sm:mb-6">
+              Training Facilities
+            </h2>
+            <p className="max-w-4xl mx-auto text-base leading-relaxed text-gray-600 sm:text-lg">
+              Welcome to DroneVerse, where we redefine India's drone industry.
+              Driven by a vision to create world-class drone pilots, we go above
+              & beyond in everything we do. Recognized in the esteemed World
+              Book of Records.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
+            {trainingFacilities.map((facility, index) => (
+              <div
+                key={index}
+                className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full max-w-[302px] mx-auto lg:mx-0"
+              >
+                <h3 className="px-4 py-4 text-base font-semibold text-gray-900 sm:text-lg sm:py-5">
+                  {facility.title}
+                </h3>
+                <div className="relative w-full h-[140px] sm:h-[162px] overflow-hidden">
+                  <Image
+                    src={facility.image}
+                    alt={facility.title}
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                    fill
+                  />
+                </div>
+
+                <div className="p-4 sm:p-6">
+                  <p className="text-black text-sm sm:text-base lg:text-[18px] leading-relaxed">
+                    {facility.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Category Tabs */}
         <div className="relative flex justify-center mb-6 sm:mb-8">
           <Image src={fillShape} alt="shape" className="absolute w-40 -left-6 -top-5" />
@@ -247,11 +317,10 @@ const WhoApplySection = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${
-                  activeTab === tab
+                className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${activeTab === tab
                     ? "bg-[#FFB801] text-black"
                     : "bg-transparent text-gray-600"
-                }`}
+                  }`}
               >
                 {tab}
               </button>
@@ -334,7 +403,7 @@ const WhoApplySection = () => {
                   ))}
                 </ul>
                 <div className="flex flex-col gap-2 sm:flex-row">
-                    <button className="flex-1 border border-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-10 transition-colors">
+                  <button className="flex-1 border border-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-10 transition-colors">
                     Details
                   </button>
                   <button className="flex-1 bg-[#FFB801] text-black text-sm sm:text-[16px] py-2 px-4 rounded-md cursor-pointer hover:bg-[#FFB801] hover:bg-opacity-90 transition-colors">

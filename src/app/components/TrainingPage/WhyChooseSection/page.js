@@ -7,6 +7,8 @@ import flightMode from "../../../../../public/assets/img/training/flight mode.pn
 import drone from "../../../../../public/assets/img/training/drone.png";
 import SectionBg from "../../../../../public/assets/img/training/why-choose-bg.png";
 import LeftFrame from "../../../../../public/assets/img/training/left-frame.png";
+import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
+
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -77,9 +79,9 @@ const WhyChoose = () => {
 
   return (
     <div
-      className="relative px-4 py-8 bg-center bg-no-repeat bg-cover sm:py-12 lg:py-16 sm:px-6 lg:px-8"
+      className="relative px-4 py-8 bg-[#080114] bg-center bg-repeat-y bg-contain sm:py-12 lg:py-16 sm:px-6 lg:px-8  bg-blend-luminosity"
       style={{
-        backgroundImage: `url(${SectionBg.src || SectionBg})`,
+        backgroundImage: `url(${newPattern.src || newPattern.src})`,
       }}
     >
       {/* Optional overlay for better text readability */}
@@ -91,11 +93,8 @@ const WhyChoose = () => {
           <div className="text-center mb-12 sm:mb-16 w-full max-w-[675px] mx-auto px-4">
             <div
               className="inline-block 
-    text-base sm:text-xl md:text-2xl lg:text-[36px] 
-    bg-[#FFC634] text-white text-center 
-    px-4 sm:px-6 lg:px-8 py-2 sm:py-3 
-    rounded-[20px] font-semibold 
-    mb-6 sm:mb-8 
+    text-base sm:text-xl md:text-2xl lg:text-[36px]  text-white text-center 
+    px-4 sm:px-6 lg:px-8 py-2 sm:py-3  poppins-semibold
     w-full sm:w-auto max-w-full"
             >
               Why choose Droneverse RPTO?
@@ -107,9 +106,9 @@ const WhyChoose = () => {
             {whyChooseData.map((item, index) => (
               <div
                 key={index}
-                className="p-3 sm:p-4 w-full max-w-full sm:max-w-[430px] mx-auto lg:mx-0"
+                className="p-3 sm:p-4 w-full pt-6 pb-7 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full sm:max-w-[430px] mx-auto lg:mx-0 bg-[#161616]"
               >
-                <div className="flex items-start space-x-3 sm:space-x-4">
+                <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
                   <div className="flex-shrink-0 mb-2 text-3xl">
                     <Image
                       src={item.icon}
@@ -120,10 +119,10 @@ const WhyChoose = () => {
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="mb-2 text-base font-semibold text-black sm:text-lg lg:text-xl">
+                    <h3 className="mb-2 text-base font-semibold text-white sm:text-lg lg:text-xl">
                       {item.title}
                     </h3>
-                    <p className="text-xs leading-relaxed text-black sm:text-sm lg:text-base">
+                    <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
                       {item.description}
                     </p>
                   </div>
@@ -138,10 +137,10 @@ const WhyChoose = () => {
             alt="Left Frame"
             width={350}
             height={350}
-            className="h-auto -translate-x-6 lg:w-16 lg:translate-y-24 xl:w-20"
+            className="hidden h-auto -translate-x-6 lg:w-16 lg:translate-y-24 xl:w-20"
           />
         </div>
-        <div className="mx-auto max-w-7xl">
+        <div className="hidden mx-auto max-w-7xl">
           <div className="px-4 mb-8 text-center sm:mb-12">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl sm:mb-6">
               Training Facilities
