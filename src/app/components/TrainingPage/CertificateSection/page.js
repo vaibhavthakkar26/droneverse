@@ -11,18 +11,18 @@ import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
 import iconicSHape from '../../../../../public/assets/img/training/bgShapeDrone.png'
 
 const CertificateSection = () => {
-  return (
-    <div>
-      <section className="relative flex flex-col gap-10 px-6 py-12 mx-auto max-w-7xl lg:flex-row">
+    return (
+        <div>
+            <section className="relative flex flex-col gap-4 px-2 py-12 mx-auto md:gap-0 lg:gap-10 md:px-3 max-w-7xl lg:flex-row lg:px-8">
                 <div className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10" style={{ backgroundImage: `url(${sectionBg.src})` }}></div>
                 {/* Left Content */}
-                <div className="relative space-y-6 bg-gradient-to-b rounded-[10px] p-6  md:p-8 from-[#D9D9D91A] from-[20%] to-[#73737300] to-[100%] lg:w-1/2">
+                <div className="relative space-y-6 rounded-[10px] p-4 sm:p-6  md:p-8  lg:w-1/2">
                     {/* Decorative Shape */}
-                    <Image
-                        src={transShape}
+                    {/* <Image
+                        src={iconicSHape}
                         alt="fill shape"
                         className="absolute z-0 object-contain size-16 lg:size-[86px] top-12 xl:top-7 xl:right-24 md:right-16 md:top-16 right-5"
-                    />
+                    /> */}
 
                     {/* Government Approve Logo */}
                     <Image
@@ -61,19 +61,19 @@ const CertificateSection = () => {
                     <Image
                         src={iconicSHape}
                         alt="fill shape"
-                        className="absolute -z-[1] object-contain bottom-20 size-14 right-18 xl:bottom-24 xl:right-44"
+                        className="absolute -z-[1] object-contain -bottom-10 md:-bottom-16 size-12 lg:size-14  md:left-16 lg:-right-6 lg:left-auto lg:-bottom-4"
+                    />
+                    <Image
+                        src={iconicSHape}
+                        alt="fill shape"
+                        className="absolute top-0 block object-contain md:right-8 lg:-right-6 right-8 -z-10 lg:size-14 size-12 "
                     />
                 </div>
-
                 {/* Right Images */}
-                <div className="relative grid grid-cols-2 gap-4 lg:w-1/2">
+                <div className="relative grid w-full grid-cols-2 gap-4 mx-auto md:w-2/3 lg:w-1/2">
                     {/* Main Image */}
                     <div className="relative flex">
-                        <Image
-                            src={iconicSHape}
-                            alt="fill shape"
-                            className="absolute block object-contain lg:-left-5/12 -top-10 -z-10 size-24 -left-2/3 lg:top-6 xl:-top-5"
-                        />
+
                         <Image
                             src={dgca1}
                             alt="Mission Control Center"
@@ -95,13 +95,13 @@ const CertificateSection = () => {
                         <Image
                             src={dgca3}
                             alt="Drone Practice"
-                            className="relative z-0 object-contain size-60"
+                            className="relative z-0 object-contain lg:-mt-2 md:size-60 size-auto"
                         />
                     </div>
                 </div>
             </section>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default CertificateSection;

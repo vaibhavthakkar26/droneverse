@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import SliderOne from "../../../../../public/assets/img/training/sliderOne.png";
 import SliderTwo from "../../../../../public/assets/img/training/sliderTwo.png";
 import SliderThree from "../../../../../public/assets/img/training/sliderThree.png";
+import gRating from '../../../../../public/assets/img/training/googleRateings.png'
 import Image from "next/image";
 
 const ImageSliderSection = () => {
@@ -18,9 +19,20 @@ const ImageSliderSection = () => {
   }, [images.length]);
 
   return (
-    <div className="max-w-7xl mx-auto py-8 md:py-16 overflow-hidden">
+    <div className="py-8 mx-auto overflow-hidden max-w-7xl md:py-16">
+
+         <div className="px-4 mb-8 text-center sm:mb-12">
+          <Image src={gRating} alt="g rate" className="object-contain w-auto mx-auto mb-4" />
+              <h2 className="mb-4 text-2xl font-bold text-black sm:text-3xl md:text-4xl sm:mb-6 poppins-bold">
+                See what people are talking
+              </h2>
+              <p className="w-full max-w-4xl mx-auto text-base leading-relaxed text-[#5F5F5F] sm:text-lg poppins-regular">
+               Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.
+              </p>
+            </div>
+      
       <div 
-        className="flex gap-4 md:gap-6 transition-transform duration-1000 ease-in-out"
+        className="flex gap-4 transition-transform duration-1000 ease-in-out md:gap-6"
         style={{
           transform: `translateX(-${currentIndex * (300 + 24)}px)`, 
         }}

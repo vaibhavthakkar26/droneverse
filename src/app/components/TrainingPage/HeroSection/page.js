@@ -19,34 +19,30 @@ const HeroSection = () => {
   ];
   return (
     <div>
-      <section className="relative flex flex-wrap items-center pt-32 pb-0">
+      <section className="relative flex flex-wrap items-center pb-0 lg:pt-32 md:pt-28">
         {/* Background pattern */}
         <div
           className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10"
           style={{ backgroundImage: `url(${sectionBg.src})` }}
         ></div>
 
-        <div className="relative flex flex-wrap px-2 mx-auto max-w-7xl md:px-8">
+        <div className="relative flex flex-wrap px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
           <Image
             src={iconicSHape}
             alt="fill shape"
-            className="absolute block object-contain top-12 xl:-left-2 -left-20 -z-10 size-44"
+            className="absolute block object-contain lg:bottom-20 lg:left-96 -z-10 size-12 lg:size-14 md:bottom-16 md:left-72"
           />
-          <Image src={HeroDrone} alt="new drone" className="absolute -translate-x-1/2 -top-2 w-60 left-1/2" />
+          <Image src={HeroDrone} alt="new drone" className="absolute lg:-top-14 lg:-translate-x-1/2 xl:-top-2 xl:w-60 lg:left-1/2 md:w-48 left-1/2 z-[1] -top-10" />
           {/* Left content */}
-          <div className="relative flex flex-col w-full space-y-6 sm:w-2/3 xl:py-20 md:w-3/5">
-            <h2 className="text-4xl leading-tight xl:text-7xl lg:text-6xl md:text-5xl poppins-bold">
+          <div className="relative flex flex-col w-full pt-10 space-y-6 sm:w-2/3 xl:pt-12 xl:pb-28 md:w-3/5 lg:pb-24 lg:pt-10 md:pt-12 md:pb-16">
+            <h2 className="z-10 mb-3 text-4xl leading-tight xl:text-7xl lg:text-6xl poppins-bold md:text-5xl">
               INDIA’S TOP <br /> DGCA-CERTIFIED INSTITUTE
             </h2>
-            <p className="relative z-10 mt-4 text-2xl poppins-regular-italic leading-full gray-600  md:text-3xl lg:text-[32px]">
+            <p className="relative z-10 mt-0 text-2xl poppins-medium-italic leading-full gray-600  lg:text-[32px] ">
               Powered by Passion, Backed by DGCA
-              <Image
-                src={iconicSHape}
-                alt="fill shape"
-                className="absolute bottom-0 right-0 object-contain size-14"
-              />
+              
             </p>
-            <button className="px-6 py-2 rounded-lg relative z-10 bg-[var(--color-primary)] poppins-medium cursor-pointer w-fit">
+            <button className="px-6 py-2 rounded-lg relative z-10 bg-[var(--color-primary)] poppins-medium cursor-pointer w-fit xl:mt-8 lg:mt-6 md:mt-4 ">
               Enroll Now
             </button>
           </div>
@@ -56,18 +52,24 @@ const HeroSection = () => {
             <Image
               src={iconicSHape}
               alt="fill shape"
-              className="absolute left-0 z-0 object-contain -top-5 w-28"
+              className="absolute -z-[1] object-contain top-5 lg:top-5 md:top-8 left-24 lg:size-14 size-12 md:left-32 "
             />
+
+            <Image
+                src={iconicSHape}
+                alt="fill shape"
+                className="absolute object-contain lg:left-0 md:bottom-8 lg:bottom-16 lg:size-14 size-12 bottom-10 left-6"
+              />
 
             <Image
               src={HeroPilot}
               alt="Drone Pilot"
-              className="relative object-contain w-full z-1 -mb-3.5"
+              className="relative object-contain w-full z-1 lg:-mb-3.5 -mb-2"
             />
             <Image
               src={iconicSHape}
               alt="fill shape"
-              className="absolute bottom-0 z-0 object-contain size-56 -left-2 md:-left-10 md:-bottom-12 md:size-48 xl:bottom-8 xl:left-8"
+              className="absolute top-0 right-0 z-0 ject-contain lg:top-24 lg:size-14 md:top-28 md:size-12 size-12"
             />
           </div>
           <div className="container hidden">
@@ -103,8 +105,8 @@ const HeroSection = () => {
       </section>
       <section className='relative bg-bottom' style={{ backgroundImage: `url(${counterBg.src})` }}>
         <Image src={counterBg2} alt="bg" className="absolute top-0 left-0 w-full h-full" />
-        <div className="relative px-2 mx-auto max-w-7xl lg:px-8">
-          <div className="flex flex-wrap items-start pt-[53px] pb-[47px]">
+        <div className="relative px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
+          <div className="flex flex-wrap items-start pt-[53px] pb-[47px] md:py-11">
             {traningStats.map((item, idx) => (
               <div
                 key={idx}

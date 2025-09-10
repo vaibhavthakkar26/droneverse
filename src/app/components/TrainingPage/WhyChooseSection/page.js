@@ -8,7 +8,11 @@ import drone from "../../../../../public/assets/img/training/drone.png";
 import SectionBg from "../../../../../public/assets/img/training/why-choose-bg.png";
 import LeftFrame from "../../../../../public/assets/img/training/left-frame.png";
 import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
-
+import counterBg2 from '../../../../../public/assets/img/training/counterbg2.png'
+import counterBg from '../../../../../public/assets/img/training/counterBg.png'
+import whoApply1 from '../../../../../public/assets/img/training/whoApply-1.png'
+import whoApply2 from '../../../../../public/assets/img/training/whoApply-2.png'
+import whoApply3 from '../../../../../public/assets/img/training/whoApply-3.png'
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -77,70 +81,85 @@ const WhyChoose = () => {
     },
   ];
 
+  const whoApply = [{
+    icon: whoApply1,
+    title: "Age Limit ",
+    description:
+      "18-65 Years",
+  }, {
+    icon: whoApply2,
+    title: "Education",
+    description:
+      "10th Pass",
+  }, {
+    icon: whoApply3,
+    title: "Valid Govt. Id ",
+    description:
+      "Adhaar,Pan,Voter Id, Passport",
+  },]
+
   return (
-    <div
-      className="relative px-4 py-8 bg-[#080114] bg-center bg-repeat-y bg-contain sm:py-12 lg:py-16 sm:px-6 lg:px-8  bg-blend-luminosity"
-      style={{
-        backgroundImage: `url(${newPattern.src || newPattern.src})`,
-      }}
-    >
-      {/* Optional overlay for better text readability */}
-      {/* <div className="absolute inset-0 bg-white/90"></div> */}
+    <div>
+      <div
+        className="relative px-2 py-8 bg-[#080114] bg-center bg-repeat-y bg-contain sm:py-12 md:px-3 lg:px-8  bg-blend-luminosity lg:py-20 md:py-16"
+        style={{
+          backgroundImage: `url(${newPattern.src || newPattern.src})`,
+        }}
+      >
+        {/* Optional overlay for better text readability */}
+        {/* <div className="absolute inset-0 bg-white/90"></div> */}
 
-      {/* Content wrapper with relative positioning */}
-      <div className="relative z-10">
-        <div className="mx-auto mb-12 max-w-7xl sm:mb-16 lg:mb-20">
-          <div className="text-center mb-12 sm:mb-16 w-full max-w-[675px] mx-auto px-4">
-            <div
-              className="inline-block 
-    text-base sm:text-xl md:text-2xl lg:text-[36px]  text-white text-center 
-    px-4 sm:px-6 lg:px-8 py-2 sm:py-3  poppins-semibold
-    w-full sm:w-auto max-w-full"
-            >
-              Why choose Droneverse RPTO?
-            </div>
-          </div>
-
-          {/* Why Choose Grid */}
-          <div className="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:mb-16 lg:mb-20">
-            {whyChooseData.map((item, index) => (
+        {/* Content wrapper with relative positioning */}
+        <div className="relative z-10">
+          <div className="mx-auto max-w-7xl ">
+            <div className="text-center mb-10 w-full max-w-[675px] mx-auto px-4">
               <div
-                key={index}
-                className="p-3 sm:p-4 w-full pt-6 pb-7 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full sm:max-w-[430px] mx-auto lg:mx-0 bg-[#161616]"
+                className="inline-block text-2xl md:text-3xl poppins-semibold lg:text-[36px]  text-white text-center"
               >
-                <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
-                  <div className="flex-shrink-0 mb-2 text-3xl">
-                    <Image
-                      src={item.icon}
-                      alt="icon"
-                      width={86}
-                      height={76}
-                      className="w-16 sm:w-20 lg:w-[86px] h-auto"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="mb-2 text-base font-semibold text-white sm:text-lg lg:text-xl">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
-                      {item.description}
-                    </p>
+                Why choose Droneverse RPTO?
+              </div>
+            </div>
+
+            {/* Why Choose Grid */}
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
+              {whyChooseData.map((item, index) => (
+                <div
+                  key={index}
+                  className="p-3 sm:p-4 w-full pt-6 pb-7 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full sm:max-w-[430px] mx-auto lg:mx-0 bg-[#161616]"
+                >
+                  <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
+                    <div className="flex-shrink-0 mb-2 text-3xl">
+                      <Image
+                        src={item.icon}
+                        alt="icon"
+                        width={86}
+                        height={76}
+                        className="w-16 sm:w-20 lg:w-[86px] h-auto"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="mb-2 text-base font-semibold text-white sm:text-lg lg:text-xl">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="absolute top-[50%] left-0 z-20 transform -translate-y-1/2 hidden lg:block">
-          <Image
-            src={LeftFrame}
-            alt="Left Frame"
-            width={350}
-            height={350}
-            className="hidden h-auto -translate-x-6 lg:w-16 lg:translate-y-24 xl:w-20"
-          />
-        </div>
-        <div className="hidden mx-auto max-w-7xl">
+          <div className="absolute top-[50%] left-0 z-20 transform -translate-y-1/2 hidden lg:block">
+            <Image
+              src={LeftFrame}
+              alt="Left Frame"
+              width={350}
+              height={350}
+              className="hidden h-auto -translate-x-6 lg:w-16 lg:translate-y-24 xl:w-20"
+            />
+          </div>
+          {/* <div className="hidden mx-auto max-w-7xl">
           <div className="px-4 mb-8 text-center sm:mb-12">
             <h2 className="mb-4 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl sm:mb-6">
               Training Facilities
@@ -179,8 +198,37 @@ const WhyChoose = () => {
               </div>
             ))}
           </div>
+        </div> */}
         </div>
       </div>
+
+
+      <section className='relative py-8 bg-bottom lg:py-20 md:py-16' style={{ backgroundImage: `url(${counterBg.src})` }}>
+        <Image src={counterBg2} alt="bg" className="absolute top-0 left-0 w-full h-full" />
+        <div className="relative z-10 px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
+          <div className="mb-10 text-center">
+            <div className="mb-4 text-2xl text-black lg:text-5xl md:text-4xl poppins-semibold">Who can apply?</div>
+            <p className="text-[#5F5F5F]">Basic Requirements to join the Drone Pilot Training Course</p>
+          </div>
+
+          <div className="grid gap-4 lg:gap-6 grid-col-1 md:grid-cols-3 ">
+            {whoApply.map((item, index) => (
+              <div className="py-10 text-center bg-white  md:px-6 lg:px-14 rounded-[10px]" key={index}> 
+                <div className="mb-6 text-center">
+                  <Image src={item.icon} alt={item.title} className="mx-auto size-20" />
+                </div>
+                <div className="w-full">
+                  <div className="mb-2 text-lg md:text-xl poppins-semibold">{item.title}</div>
+                  <p className="text-sm text-[#5F5F5F] poppins-medium">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+      </section>
+
     </div>
   );
 };
