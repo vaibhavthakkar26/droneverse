@@ -14,7 +14,7 @@
   }
 }
 
-.icon {
+.mainIcon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,29 +22,64 @@
   width: 100%;
 
   img {
-    width: 70px;
+    width: 91px;
     height: auto;
     display: block;
     margin: 0 auto;
 
     @media (min-width: 480px) {
-      width: 75px;
+      width: 91px;
     }
 
     @media (min-width: 640px) {
-      width: 80px;
+      width: 91px;
     }
 
     @media (min-width: 768px) {
-      width: 85px;
+      width: 91px;
     }
 
     @media (min-width: 1024px) {
-      width: 90px;
+      width: 91px;
     }
 
     @media (min-width: 1280px) {
-      width: 95px;
+      width: 91px;
+    }
+  }
+}
+
+.cardIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+
+  img {
+    width: 34px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: 480px) {
+      width: 34px;
+    }
+
+    @media (min-width: 640px) {
+      width: 34px;
+    }
+
+    @media (min-width: 768px) {
+      width: 34px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 34px;
+    }
+
+    @media (min-width: 1280px) {
+      width: 34px;
     }
   }
 }
@@ -58,7 +93,8 @@
 .subtext {
   max-width: 1200px;
   margin: 0 auto 40px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   color: #ccc;
 }
@@ -156,6 +192,15 @@
   }
 
   @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1280px) {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-bottom: 40px;
@@ -270,8 +315,8 @@
 }
 
 .whiteBtn {
-  background-color: transparent;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-transform: none;
   font-weight: 600;
   padding: 12px 24px;
@@ -291,8 +336,8 @@
   }
 
   &:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: transparent;
+    color: #fff;
     transform: translateY(-1px);
   }
 }
