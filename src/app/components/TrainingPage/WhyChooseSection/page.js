@@ -13,6 +13,7 @@ import counterBg from '../../../../../public/assets/img/training/counterBg.png'
 import whoApply1 from '../../../../../public/assets/img/training/whoApply-1.png'
 import whoApply2 from '../../../../../public/assets/img/training/whoApply-2.png'
 import whoApply3 from '../../../../../public/assets/img/training/whoApply-3.png'
+import WhoApplyBg2 from "../../../../../public/assets/img/training/whocanBg.png";
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -202,9 +203,9 @@ const WhyChoose = () => {
         </div>
       </div>
 
-
-      <section className='relative py-8 bg-bottom lg:py-20 md:py-16' style={{ backgroundImage: `url(${counterBg.src})` }}>
-        <Image src={counterBg2} alt="bg" className="absolute top-0 left-0 w-full h-full" />
+      {/* <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 bg-size-[auto_1600px]' style={{ backgroundImage: `url(${counterBg.src})` }}></section> */}
+      <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 '>
+        <Image src={WhoApplyBg2} alt="bg" className="absolute top-0 left-0 w-full h-full bg-cover" />
         <div className="relative z-10 px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
           <div className="mb-10 text-center">
             <div className="mb-4 text-2xl text-black lg:text-5xl md:text-4xl poppins-semibold">Who can apply?</div>

@@ -291,7 +291,7 @@ const WhoApplySection = () => {
                   key={index}
                   className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full  mx-auto lg:mx-0"
                 >
-                  <h3 className="p-3 text-base leading-normal text-black md:px-4 md:py-4 md:text-lg sm:py-5 xl:h-auto poppins-semibold lg:h-20">
+                  <h3 className="p-3 text-base leading-normal text-black md:px-2 md:py-4 md:text-lg sm:py-5 xl:h-auto poppins-semibold lg:h-20">
                     {facility.title}
                   </h3>
                   <div className="relative w-full h-[140px] sm:h-[162px] overflow-hidden">
