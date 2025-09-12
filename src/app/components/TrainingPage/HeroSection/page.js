@@ -84,8 +84,8 @@ const HeroSection = () => {
                     <Image
                       src={Graduation}
                       alt="Graduation Icon"
-                      width={40}
-                      height={40}
+                      width={57}
+                      height={53}
                     />
                   </span>
                   <span className="w-[2px] h-12 bg-[#5F5F5F] my-0 mx-2"></span>

@@ -40,7 +40,7 @@ export default function FPVSection() {
                     src={droneImage}
                     alt="Drone"
                     width={350}
-                    height={180}
+                    height={238}
                     className={styles.droneImage}
                 />
             </div>
