@@ -126,33 +126,53 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 1) 0%,
-      // pure black at the top
-      rgba(0, 0, 0, 0.9) 50%,
-      // still very dark
-      rgba(0, 0, 0, 0.5) 60%,
-      // fading
-      rgba(10, 10, 30, 0.3) 100% // subtle bluish tint at bottom
-    );
+  // background: linear-gradient(to bottom,
+  //     rgba(0, 0, 0, 1) 0%,
+  //     // pure black at the top
+  //     rgba(0, 0, 0, 0.9) 50%,
+  //     // still very dark
+  //     rgba(0, 0, 0, 0.5) 60%,
+  //     // fading
+  //     rgba(10, 10, 30, 0.3) 100% // subtle bluish tint at bottom
+  //   );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.85) 40%,
+    rgba(0, 0, 0, 0.6) 60%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
+// .overlay::after {
+//   content: "";
+//   position: absolute;
+//   inset: 0;
+//   background: radial-gradient(
+//     ellipse at center,
+//     rgba(0, 0, 0, 0.1),
+//     transparent 70%
+//   );
+//   z-index: 1;
+// }
 .overlay::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center,
-      rgba(0, 0, 0, 0.1),
-      transparent 70%);
-  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px; // adjust height of the "band"
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+  z-index: 4;
 }
 
 .videoBackground {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -211,7 +231,7 @@
 }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: #1D1D1D99;
   border-radius: 12px;
   padding: 20px 16px;
   text-align: center;
