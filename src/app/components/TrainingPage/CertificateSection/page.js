@@ -13,10 +13,10 @@ import iconicSHape from '../../../../../public/assets/img/training/bgShapeDrone.
 const CertificateSection = () => {
     return (
         <div>
-            <section className="relative flex flex-col gap-4 px-2 py-12 mx-auto md:gap-0 lg:gap-10 md:px-3 max-w-7xl lg:flex-row lg:px-8">
+            <section className="relative flex flex-col gap-4 px-3 py-12 mx-auto md:gap-0 lg:gap-10 max-w-7xl lg:flex-row lg:px-8">
                 <div className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10" style={{ backgroundImage: `url(${sectionBg.src})` }}></div>
                 {/* Left Content */}
-                <div className="relative space-y-6 rounded-[10px] p-4 sm:p-6  md:p-8  lg:w-1/2">
+                <div className="relative space-y-6 rounded-[10px] p-4 px-0 sm:py-6  md:py-8  lg:w-1/2">
                     {/* Decorative Shape */}
                     {/* <Image
                         src={iconicSHape}

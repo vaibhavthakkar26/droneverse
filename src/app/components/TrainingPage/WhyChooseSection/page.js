@@ -14,6 +14,7 @@ import whoApply1 from '../../../../../public/assets/img/training/whoApply-1.png'
 import whoApply2 from '../../../../../public/assets/img/training/whoApply-2.png'
 import whoApply3 from '../../../../../public/assets/img/training/whoApply-3.png'
 import WhoApplyBg2 from "../../../../../public/assets/img/training/whocanBg.png";
+import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -102,11 +103,13 @@ const WhyChoose = () => {
   return (
     <div>
       <div
-        className="relative px-2 py-8 bg-[#080114] bg-center bg-repeat-y bg-contain sm:py-12 md:px-3 lg:px-8  bg-blend-luminosity lg:py-20 md:py-16"
-        style={{
-          backgroundImage: `url(${newPattern.src || newPattern.src})`,
-        }}
+        className="relative py-8 bg-[#080114] bg-center sm:py-12 px-3 lg:px-8  lg:py-20 md:py-16"
+        // style={{
+        //   backgroundImage: `url(${sectionBg.src || newPattern.src})`,
+        // }}
       >
+        
+        <Image src={sectionBg} alt="bg" className="absolute top-0 left-0 object-cover w-full h-full opacity-40" />
         {/* Optional overlay for better text readability */}
         {/* <div className="absolute inset-0 bg-white/90"></div> */}
 
@@ -206,7 +209,7 @@ const WhyChoose = () => {
       {/* <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 bg-size-[auto_1600px]' style={{ backgroundImage: `url(${counterBg.src})` }}></section> */}
       <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 '>
         <Image src={WhoApplyBg2} alt="bg" className="absolute top-0 left-0 w-full h-full bg-cover" />
-        <div className="relative z-10 px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
+        <div className="relative z-10 px-3 mx-auto max-w-7xl lg:px-8">
           <div className="mb-10 text-center">
             <div className="mb-4 text-2xl text-black lg:text-5xl md:text-4xl poppins-semibold">Who can apply?</div>
             <p className="text-[#5F5F5F]">Basic Requirements to join the Drone Pilot Training Course</p>

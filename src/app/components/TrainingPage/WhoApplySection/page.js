@@ -13,6 +13,7 @@ import flight from "../../../../../public/assets/img/training/flight.png";
 import flightMode from "../../../../../public/assets/img/training/flight mode.png";
 import drone from "../../../../../public/assets/img/training/drone.png";
 import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
+import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
 
 const WhoApplySection = () => {
   const [activeTab, setActiveTab] = useState("Defence");
@@ -225,7 +226,7 @@ const WhoApplySection = () => {
         />
       </div> */}
 
-        <div className="relative px-2 mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div className="relative px-3 mx-auto max-w-7xl md:px-6 lg:px-8">
           {/* Header */}
           {/* <div className="mb-8 text-center sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#FFB801] mb-1 font-[poppins] poppins-bold ">
@@ -285,16 +286,16 @@ const WhoApplySection = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
               {trainingFacilities.map((facility, index) => (
                 <div
                   key={index}
                   className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full  mx-auto lg:mx-0"
                 >
-                  <h3 className="p-3 text-base leading-normal text-black md:px-2 md:py-4 md:text-lg sm:py-5 xl:h-auto poppins-semibold lg:h-20">
+                  <h3 className="p-5 text-base leading-normal text-black md:py-4 sm:py-5 xl:h-auto poppins-semibold lg:h-20">
                     {facility.title}
                   </h3>
-                  <div className="relative w-full h-[140px] sm:h-[162px] overflow-hidden">
+                  <div className="relative w-full h-44 sm:h-[162px] overflow-hidden">
                     <Image
                       src={facility.image}
                       alt={facility.title}
@@ -303,7 +304,7 @@ const WhoApplySection = () => {
                     />
                   </div>
 
-                  <div className="p-4 sm:p-6">
+                  <div className="p-5">
                     <p className="text-sm leading-relaxed text-black sm:text-base lg:text-base poppins-regular">
                       {facility.description}
                     </p>
@@ -315,9 +316,10 @@ const WhoApplySection = () => {
         </div>
       </div>
 
-      <section className="relative py-8 bg-[#080114] bg-center bg-repeat-y bg-contain sm:py-12   bg-blend-luminosity lg:py-20 md:py-16" style={{ backgroundImage: `url(${newPattern.src || newPattern.src})`, }}>
+      <section className="relative py-8 bg-[#080114]  sm:py-12  lg:py-20 md:py-16" >
+        <Image src={sectionBg} alt="bg" className="absolute top-0 left-0 w-full h-full opacity-40" />
         <div>
-          <div className="relative z-10 px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
+          <div className="relative z-10 px-3 mx-auto max-w-7xl lg:px-8">
             <div className="mb-10 text-center">
               <div className="mb-4 text-2xl text-white md:mb-6 lg:text-5xl md:text-4xl poppins-semibold">All training courses</div>
               <p className="text-[#E6E6E6]">Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.</p>
@@ -427,8 +429,8 @@ const WhoApplySection = () => {
                 </div>
               ))}
             </div>
-            </div>
           </div>
+        </div>
       </section>
 
     </div>

@@ -10,14 +10,14 @@ import OurPresenceSection from '../components/TrainingPage/OurPresenceSection/pa
 const TrainingPage = () => {
 
     return (
-        <>
+        <div className='pb-0 pt-18'>
             <HeroSection />
             <CertificateSection />
             <WhyChoose />
             <WhoApplySection />
             <ImageSliderSection />
             <OurPresenceSection />
-        </>
+        </div>
     )
 }
 

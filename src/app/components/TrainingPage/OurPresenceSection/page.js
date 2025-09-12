@@ -33,7 +33,7 @@ const OurPresenceSection = () => {
   const [activeTab, setActiveTab] = useState("Office");
 
   return (
-    <div className="relative px-4 py-16 mx-auto bg-no-repeat bg-cover max-w-7xl">
+    <div className="relative px-3 py-16 mx-auto bg-no-repeat bg-cover max-w-7xl">
       {/* Header */}
       <div className="mb-12 text-center bg-white/80">
         <h2 className="text-[36px] font-bold text-black mb-4 font-[poppins] poppins-bold">
@@ -49,15 +49,15 @@ const OurPresenceSection = () => {
 
       {/* Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="relative z-10 flex w-full max-w-md p-1 bg-white border border-black rounded-lg shadow-md sm:p-2 sm:max-w-lg">
+          <div className="relative z-10 flex w-full max-w-md p-1 bg-white border border-[#FFBF1B] rounded-lg shadow-md sm:p-2 sm:max-w-lg lg:max-w-xl">
             {["Office", "Institute", "R&D Center"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${
+                className={`text-sm sm:text-base px-3 sm:px-6 py-3 rounded-md poppins-regular flex-1 transition-colors ${
                   activeTab === tab
                     ? "bg-[#FFB801] text-black"
-                    : "bg-transparent text-gray-600"
+                    : "bg-transparent text-black"
                 }`}
               >
                 {tab}

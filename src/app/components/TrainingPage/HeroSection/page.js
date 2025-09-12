@@ -19,18 +19,18 @@ const HeroSection = () => {
   ];
   return (
     <div>
-      <section className="relative flex flex-wrap items-center pb-0 lg:pt-32 md:pt-28">
+      <section className="relative flex flex-wrap items-center pt-24" >
         {/* Background pattern */}
         <div
-          className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-10"
+          className="absolute inset-0 bg-center bg-repeat-y bg-cover opacity-10"
           style={{ backgroundImage: `url(${sectionBg.src})` }}
         ></div>
 
-        <div className="relative flex flex-wrap px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
+        <div className="relative flex flex-wrap px-3 mx-auto max-w-7xl lg:px-8">
           <Image
             src={iconicSHape}
             alt="fill shape"
-            className="absolute block object-contain lg:bottom-20 lg:left-96 -z-10 size-12 lg:size-14 md:bottom-16 md:left-72"
+            className="absolute block object-contain -top-5 lg:bottom-20 lg:left-96 -z-10 size-12 lg:size-14 md:bottom-16 md:left-72 left-3"
           />
           <Image src={HeroDrone} alt="new drone" className="absolute lg:-top-14 lg:-translate-x-1/2 xl:-top-2 xl:w-60 lg:left-1/2 md:w-48 left-1/2 z-[1] -top-10" />
           {/* Left content */}
@@ -38,7 +38,7 @@ const HeroSection = () => {
             <h2 className="z-10 mb-3 text-4xl leading-tight xl:text-7xl lg:text-6xl poppins-bold md:text-5xl">
               INDIA’S TOP <br /> DGCA-CERTIFIED INSTITUTE
             </h2>
-            <p className="relative z-10 mt-0 text-2xl poppins-medium-italic leading-full gray-600  lg:text-[32px] ">
+            <p className="relative z-10 mt-0 text-xl poppins-medium-italic leading-full gray-600  lg:text-[32px] ">
               Powered by Passion, Backed by DGCA
               
             </p>
@@ -103,10 +103,10 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      <section className='relative bg-bottom' style={{ backgroundImage: `url(${counterBg.src})` }}>
+      <section className='relative bg-bottom bg-[#FFB801]'>
         <Image src={counterBg2} alt="bg" className="absolute top-0 left-0 w-full h-full" />
-        <div className="relative px-2 mx-auto max-w-7xl lg:px-8 md:px-3">
-          <div className="flex flex-wrap items-start pt-[53px] pb-[47px] md:py-11">
+        <div className="relative px-3 mx-auto max-w-7xl lg:px-8 ">
+          <div className="flex flex-wrap items-start pt-[53px] pb-[47px] md:py-11 py-8">
             {traningStats.map((item, idx) => (
               <div
                 key={idx}
@@ -121,12 +121,12 @@ const HeroSection = () => {
                     height={40}
                   />
                 </span>
-                <span className="w-[2px] h-12 bg-[#5F5F5F] my-0 mx-2"></span>
+                <span className="w-[1px] h-12 bg-black my-0 mx-3 md:mx-2 lg:mx-4"></span>
                 <div className="text-left">
-                  <h3 className="font-bold text-black xl:text-4xl lg:text-3xl font-montserrat">
+                  <h3 className="mb-1 text-2xl text-black xl:text-4xl md:text-3xl poppins-bold">
                     {item.value}
                   </h3>
-                  <p className="text-sm font-normal xl:text-xl lg:text-lg gray-700 font-poppins text-[#5F5F5F]">
+                  <p className="text-sm lg:text-base  gray-700 poppins-regular text-[#5F5F5F]">
                     {item.label}
                   </p>
                 </div>
