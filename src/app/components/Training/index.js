@@ -19,7 +19,7 @@ const courses = [
       "Practical flight training",
       "Training on a drone simulator and remote pilot certification",
     ],
-    image: "/assets/img/course&instruction/img1.png",
+    image: "/assets/img/course&instruction/dron-pilot.png",
   },
   {
     tab: "Defence",
@@ -33,7 +33,7 @@ const courses = [
       "Practical flight training",
       "Training on a drone simulator and remote pilot certification",
     ],
-    image: "/assets/img/course&instruction/img2.png",
+    image: "/assets/img/course&instruction/drone-operation.png",
   },
   {
     tab: "Defence",
@@ -47,7 +47,7 @@ const courses = [
       "Practical flight training",
       "Training on a drone simulator and remote pilot certification",
     ],
-    image: "/assets/img/course&instruction/img3.png",
+    image: "/assets/img/course&instruction/maintainance.png",
   },
 ];
 

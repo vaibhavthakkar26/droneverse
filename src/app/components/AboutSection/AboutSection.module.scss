@@ -11,6 +11,7 @@
 
   @media (min-width: 768px) {
     padding: 10px 32px;
+    max-width: none;
   }
 }
 
@@ -20,6 +21,13 @@
   align-items: center;
   margin-bottom: 25px;
   width: 100%;
+  padding-top: 80px;
+
+  @media (min-width: 1024px){
+    max-width: 1280px;
+    padding-inline: 32px;
+    margin-inline: auto;
+  }
 
   img {
     width: 91px;
@@ -106,7 +114,7 @@
   color: white;
   text-align: center;
   z-index: 1;
-
+  padding-bottom: 84px;
   // Overlay to darken the video a bit
   &::before {
     content: "";
@@ -115,13 +123,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); // adjust for readability
+    background: linear-gradient(
+      180deg,
+      #000000 14.75%,
+      rgba(0, 0, 0, 0.73) 51.64%,
+      #000000 100%
+    );
     z-index: 2;
   }
 }
 
 .overlay {
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -160,7 +173,7 @@
 //   z-index: 1;
 // }
 .overlay::after {
-  content: "";
+  // content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -212,7 +225,7 @@
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-bottom: 40px;
     max-width: none;
@@ -224,14 +237,16 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-bottom: 40px;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 1280px;
+    // margin-left: 0;
+    // margin-right: 0;
+    margin:0 auto;
+    padding-inline: 32px;
   }
 }
 
 .card {
-  background-color: #1D1D1D99;
+  background-color: #1d1d1d99;
   border-radius: 12px;
   padding: 20px 16px;
   text-align: center;
@@ -253,7 +268,7 @@
     border-radius: 16px;
     padding: 30px 24px;
     min-height: 255px;
-    width: 260px;
+    // width: 260px;
   }
 }
 

@@ -1,7 +1,7 @@
 .wrapper {
-  padding: 40px 15px;
-  max-width: 1200px;
-  margin: auto;
+  padding: 40px 16px;
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
 
   @media (min-width: 640px) {
@@ -9,7 +9,11 @@
   }
 
   @media (min-width: 768px) {
-    padding: 60px 20px;
+    padding: 60px 16px;
+  }
+
+    @media (min-width: 992px) {
+    padding: 60px 32px;
   }
 }
 
@@ -34,14 +38,19 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 32px;
+  width:fit-content;
+  padding: 10px;
+  margin-inline: auto;
+  border-radius: 10px;
+  background: #FFF8E6;
 }
 
 .tabButton {
   padding: 10px 20px;
-  background: #f4f4f4;
+  // background: #f4f4f4;
   border: none;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
@@ -49,7 +58,7 @@
 }
 
 .tabButton:hover {
-  background: #e2e2e2;
+  // background: #e2e2e2;
 }
 
 .active {
@@ -63,7 +72,7 @@
 }
 
 .card {
-  background: #fff;
+  background: #FFFBF2;
   border: 1px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
@@ -80,6 +89,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
+  background: #FFF1CC;
 }
 
 .cardContent {
@@ -132,7 +142,7 @@
 }
 
 .detailsBtn {
-  background: #fff;
+  background: transparent;
   border: 1px solid #ffb801;
   padding: 8px 12px;
   border-radius: 6px;
@@ -147,7 +157,7 @@
   border: none;
   padding: 8px 12px;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
   font-size: 16px;
 }
