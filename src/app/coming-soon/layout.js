@@ -20,9 +20,9 @@ export default function ComingSoonLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body>
-        <Header variant="dark" />
+        {/* <Header variant="dark" /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
