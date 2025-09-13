@@ -54,7 +54,7 @@ const nextConfig = {
 
     // Image optimization
     images: {
-        domains: ['localhost', 'admin.droneverse.in'],
+        domains: ['localhost', 'admin.droneverse.in', 'images.unsplash.com'],
         remotePatterns: [
             {
                 protocol: 'http',
@@ -67,6 +67,7 @@ const nextConfig = {
                 hostname: 'admin.droneverse.in',
                 pathname: '/storage/**',
             },
+            
         ],
     },
 };
