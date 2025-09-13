@@ -172,3 +172,84 @@ body {
         transform: translateY(0) translateX(0) rotate(0deg) scale(1);
     }
 }
+
+/* Coming Soon Page Animations */
+@keyframes float-1 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(2deg);
+    }
+}
+
+@keyframes float-2 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-2deg);
+    }
+}
+
+@keyframes float-3 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-6px) rotate(1deg);
+    }
+}
+
+@keyframes float-4 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(-1deg);
+    }
+}
+
+@keyframes float-5 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-6px) rotate(1deg);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-float-1 {
+    animation: float-1 12s ease-in-out infinite;
+}
+
+.animate-float-2 {
+    animation: float-2 15s ease-in-out infinite reverse;
+}
+
+.animate-float-3 {
+    animation: float-3 10s ease-in-out infinite;
+}
+
+.animate-float-4 {
+    animation: float-4 14s ease-in-out infinite;
+}
+
+.animate-float-5 {
+    animation: float-5 16s ease-in-out infinite reverse;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out;
+}
