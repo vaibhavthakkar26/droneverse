@@ -53,7 +53,7 @@ const AboutSection = ({ data }) => {
 
   return (
     <>
-      <section className={styles.aboutContainer}>
+      <section className={styles.aboutContainer} >
         <div className={styles.mainIcon}>
           <Image src={icon} alt="decorative icon" width={100} height={100} />
         </div>

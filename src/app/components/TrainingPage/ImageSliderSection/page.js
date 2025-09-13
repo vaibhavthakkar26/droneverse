@@ -22,7 +22,7 @@ const ImageSliderSection = () => {
     <div className="py-8 mx-auto overflow-hidden max-w-7xl md:py-16">
 
          <div className="px-4 mb-8 text-center sm:mb-12">
-          <Image src={gRating} alt="g rate" className="object-contain w-auto mx-auto mb-4" />
+          <Image src={gRating} alt="g rate" className="object-contain w-56 mx-auto mb-4" />
               <h2 className="mb-4 text-2xl font-bold text-black sm:text-3xl md:text-4xl sm:mb-6 poppins-bold">
                 See what people are talking
               </h2>

@@ -349,7 +349,7 @@ const WhoApplySection = () => {
                   key={idx}
                   className="bg-white rounded-lg overflow-hidden border border-[#DADADA] px-3 sm:px-4 lg:px-1 py-4 max-w-sm mx-auto w-full"
                 >
-                  <div className="relative px-2 pb-1 overflow-hidden sm:px-4 lg:px-6">
+                  <div className="relative px-2 pb-1 overflow-hidden sm:px-0 lg:px-6">
                     <Image
                       src={course.image}
                       alt={course.title}
@@ -362,10 +362,10 @@ const WhoApplySection = () => {
                       {course.label}
                     </div>
                   </div>
-                  <p className="text-sm sm:text-[16px] text-[#00A32C] mb-2 mx-2 sm:mx-4 lg:mx-6 mt-4 sm:mt-6">
+                  <p className="text-sm sm:text-[16px] text-[#00A32C] mb-2 mx-2 sm:me-4 sm:ms-0 lg:mx-6 mt-4 sm:mt-6">
                     {course.subtitle}
                   </p>
-                  <div className="px-2 sm:px-4 lg:px-6">
+                  <div className="px-2 sm:px-0 lg:px-6">
                     <h3 className="text-lg sm:text-xl lg:text-[20px] font-bold text-black mb-3 sm:mb-4 leading-tight">
                       {course.title}
                     </h3>
@@ -390,7 +390,7 @@ const WhoApplySection = () => {
                         </span>
                       </span>
                     </div>
-                    <ul className="mb-4 space-y-2 sm:mb-6">
+                    <ul className="mb-4 space-y-2 sm:mb-6 lg:h-48 xl:h-auto">
                       {course.points.map((point, i) => (
                         <li
                           key={i}

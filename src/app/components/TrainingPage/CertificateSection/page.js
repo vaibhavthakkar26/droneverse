@@ -72,7 +72,7 @@ const CertificateSection = () => {
                 {/* Right Images */}
                 <div className="relative grid w-full grid-cols-2 gap-4 mx-auto md:w-2/3 lg:w-1/2">
                     {/* Main Image */}
-                    <div className="relative flex">
+                    <div className="relative flex items-end">
 
                         <Image
                             src={dgca1}
@@ -91,11 +91,11 @@ const CertificateSection = () => {
                     </div>
 
                     {/* Overlap Image 2 */}
-                    <div className="relative flex col-span-2 col-start-2 row-start-2">
+                    <div className="relative flex items-start justify-start col-span-2 col-start-2 row-start-2">
                         <Image
                             src={dgca3}
                             alt="Drone Practice"
-                            className="relative z-0 object-contain lg:-mt-2 md:size-60 size-auto"
+                            className="relative z-0 object-contain w-3/4 sm:w-10/12 "
                         />
                     </div>
                 </div>

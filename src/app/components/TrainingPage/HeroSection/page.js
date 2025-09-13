@@ -30,11 +30,11 @@ const HeroSection = () => {
           <Image
             src={iconicSHape}
             alt="fill shape"
-            className="absolute block object-contain -top-5 lg:bottom-20 lg:left-96 -z-10 size-12 lg:size-14 md:bottom-16 md:left-72 left-3"
+            className="absolute block object-contain bottom-[95%] lg:bottom-20 lg:left-96 -z-10 size-12 lg:size-14 md:bottom-16 md:left-72 left-18 sm:bottom-12 sm:left-64"
           />
-          <Image src={HeroDrone} alt="new drone" className="absolute lg:-top-14 lg:-translate-x-1/2 xl:-top-2 xl:w-60 lg:left-1/2 md:w-48 left-1/2 z-[1] -top-10" />
+          <Image src={HeroDrone} alt="new drone" className="absolute lg:-top-14 sm:-translate-x-1/2 xl:-top-2 xl:w-60 lg:left-1/2 md:w-48 left-1/2 z-[1] -top-14 sm:w-44 sm:-top-14 w-40" />
           {/* Left content */}
-          <div className="relative flex flex-col w-full pt-10 space-y-6 sm:w-2/3 xl:pt-12 xl:pb-28 md:w-3/5 lg:pb-24 lg:pt-10 md:pt-12 md:pb-16">
+          <div className="relative flex flex-col w-full pt-10 space-y-6 sm:w-2/3 xl:pt-12 xl:pb-28 md:w-3/5 lg:pb-24 lg:pt-10 sm:pt-0 sm:pb-16">
             <h2 className="z-10 mb-3 text-4xl leading-tight xl:text-7xl lg:text-6xl poppins-bold md:text-5xl">
               INDIA’S TOP <br /> DGCA-CERTIFIED INSTITUTE
             </h2>
@@ -52,24 +52,24 @@ const HeroSection = () => {
             <Image
               src={iconicSHape}
               alt="fill shape"
-              className="absolute -z-[1] object-contain top-5 lg:top-5 md:top-8 left-24 lg:size-14 size-12 md:left-32 "
+              className="absolute -z-[1] object-contain top-5 lg:top-5 md:top-3 left-32 sm:left-10 sm:-top-5 lg:size-14 size-12 md:left-20 "
             />
 
             <Image
                 src={iconicSHape}
                 alt="fill shape"
-                className="absolute object-contain lg:left-0 md:bottom-8 lg:bottom-16 lg:size-14 size-12 bottom-10 left-6"
+                className="absolute object-contain lg:left-0 md:bottom-8 lg:bottom-16 lg:size-14 size-12 bottom-10 left-6 sm:left-0"
               />
 
             <Image
               src={HeroPilot}
               alt="Drone Pilot"
-              className="relative object-contain w-full z-1 lg:-mb-3.5 -mb-2"
+              className="relative object-contain w-64 sm:w-full z-1 lg:-mb-3.5 -mb-2"
             />
             <Image
               src={iconicSHape}
               alt="fill shape"
-              className="absolute top-0 right-0 z-0 ject-contain lg:top-24 lg:size-14 md:top-28 md:size-12 size-12"
+              className="absolute top-0 right-0 z-0 object-contain lg:top-24 lg:size-14 md:top-14 md:size-12 size-12"
             />
           </div>
           <div className="container hidden">
@@ -110,7 +110,7 @@ const HeroSection = () => {
             {traningStats.map((item, idx) => (
               <div
                 key={idx}
-                className={`relative flex items-center w-1/2 space-x-3 md:w-1/4 ${idx >= 2 ? "mt-4 md:mt-0" : "mt-0"
+                className={`relative flex items-center w-1/2 space-x-3 sm:w-1/4 ${idx >= 2 ? "mt-0 md:mt-0" : "mt-0"
                   } `}
               >
                 <span className="m-0 text-4xl">

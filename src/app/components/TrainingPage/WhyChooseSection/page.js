@@ -125,14 +125,14 @@ const WhyChoose = () => {
             </div>
 
             {/* Why Choose Grid */}
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-5">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-5">
               {whyChooseData.map((item, index) => (
                 <div
                   key={index}
-                  className="p-3 sm:p-4 w-full pt-6 pb-7 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full sm:max-w-[430px] mx-auto lg:mx-0 bg-[#161616]"
+                  className="p-3 sm:p-4 w-full pt-8 pb-8 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full  mx-auto lg:mx-0 bg-[#161616]"
                 >
                   <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
-                    <div className="flex-shrink-0 mb-2 text-3xl">
+                    <div className="flex-shrink-0 mb-4 text-3xl lg:mb-5">
                       <Image
                         src={item.icon}
                         alt="icon"
@@ -142,7 +142,7 @@ const WhyChoose = () => {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="mb-2 text-base font-semibold text-white sm:text-lg lg:text-xl">
+                      <h3 className="mb-2 text-base text-white sm:text-lg lg:text-xl poppins-semibold">
                         {item.title}
                       </h3>
                       <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
@@ -215,11 +215,11 @@ const WhyChoose = () => {
             <p className="text-[#5F5F5F]">Basic Requirements to join the Drone Pilot Training Course</p>
           </div>
 
-          <div className="grid gap-4 lg:gap-6 grid-col-1 md:grid-cols-3 ">
+          <div className="grid gap-4 lg:gap-6 grid-col-1 sm:grid-cols-3 ">
             {whoApply.map((item, index) => (
-              <div className="py-10 text-center bg-white  md:px-6 lg:px-14 rounded-[10px]" key={index}> 
-                <div className="mb-6 text-center">
-                  <Image src={item.icon} alt={item.title} className="mx-auto size-20" />
+              <div className="py-10 sm:py-7 text-center bg-white  md:px-6 lg:px-14 rounded-[10px]" key={index}> 
+                <div className="mb-6 text-center sm:mb-4 md:mb-5 lg:mb-6">
+                  <Image src={item.icon} alt={item.title} className="mx-auto size-20 sm:size-14 lg:size-20 md:size-18" />
                 </div>
                 <div className="w-full">
                   <div className="mb-2 text-lg md:text-xl poppins-semibold">{item.title}</div>

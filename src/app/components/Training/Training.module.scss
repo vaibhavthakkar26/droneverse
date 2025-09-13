@@ -251,3 +251,50 @@
 .card1 {
   background-color: #fef2f2; // soft pink
 }
+
+// Mobile first overrides
+@media (max-width: 767px) {
+  .instructorGrid {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .instructorCard {
+    width: 100%;
+    padding: 0;
+    flex: 1;
+    flex-direction: row-reverse; 
+    text-align: center;
+  }
+
+  .textContent {
+    padding: 0 10px 0 20px; 
+  }
+
+  .imageContainer {
+    justify-content: center; 
+    margin-top: 10px; 
+  }
+
+  .instructorCard p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow-y: hidden; 
+  }
+}
+
+@media (max-width: 374px){
+  .instructorCard {
+    padding: 15px;
+    flex: 1;
+    flex-direction: column-reverse;
+    align-items: flex-start ;
+    text-align: center;
+  }
+  .textContent {
+    padding: 20px 0;
+  }
+}
