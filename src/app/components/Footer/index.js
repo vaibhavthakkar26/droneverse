@@ -19,7 +19,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="w-full h-28 bg-linear-to-b from-black to-white"></div>
+      <div className="w-full bg-gradient-to-t from-black/100 from-[10%]    to-white to-[100%]  h-20"></div>
       <footer className={styles.footer}>
         {/* Background Video */}
         <video autoPlay loop muted playsInline className={styles.videoBackground}>
