@@ -38,22 +38,6 @@ export default function DefenceSection() {
             className={styles.image}
             priority
           />
-          <div className={styles.gridBallsWrapper}>
-            <Image
-              src={gridBallsImage}
-              alt="Drone"
-              width={286}
-              height={71}
-              className={styles.gridBalls}
-            />
-            <Image
-              src={gridBallsImage}
-              alt="Drone"
-              width={286}
-              height={71}
-              className={styles.gridBalls}
-            />
-          </div>
         </div>
       </div>
       <FPVSection />
