@@ -45,6 +45,7 @@ export const metadata = {
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function RootLayout({ children }) {
   return (
@@ -57,6 +58,12 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <WhatsAppButton 
+          phoneNumber="1234567890" 
+          message="Hello! I'd like to know more about your services."
+          position="bottom-right"
+          showTooltip={true}
+        />
         <Footer />
       </body>
     </html>
