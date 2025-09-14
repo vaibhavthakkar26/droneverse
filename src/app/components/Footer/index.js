@@ -96,23 +96,25 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottomSection}>
-        <p>
-          © 2024 Droneverse Pvt Ltd. All rights reserved | Digital Partner |{" "}
-          <a href="#">K2 Solutions</a>
-        </p>
-        <div className={styles.socialIcons}>
-          <a href="#">
-            <FaFacebookF />
-          </a>
-          <a href="#">
-            <FaTwitter />
-          </a>
-          <a href="#">
-            <FaInstagram />
-          </a>
-          <a href="#">
-            <FaLinkedinIn />
-          </a>
+        <div className="flex flex-wrap justify-between w-full px-3 py-4 mx-auto max-w-7xl lg:px-8">
+          <p className="mb-1 text-center md:text-left md:m-0">
+            © 2024 Droneverse Pvt Ltd. All rights reserved | Digital Partner |{" "}
+            <a href="#">K2 Solutions</a>
+          </p>
+          <div className={styles.socialIcons}>
+            <a href="#">
+              <FaFacebookF />
+            </a>
+            <a href="#">
+              <FaTwitter />
+            </a>
+            <a href="#">
+              <FaInstagram />
+            </a>
+            <a href="#">
+              <FaLinkedinIn />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

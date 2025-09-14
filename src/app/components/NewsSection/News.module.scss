@@ -19,8 +19,6 @@
 .carousel {
   margin-bottom: 40px;
 
-
-
   .slick-list {
     overflow: visible; // allow shifted cards to be visible
   }
@@ -70,7 +68,6 @@
   border-radius: 8px;
   overflow: hidden;
 
-
   img {
     width: 100%;
     height: 100%;
@@ -97,12 +94,24 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 16px;
+  @media (min-width: 1024px) {
+   padding-inline: 32px;
+  }
 }
 
 .newsHeader {
-  max-width: 70%;
+  max-width: 100%;
   // text-align: center;
   margin-bottom: 20px;
+
+  @media(min-width:768px){
+    .newsHeader{
+      max-width: 70%;
+    }
+  }
 
   h2 {
     font-size: 2rem;
@@ -199,7 +208,11 @@
     color: #000;
 
     mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0));
-    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0)
+    );
   }
 }
 
@@ -219,13 +232,13 @@
 .icon {
   width: 20px;
   height: 20px;
-  color: #007AFF;
+  color: #007aff;
 }
 
 // === Responsive Fixes ===
 @media (max-width: 1366px) {
   .wrapper {
-    padding: 60px 40px;
+    padding: 60px 0px;
   }
 
   .card {
@@ -239,9 +252,9 @@
 }
 
 @media (max-width: 768px) {
-  .newsHeader h2 {
-    font-size: 48px;
-  }
+  // .newsHeader h2 {
+  //   font-size: 48px;
+  // }
 
   .newsHeader p {
     font-size: 18px;

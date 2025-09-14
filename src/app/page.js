@@ -19,6 +19,7 @@ import Presence from "./components/Presence";
 import Footer from "./components/Footer";
 import Certifications from "./components/Certification";
 import OurPresenceSection from "./components/TrainingPage/OurPresenceSection/page";
+import CourseAll from "../app/components/trainingCourse/page";
 
 // Generate dynamic metadata for the homepage
 export async function generateMetadata() {
@@ -61,15 +62,15 @@ export default async function Home() {
     if (!page) {
       console.warn("No page data available, using fallback");
       return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-red-600 mb-4">
+            <h1 className="mb-4 text-2xl font-bold text-red-600">
               Unable to load page content
             </h1>
             <p className="text-gray-600">
               Please check your API configuration or enable dummy data mode.
             </p>
-            <div className="mt-4 p-4 bg-gray-100 rounded">
+            <div className="p-4 mt-4 bg-gray-100 rounded">
               <p className="text-sm text-gray-500">
                 <strong>API Base URL:</strong> {getApiBaseUrl()}
                 <br />
@@ -129,6 +130,8 @@ export default async function Home() {
           />
         )}
 
+        
+
         {/* Defence Section */}
         {page.defence && (
           <DefenceSection
@@ -141,8 +144,12 @@ export default async function Home() {
           />
         )}
 
+        {/* Course Section */}
+
+        <CourseAll />
+
         {/* Training Section */}
-        {page.training && (
+        {/* {page.training && (
           <Training
             data={page.training}
             fallbackData={{
@@ -151,7 +158,7 @@ export default async function Home() {
                 "Comprehensive drone training programs for all skill levels",
             }}
           />
-        )}
+        )} */}
         {/* Certifications Section */}
         <Certifications data={page.certifications} />
         {/* News Section */}
@@ -194,13 +201,13 @@ export default async function Home() {
     console.error("Error loading page data:", error);
 
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">
+          <h1 className="mb-4 text-2xl font-bold text-red-600">
             Error Loading Page
           </h1>
-          <p className="text-gray-600 mb-4">{error.message}</p>
-          <div className="p-4 bg-gray-100 rounded text-left">
+          <p className="mb-4 text-gray-600">{error.message}</p>
+          <div className="p-4 text-left bg-gray-100 rounded">
             <p className="text-sm text-gray-500">
               <strong>Error:</strong> {error.message}
               <br />

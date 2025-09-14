@@ -1,30 +1,31 @@
 .wrapper {
-  padding: 40px 20px;
+  padding-block: 50px;
   text-align: center;
   margin-bottom: 30px;
-  background-color: #FBFCFC;
+  background-color: #fbfcfc;
   position: relative;
 
   @media (min-width: 640px) {
-    padding: 50px 30px;
+    padding-block: 40px 30px;
     margin-bottom: 40px;
   }
 
   @media (min-width: 768px) {
-    padding: 55px 40px;
+    padding-block: 40px 60px;
     margin-bottom: 45px;
   }
 
   @media (min-width: 1024px) {
-    padding: 60px 50px;
+    padding-block: 80px 159px;
     margin-bottom: 50px;
   }
 }
 
 .title {
-  font-size: 48px;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
+  padding-inline: 16px;
 }
 
 .subtitle {
@@ -32,6 +33,7 @@
   max-width: 900px;
   margin: 0 auto 40px;
   color: #333;
+    padding-inline: 16px;
 }
 
 .grid {
@@ -48,12 +50,18 @@
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    max-width: 100%;
+    gap: 16px;
+    padding-inline: 16px;
+    margin-inline: auto;
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 24px;
+    max-width: 1280px;
+    padding-inline: 32px;
+    margin-inline: auto;
   }
 }
 
@@ -63,7 +71,7 @@
   border-radius: 16px;
   padding: 20px;
   height: 105px;
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +87,6 @@
 .card:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 
 @media (max-width: 1300px) {
   .grid {

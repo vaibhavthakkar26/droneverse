@@ -16,7 +16,7 @@ export default function HomeNewsCardSlider({ newsItems }) {
   }, [newsItems.length]);
 
   return (
-    <div className="overflow-hidden w-full py-8">
+    <div className="w-full px-3 py-8 mx-auto overflow-hidden lg:max-w-7xl lg:px-8">
       <div
         className="flex gap-6 transition-transform duration-1000 ease-in-out"
         style={{
