@@ -20,6 +20,7 @@ import Footer from "./components/Footer";
 import Certifications from "./components/Certification";
 import OurPresenceSection from "./components/TrainingPage/OurPresenceSection/page";
 import CourseAll from "../app/components/trainingCourse/page";
+import InstructorSection from "./components/InstructorSection";
 
 // Generate dynamic metadata for the homepage
 export async function generateMetadata() {
@@ -147,6 +148,8 @@ export default async function Home() {
         {/* Course Section */}
 
         <CourseAll />
+
+        {/* <InstructorSection /> */}
 
         {/* Training Section */}
         {/* {page.training && (

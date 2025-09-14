@@ -10,6 +10,17 @@ import patternBg from "../../../public/assets/img/defence/PatternDark.png";
 import { useEffect, useState } from "react";
 import { FaChevronDown, FaStar } from "react-icons/fa"; // Importing star icon for rating
 import whatGetFromCourse from "../../../public/assets/img/training/whatGetFromCourse.jpg";
+import {
+  GraduationCap,
+  FileText,
+  Stethoscope,
+  CheckCircle,
+  Users,
+  DollarSign,
+  Banknote,
+  Award,
+  Zap,
+} from "lucide-react";
 
 export default function EnrollNow() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -59,6 +70,47 @@ export default function EnrollNow() {
       image:
         "https://images.unsplash.com/photo-1559045351-e51761f70324?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg4OXwwfDF8c2VhcmNofDQ4fHxwZXJzb258ZW58MHx8fHwxNjY2MTYwOTg&ixlib=rb-1.2.1&q=80&w=1080",
       rating: 4,
+    },
+  ];
+
+  const eligibilityRequirements = [
+    {
+      icon: GraduationCap,
+      title: "EDUCATION",
+      description: "Minimum 10th Pass and 18 years of age",
+    },
+    {
+      icon: FileText,
+      title: "DOCUMENTS",
+      description: "Must possess valid Passport and Aadhar Card",
+    },
+    {
+      icon: Stethoscope,
+      title: "MEDICAL",
+      description: "Medical Fitness Certification from a certified MBBS Doctor",
+    },
+  ];
+
+  const whyDroneverse = [
+    {
+      icon: CheckCircle,
+      text: "100% Placements Assistance",
+    },
+    {
+      icon: Users,
+      text: "Hostel Facility",
+    },
+    {
+      icon: DollarSign,
+      text: "Finance Assistance",
+    },
+    {
+      icon: Banknote,
+      text: "Earn 60k Salary Per Month",
+    },
+    {
+      icon: Award,
+      text: "10 Year Valid (DGCA Approved) Drone Flying License",
     },
   ];
 
@@ -472,8 +524,88 @@ Sector 34, Gurugram, Haryana 122001`;
         </section>
       </div>
 
-      {/* FAQs */}
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Eligibility Requirements */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Eligibility Requirements
+              </h2>
+              <div className="w-24 h-1 bg-[#FFB801] mx-auto rounded-full"></div>
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {eligibilityRequirements.map((req, index) => {
+                const IconComponent = req.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-20 h-20 bg-[#FFB801] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent className="w-10 h-10 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 tracking-wide">
+                        {req.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {req.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Why Droneverse */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="absolute inset-0 bg-[#FFB801] rounded-3xl transform rotate-3"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Drone training team with equipment"
+                  className="relative z-10 w-full h-96 object-cover rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Why Droneverse
+              </h2>
+
+              <div className="space-y-6 mb-10">
+                {whyDroneverse.map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-[#FFB801] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <IconComponent className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="text-gray-700 text-lg font-medium leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="flex justify-center lg:justify-start">
+                <button className="mt-2 bg-[#FFB801] text-black font-semibold px-6 py-3 rounded-md cursor-pointer transition">
+                  Enroll Now &raquo;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs */}
       <section className="py-16">
         <div className="px-3 mx-auto max-w-7xl lg:px-8">
           <div className="mb-12 text-3xl text-center sm:text-4xl md:text-5xl poppins-bold">

@@ -1,0 +1,147 @@
+
+.instructors {
+  margin-top: 60px;
+}
+
+.instructorHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 18px;
+  max-width: 1000px;
+  line-height: 1.6;
+  color: #444;
+  text-align: center;
+}
+
+.instructorGrid {
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.instructorCard {
+  flex: 1 1 450px;
+  width: 629px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  h4 {
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  p {
+    text-align: left;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 383px;
+  }
+}
+
+.textContent {
+  flex: 1;
+  padding-right: 20px;
+  padding-left: 10px;
+  // padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+
+  img {
+    width: 123px;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+// Alternate background colors
+.card0 {
+  background-color: #f6f2fc; // soft purple
+}
+
+.card1 {
+  background-color: #fef2f2; // soft pink
+}
+
+// Mobile first overrides
+@media (max-width: 767px) {
+  .instructorGrid {
+    flex-direction: column; 
+    gap: 20px; 
+  }
+
+  .instructorCard {
+    width: 100%;
+    padding: 0;
+    flex: 1;
+    flex-direction: row-reverse; 
+    text-align: center;
+  }
+
+  .textContent {
+    padding: 0 10px 0 20px; 
+  }
+
+  .imageContainer {
+    justify-content: center; 
+    margin-top: 10px; 
+  }
+
+  .instructorCard p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow-y: hidden; 
+  }
+}
+
+@media (max-width: 374px){
+  .instructorCard {
+    padding: 15px;
+    flex: 1;
+    flex-direction: column-reverse;
+    align-items: flex-start ;
+    text-align: center;
+  }
+  .textContent {
+    padding: 20px 0;
+  }
+}
