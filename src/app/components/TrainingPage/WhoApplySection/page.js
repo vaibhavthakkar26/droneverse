@@ -7,104 +7,21 @@ import DroneOperation from "../../../../../public/assets/img/training/drone-oper
 import Maintainance from "../../../../../public/assets/img/training/maintainance.png";
 import WhoApplyBg from "../../../../../public/assets/img/training/who-apply-bg.png";
 import RightFrame from "../../../../../public/assets/img/training/right-frame.png";
-import fillShape from '../../../../../public/assets/img/training/fillShape.png'
+import fillShape from "../../../../../public/assets/img/training/fillShape.png";
 import classroom from "../../../../../public/assets/img/training/classroom.png";
 import flight from "../../../../../public/assets/img/training/flight.png";
 import flightMode from "../../../../../public/assets/img/training/flight mode.png";
 import drone from "../../../../../public/assets/img/training/drone.png";
 import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
-import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
+import sectionBg from "../../../../../public/assets/img/training/SectionBg.png";
+import AnimatedWrapper from "../../AnimatedWrapper";
+import { useRouter } from "next/navigation";
 
 const WhoApplySection = () => {
-  const [activeTab, setActiveTab] = useState("Defence");
+  const [activeTab, setActiveTab] = useState("Student");
+  const router = useRouter();
 
   const courses = {
-    Defence: [
-      {
-        title: "Small Class Drone Pilot Course",
-        subtitle: "DGCA approved",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: DronePilot,
-        label: "SMALL CLASS",
-        points: [
-          "Understand the regulatory framework",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-      {
-        title: "Advanced Drone Operations",
-        subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: DroneOperation,
-        label: "MEDIUM CLASS",
-        points: [
-          "Understand the regulatory framework",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-      {
-        title: "Drone Maintenance & Repair",
-        subtitle: "Comprehensive training program",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: Maintainance,
-        label: "TRAIN THE TRAINER",
-        points: [
-          "Learn about drone components",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-      {
-        title: "Small Class Drone Pilot Course",
-        subtitle: "DGCA approved",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: DronePilot,
-        label: "SMALL CLASS",
-        points: [
-          "Understand the regulatory framework",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-      {
-        title: "Advanced Drone Operations",
-        subtitle: "Industry recognized certification",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: DroneOperation,
-        label: "MEDIUM CLASS",
-        points: [
-          "Understand the regulatory framework",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-      {
-        title: "Drone Maintenance & Repair",
-        subtitle: "Comprehensive training program",
-        duration: "5 days | Weight upto",
-        highlight: "2KG",
-        image: Maintainance,
-        label: "TRAIN THE TRAINER",
-        points: [
-          "Learn about drone components",
-          "Learn flight planning, navigation and safety protocols",
-          "Practical flight training",
-          "Training on a drone simulator and remote pilot certification",
-        ],
-      },
-    ],
     Student: [
       {
         title: "Small Class Drone Pilot Course",
@@ -148,8 +65,6 @@ const WhoApplySection = () => {
           "Training on a drone simulator and remote pilot certification",
         ],
       },
-    ],
-    Training: [
       {
         title: "Small Class Drone Pilot Course",
         subtitle: "DGCA approved",
@@ -178,8 +93,40 @@ const WhoApplySection = () => {
           "Training on a drone simulator and remote pilot certification",
         ],
       },
+      {
+        title: "Drone Maintenance & Repair",
+        subtitle: "Comprehensive training program",
+        duration: "5 days | Weight upto",
+        highlight: "2KG",
+        image: Maintainance,
+        label: "TRAIN THE TRAINER",
+        points: [
+          "Learn about drone components",
+          "Learn flight planning, navigation and safety protocols",
+          "Practical flight training",
+          "Training on a drone simulator and remote pilot certification",
+        ],
+      },
+    ],
+    Defence: [
+    ],
+    Training: [
     ],
   };
+
+  const handleTabClick = (tab) => {
+    console.log("Tab clicked:", tab);
+
+    if (tab === "Defence" || tab === "Training") {
+      // Optional: Add loading state or confirmation
+      console.log(`Redirecting to coming soon page for ${tab}`);
+      router.push("/coming-soon");
+    } else if (tab === "Student") {
+      // Only update active tab for Student
+      setActiveTab(tab);
+    }
+  };
+
   const trainingFacilities = [
     {
       title: "Flight Zones",
@@ -206,13 +153,12 @@ const WhoApplySection = () => {
         "Welcome to DroneVerse, where we redefine India's drone industry. Driven by a vision to create world-class drone pilots.",
     },
   ];
+
   return (
-
     <div>
-
       <div
         className="relative py-8 bg-center bg-cover sm:py-12 lg:py-16"
-      // style={{ backgroundImage: `url(${WhoApplyBg.src})` }}
+        // style={{ backgroundImage: `url(${WhoApplyBg.src})` }}
       >
         <div className="absolute inset-0 bg-white/90" />
 
@@ -275,66 +221,83 @@ const WhoApplySection = () => {
 
           <div className="mx-auto max-w-7xl">
             <div className="px-4 mb-8 text-center sm:mb-12">
-              <h2 className="mb-4 text-2xl font-bold text-[#080114] sm:text-3xl md:text-4xl sm:mb-6 poppins-bold">
-                Training Facilities
-              </h2>
-              <p className="w-full max-w-4xl mx-auto text-base leading-relaxed text-[#080114] sm:text-lg poppins-regular lg:w-4/5">
-                Welcome to DroneVerse, where we redefine India's drone industry.
-                Driven by a vision to create world-class drone pilots, we go above
-                & beyond in everything we do. Recognized in the esteemed World
-                Book of Records.
-              </p>
+              <AnimatedWrapper>
+                <h2 className="mb-4 text-2xl font-bold text-[#080114] sm:text-3xl md:text-4xl sm:mb-6 poppins-bold">
+                  Training Facilities
+                </h2>
+                <p className="w-full max-w-4xl mx-auto text-base leading-relaxed text-[#080114] sm:text-lg poppins-regular lg:w-4/5">
+                  Welcome to DroneVerse, where we redefine India's drone
+                  industry. Driven by a vision to create world-class drone
+                  pilots, we go above & beyond in everything we do. Recognized
+                  in the esteemed World Book of Records.
+                </p>
+              </AnimatedWrapper>
             </div>
+            <AnimatedWrapper>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
+                {trainingFacilities.map((facility, index) => (
+                  <div
+                    key={index}
+                    className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full  mx-auto lg:mx-0"
+                  >
+                    <h3 className="p-5 text-base leading-normal text-black md:py-4 sm:py-5 xl:h-auto poppins-semibold lg:h-20">
+                      {facility.title}
+                    </h3>
+                    <div className="relative w-full h-44 sm:h-[162px] overflow-hidden">
+                      <Image
+                        src={facility.image}
+                        alt={facility.title}
+                        className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                        fill
+                      />
+                    </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 sm:px-0">
-              {trainingFacilities.map((facility, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl overflow-hidden border border-[#E6E6E6] shadow-sm hover:shadow-md transition-shadow duration-300 w-full  mx-auto lg:mx-0"
-                >
-                  <h3 className="p-5 text-base leading-normal text-black md:py-4 sm:py-5 xl:h-auto poppins-semibold lg:h-20">
-                    {facility.title}
-                  </h3>
-                  <div className="relative w-full h-44 sm:h-[162px] overflow-hidden">
-                    <Image
-                      src={facility.image}
-                      alt={facility.title}
-                      className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                      fill
-                    />
+                    <div className="p-5">
+                      <p className="text-sm leading-relaxed text-black sm:text-base lg:text-base poppins-regular">
+                        {facility.description}
+                      </p>
+                    </div>
                   </div>
-
-                  <div className="p-5">
-                    <p className="text-sm leading-relaxed text-black sm:text-base lg:text-base poppins-regular">
-                      {facility.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </AnimatedWrapper>
           </div>
         </div>
       </div>
 
-      <section className="relative py-8 bg-[#080114]  sm:py-12  lg:py-20 md:py-16" >
-        <Image src={sectionBg} alt="bg" className="absolute top-0 left-0 w-full h-full opacity-40" />
+      <section className="relative py-8 bg-[#080114]  sm:py-12  lg:py-20 md:py-16">
+        <Image
+          src={sectionBg}
+          alt="bg"
+          className="absolute top-0 left-0 w-full h-full opacity-40"
+        />
         <div>
           <div className="relative z-10 px-3 mx-auto max-w-7xl lg:px-8">
             <div className="mb-10 text-center">
-              <div className="mb-4 text-2xl text-white md:mb-6 lg:text-5xl md:text-4xl poppins-semibold">All training courses</div>
-              <p className="text-[#E6E6E6]">Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.</p>
+              <AnimatedWrapper>
+                <div className="mb-4 text-2xl text-white md:mb-6 lg:text-5xl md:text-4xl poppins-semibold">
+                  All training courses
+                </div>
+                <p className="text-[#E6E6E6]">
+                  Welcome to DroneVerse, where we redefine India’s drone
+                  industry. Driven by a vision to create world-class drone
+                  pilots, we go above & beyond in everything we do. Recognized
+                  in the esteemed World Book of Records.
+                </p>
+              </AnimatedWrapper>
             </div>
             {/* Category Tabs */}
             <div className="relative flex justify-center mb-6 sm:mb-8">
               <div className="relative z-10 flex w-full max-w-md p-1 bg-[#1D1D1D] rounded-lg shadow-md sm:p-2 sm:max-w-lg">
-                {["Defence", "Student", "Training"].map((tab) => (
+                {["Student", "Defence", "Training"].map((tab) => (
                   <button
                     key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${activeTab === tab
-                      ? "bg-[#FFB801] text-black"
-                      : "bg-transparent text-white"
-                      }`}
+                    onClick={() => handleTabClick(tab)}
+                    className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${
+                      activeTab === tab
+                        ? "bg-[#FFB801] text-black"
+                        : "bg-transparent text-white"
+                    }`}
                   >
                     {tab}
                   </button>
@@ -357,7 +320,11 @@ const WhoApplySection = () => {
                       height={207}
                       className="w-full h-40 sm:h-44 lg:h-48 object-cover bg-[#FFF1CC] rounded-t-lg"
                     />
-                    <Image src={course.image} alt={course.title} className="absolute left-0 right-0 mx-auto size-full -top-24 opacity-5" />
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      className="absolute left-0 right-0 mx-auto size-full -top-24 opacity-5"
+                    />
                     <div className="relative rounded-b-lg  bg-[#FFDB7F] text-black text-center py-2 poppins-bold text-sm sm:text-base">
                       {course.label}
                     </div>
@@ -432,7 +399,6 @@ const WhoApplySection = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

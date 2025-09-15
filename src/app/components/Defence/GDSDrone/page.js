@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 
@@ -17,15 +17,15 @@ import icon6 from "../../../../../public/assets/img/defence/icon6.png";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
 import fullWing from "../../../../../public/assets/img/defence/fullWings.png";
 import Link from "next/link";
-import howWorks from '../../../../../public/assets/img/defence/how-work.png'
-import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
-import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
+import howWorks from "../../../../../public/assets/img/defence/how-work.png";
+import PatternBg from "../../../../../public/assets/img/Defence2/patternBg.png";
+import leftFlap from "../../../../../public/assets/img/Defence2/leftWing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
-import topGradbg from '../../../../../public/assets/img/defence/topGrad.png'
+import topGradbg from "../../../../../public/assets/img/defence/topGrad.png";
+import AnimatedWrapper from "../../AnimatedWrapper";
 
 const GDSDrones = () => {
-
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(false);
 
   const gdsData = {
     title: "Gunshot Detection DRONES",
@@ -52,22 +52,24 @@ const GDSDrones = () => {
     buttonText: "Contact Us",
     buttonLink: "/",
 
-    works: [{
-      step: 1,
-      title: "A Gunshot is fired.",
-    },
-    {
-      step: 2,
-      title: "The acoustic Fingerprint is detected."
-    },
-    {
-      step: 3,
-      title: "The Detection Forwarded to Backend."
-    },
-    {
-      step: 4,
-      title: "Location & Gunshot Information is detected."
-    }],
+    works: [
+      {
+        step: 1,
+        title: "A Gunshot is fired.",
+      },
+      {
+        step: 2,
+        title: "The acoustic Fingerprint is detected.",
+      },
+      {
+        step: 3,
+        title: "The Detection Forwarded to Backend.",
+      },
+      {
+        step: 4,
+        title: "Location & Gunshot Information is detected.",
+      },
+    ],
   };
 
   return (
@@ -328,17 +330,26 @@ const GDSDrones = () => {
     //   </div>
     // </div>
     <>
-      <section className='relative pb-24 bg-center bg-repeat-y bg-contain pt-28' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+      <section
+        className="relative pb-24 bg-center bg-repeat-y bg-contain pt-28"
+        style={{ backgroundImage: `url(${PatternBg.src})` }}
+      >
         {/* <div className="absolute top-0 z-[1] w-full h-20 bg-gradient-to-t from-white 0% to-black 20%">
         </div> */}
 
-        <div className={`absolute top-0 left-0 w-full h-40`} style={{ backgroundImage: `url(${topGradbg.src})` }}></div>
+        <div
+          className={`absolute top-0 left-0 w-full h-40`}
+          style={{ backgroundImage: `url(${topGradbg.src})` }}
+        ></div>
 
-        <div className='relative'>
-          <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain -top-7 md:block md:w-9 lg:w-16' />
+        <div className="relative">
+          <Image
+            src={leftFlap}
+            alt="left wing"
+            className="absolute left-0 hidden object-contain -top-7 md:block md:w-9 lg:w-16"
+          />
         </div>
         <div className="px-4 mx-auto max-w-7xl lg:px-8 relative z-[1]">
-
           {/* Flex Layout */}
           <div className="flex flex-col gap-4 md:flex-row">
             {/* Left - Content */}
@@ -346,12 +357,14 @@ const GDSDrones = () => {
               <h3 className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
                 {gdsData.category}
               </h3>
-              <h2 className="mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest lg:leading-24 leading-12 md:leading-16">
-                {gdsData.title}
-              </h2>
-              <p className="w-full text-lg  xl:mb-[72px] lg:mb-12 mb-12  text-[#5F5F5F] md:w-full lg:w-4/5">
-                {gdsData.description}
-              </p>
+              <AnimatedWrapper>
+                <h2 className="mb-10  text-4xl md:text-5xl lg:text-[64px] poppins-extrabold tracking-widest lg:leading-24 leading-12 md:leading-16">
+                  {gdsData.title}
+                </h2>
+                <p className="w-full text-lg  xl:mb-[72px] lg:mb-12 mb-12  text-[#5F5F5F] md:w-full lg:w-4/5">
+                  {gdsData.description}
+                </p>
+              </AnimatedWrapper>
 
               {/* Features */}
               {/* <ul className="grid grid-cols-1 gap-2 mt-6 md:gap-4 md:grid-cols-2">
@@ -430,20 +443,28 @@ const GDSDrones = () => {
           )}
 
           <div className="px-9 pt-10 pb-6 bg-[#CB7428] rounded-[20px] mt-8">
-            <h2 className="pb-8 text-3xl text-center text-white md:text-4xl lg:text-5xl poppins-semibold">How Does it Works?</h2>
+            <h2 className="pb-8 text-3xl text-center text-white md:text-4xl lg:text-5xl poppins-semibold">
+              How Does it Works?
+            </h2>
 
             <div className="flex flex-col items-center gap-8 md:flex-row">
               <div className="w-full md:w-3/5">
                 <ul className="pl-5 space-y-4 list-disc lg:pl-16 lg:space-y-7 marker:text-white md:pl-8 md:space-y-5">
                   {gdsData.works.map((step, index) => (
                     <li key={index}>
-                      <p className="text-sm text-white md:text-base lg:text-xl poppins-medium">{step.title}</p>
+                      <p className="text-sm text-white md:text-base lg:text-xl poppins-medium">
+                        {step.title}
+                      </p>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="w-full md:w-2/5">
-                <Image src={howWorks} alt="network Diagram" className="object-center w-[400px]" />
+                <Image
+                  src={howWorks}
+                  alt="network Diagram"
+                  className="object-center w-[400px]"
+                />
               </div>
             </div>
           </div>
@@ -460,7 +481,6 @@ const GDSDrones = () => {
               {showMore ? "Show Less" : "Show More"}
             </button>
           </div>
-
         </div>
       </section>
     </>

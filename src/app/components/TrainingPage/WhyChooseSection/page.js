@@ -8,13 +8,14 @@ import drone from "../../../../../public/assets/img/training/drone.png";
 import SectionBg from "../../../../../public/assets/img/training/why-choose-bg.png";
 import LeftFrame from "../../../../../public/assets/img/training/left-frame.png";
 import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
-import counterBg2 from '../../../../../public/assets/img/training/counterbg2.png'
-import counterBg from '../../../../../public/assets/img/training/counterBg.png'
-import whoApply1 from '../../../../../public/assets/img/training/whoApply-1.png'
-import whoApply2 from '../../../../../public/assets/img/training/whoApply-2.png'
-import whoApply3 from '../../../../../public/assets/img/training/whoApply-3.png'
+import counterBg2 from "../../../../../public/assets/img/training/counterbg2.png";
+import counterBg from "../../../../../public/assets/img/training/counterBg.png";
+import whoApply1 from "../../../../../public/assets/img/training/whoApply-1.png";
+import whoApply2 from "../../../../../public/assets/img/training/whoApply-2.png";
+import whoApply3 from "../../../../../public/assets/img/training/whoApply-3.png";
 import WhoApplyBg2 from "../../../../../public/assets/img/training/whocanBg.png";
-import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
+import sectionBg from "../../../../../public/assets/img/training/SectionBg.png";
+import AnimatedWrapper from "../../AnimatedWrapper";
 
 const WhyChoose = () => {
   const whyChooseData = [
@@ -83,22 +84,23 @@ const WhyChoose = () => {
     },
   ];
 
-  const whoApply = [{
-    icon: whoApply1,
-    title: "Age Limit ",
-    description:
-      "18-65 Years",
-  }, {
-    icon: whoApply2,
-    title: "Education",
-    description:
-      "10th Pass",
-  }, {
-    icon: whoApply3,
-    title: "Valid Govt. Id ",
-    description:
-      "Adhaar,Pan,Voter Id, Passport",
-  },]
+  const whoApply = [
+    {
+      icon: whoApply1,
+      title: "Age Limit ",
+      description: "18-65 Years",
+    },
+    {
+      icon: whoApply2,
+      title: "Education",
+      description: "10th Pass",
+    },
+    {
+      icon: whoApply3,
+      title: "Valid Govt. Id ",
+      description: "Adhaar,Pan,Voter Id, Passport",
+    },
+  ];
 
   return (
     <div>
@@ -108,8 +110,11 @@ const WhyChoose = () => {
         //   backgroundImage: `url(${sectionBg.src || newPattern.src})`,
         // }}
       >
-        
-        <Image src={sectionBg} alt="bg" className="absolute top-0 left-0 object-cover w-full h-full opacity-40" />
+        <Image
+          src={sectionBg}
+          alt="bg"
+          className="absolute top-0 left-0 object-cover w-full h-full opacity-40"
+        />
         {/* Optional overlay for better text readability */}
         {/* <div className="absolute inset-0 bg-white/90"></div> */}
 
@@ -117,42 +122,44 @@ const WhyChoose = () => {
         <div className="relative z-10">
           <div className="mx-auto max-w-7xl ">
             <div className="text-center mb-10 w-full max-w-[675px] mx-auto px-4">
-              <div
-                className="inline-block text-2xl md:text-3xl poppins-semibold lg:text-[36px]  text-white text-center"
-              >
-                Why choose Droneverse RPTO?
-              </div>
+              <AnimatedWrapper>
+                <div className="inline-block text-2xl md:text-3xl poppins-semibold lg:text-[36px]  text-white text-center">
+                  Why choose Droneverse RPTO?
+                </div>
+              </AnimatedWrapper>
             </div>
 
             {/* Why Choose Grid */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-5">
-              {whyChooseData.map((item, index) => (
-                <div
-                  key={index}
-                  className="p-3 sm:p-4 w-full pt-8 pb-8 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full  mx-auto lg:mx-0 bg-[#161616]"
-                >
-                  <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
-                    <div className="flex-shrink-0 mb-4 text-3xl lg:mb-5">
-                      <Image
-                        src={item.icon}
-                        alt="icon"
-                        width={86}
-                        height={76}
-                        className="w-16 sm:w-20 lg:w-[86px] h-auto"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="mb-2 text-base text-white sm:text-lg lg:text-xl poppins-semibold">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
-                        {item.description}
-                      </p>
+            <AnimatedWrapper>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 md:gap-5">
+                {whyChooseData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="p-3 sm:p-4 w-full pt-8 pb-8 px-4 md:px-7 lg:px-[43px] lg:pt-[50px] lg:pb-[60px] rounded-[20px] max-w-full  mx-auto lg:mx-0 bg-[#161616]"
+                  >
+                    <div className="flex flex-col items-center space-x-3 text-center sm:space-x-4">
+                      <div className="flex-shrink-0 mb-4 text-3xl lg:mb-5">
+                        <Image
+                          src={item.icon}
+                          alt="icon"
+                          width={86}
+                          height={76}
+                          className="w-16 sm:w-20 lg:w-[86px] h-auto"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="mb-2 text-base text-white sm:text-lg lg:text-xl poppins-semibold">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs leading-relaxed text-white sm:text-sm lg:text-base">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </AnimatedWrapper>
           </div>
           <div className="absolute top-[50%] left-0 z-20 transform -translate-y-1/2 hidden lg:block">
             <Image
@@ -207,32 +214,48 @@ const WhyChoose = () => {
       </div>
 
       {/* <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 bg-size-[auto_1600px]' style={{ backgroundImage: `url(${counterBg.src})` }}></section> */}
-      <section className='relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 '>
-        <Image src={WhoApplyBg2} alt="bg" className="absolute top-0 left-0 w-full h-full bg-cover" />
+      <section className="relative py-8 bg-[#FFB801] bg-bottom lg:py-20 md:py-16 ">
+        <Image
+          src={WhoApplyBg2}
+          alt="bg"
+          className="absolute top-0 left-0 w-full h-full bg-cover"
+        />
         <div className="relative z-10 px-3 mx-auto max-w-7xl lg:px-8">
           <div className="mb-10 text-center">
-            <div className="mb-4 text-2xl text-black lg:text-5xl md:text-4xl poppins-semibold">Who can apply?</div>
-            <p className="text-[#5F5F5F]">Basic Requirements to join the Drone Pilot Training Course</p>
+            <div className="mb-4 text-2xl text-black lg:text-5xl md:text-4xl poppins-semibold">
+              Who can apply?
+            </div>
+            <p className="text-[#5F5F5F]">
+              Basic Requirements to join the Drone Pilot Training Course
+            </p>
           </div>
 
           <div className="grid gap-4 lg:gap-6 grid-col-1 sm:grid-cols-3 ">
             {whoApply.map((item, index) => (
-              <div className="py-10 sm:py-7 text-center bg-white  md:px-6 lg:px-14 rounded-[10px]" key={index}> 
+              <div
+                className="py-10 sm:py-7 text-center bg-white  md:px-6 lg:px-14 rounded-[10px]"
+                key={index}
+              >
                 <div className="mb-6 text-center sm:mb-4 md:mb-5 lg:mb-6">
-                  <Image src={item.icon} alt={item.title} className="mx-auto size-20 sm:size-14 lg:size-20 md:size-18" />
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    className="mx-auto size-20 sm:size-14 lg:size-20 md:size-18"
+                  />
                 </div>
                 <div className="w-full">
-                  <div className="mb-2 text-lg md:text-xl poppins-semibold">{item.title}</div>
-                  <p className="text-sm text-[#5F5F5F] poppins-medium">{item.description}</p>
+                  <div className="mb-2 text-lg md:text-xl poppins-semibold">
+                    {item.title}
+                  </div>
+                  <p className="text-sm text-[#5F5F5F] poppins-medium">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-
         </div>
-
       </section>
-
     </div>
   );
 };

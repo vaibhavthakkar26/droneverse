@@ -3,6 +3,7 @@ import styles from "./AboutSection.module.scss";
 import Image from "next/image";
 import { getFallbackData } from "@/utils/fallbackData";
 import { getImageFallback } from "@/utils/imageFallbacks";
+import AnimatedWrapper from "../AnimatedWrapper";
 
 const AboutSection = ({ data }) => {
   const aboutData = data || getFallbackData("about");
@@ -53,12 +54,14 @@ const AboutSection = ({ data }) => {
 
   return (
     <>
-      <section className={styles.aboutContainer} >
+      <section className={styles.aboutContainer}>
         <div className={styles.mainIcon}>
           <Image src={icon} alt="decorative icon" width={100} height={100} />
         </div>
-        <h2 className={styles.heading}>{aboutData?.heading}</h2>
-        <p className={styles.subtext}>{aboutData?.description}</p>
+        <AnimatedWrapper>
+          <h2 className={styles.heading}>{aboutData?.heading}</h2>
+          <p className={styles.subtext}>{aboutData?.description}</p>
+        </AnimatedWrapper>
       </section>
       <div className={styles.aboutUsBg}>
         <video
@@ -73,30 +76,30 @@ const AboutSection = ({ data }) => {
         </video>
         <section className={styles.aboutContainer}>
           <div className={styles.overlay}></div>
-          <div className={styles.cardGrid}>
-            {services.map((item, index) => (
-              <div key={index} className={styles.card}>
-                <div className={styles.cardBody}>
-                  <div 
-                  className={styles.cardIcon}
-                  >
-                    <Image
-                      src={getImageFallback(
-                        "/assets/icons/lock.svg",
-                        "common",
-                        "lockIcon"
-                      )}
-                      width={34}
-                      height={38}
-                      alt="lock icon"
-                    />
+          <AnimatedWrapper>
+            <div className={styles.cardGrid}>
+              {services.map((item, index) => (
+                <div key={index} className={styles.card}>
+                  <div className={styles.cardBody}>
+                    <div className={styles.cardIcon}>
+                      <Image
+                        src={getImageFallback(
+                          "/assets/icons/lock.svg",
+                          "common",
+                          "lockIcon"
+                        )}
+                        width={34}
+                        height={38}
+                        alt="lock icon"
+                      />
+                    </div>
+                    <div className={styles.cardTitle}>{item.title}</div>
+                    <div className={styles.cardSubtitle}>{item.subtitle}</div>
                   </div>
-                  <div className={styles.cardTitle}>{item.title}</div>
-                  <div className={styles.cardSubtitle}>{item.subtitle}</div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </AnimatedWrapper>
 
           <div className={styles.buttonGroup}>
             <button className={styles.yellowBtn}>{buttons.knowMore}</button>

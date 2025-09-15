@@ -7,8 +7,8 @@ import counterBg2 from "../../../public/assets/img/training/counterbg2.png";
 import gRating from "../../../public/assets/img/training/googleRateings.png";
 import review1 from "../../../public/assets/img/instagram-1-600x600.jpg";
 import patternBg from "../../../public/assets/img/defence/PatternDark.png";
-import { useEffect, useState } from "react";
-import { FaChevronDown, FaStar } from "react-icons/fa"; // Importing star icon for rating
+import { FaChevronDown, FaStar } from "react-icons/fa";
+import { useState, useEffect } from "react";
 import whatGetFromCourse from "../../../public/assets/img/training/whatGetFromCourse.jpg";
 import {
   GraduationCap,
@@ -26,6 +26,20 @@ export default function EnrollNow() {
   const [openIndex, setOpenIndex] = useState(null);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [copied, setCopied] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Add this helper function
+  const formatValue = (value, suffix) => {
+    const numValue = parseInt(value.replace(/[^\d]/g, ""));
+    if (suffix === "k+") {
+      return (numValue / 1000).toFixed(0) + "k+";
+    }
+    return numValue + suffix;
+  };
 
   const testimonials = [
     {
@@ -128,10 +142,10 @@ export default function EnrollNow() {
   }, [totalPages]);
 
   const traningStats = [
-    { value: "5,000+", label: "Students Trained" },
-    { value: "8+", label: "Years of Experience" },
-    { value: "30", label: "Drone Products" },
-    { value: "50+", label: "Team Members" },
+    { value: 5000, suffix: "+", label: "Students Trained" },
+    { value: 8, suffix: "+", label: "Years of Experience" },
+    { value: 30, suffix: "", label: "Drone Products" },
+    { value: 50, suffix: "+", label: "Team Members" },
   ];
 
   const courseFeatures = [
@@ -425,7 +439,19 @@ Sector 34, Gurugram, Haryana 122001`;
                 <span className="w-[1px] h-12 bg-black my-0 mx-3 md:mx-2 lg:mx-4"></span>
                 <div className="text-left">
                   <h3 className="mb-1 text-2xl text-black xl:text-4xl md:text-3xl poppins-bold">
-                    {item.value}
+                    {isMounted ? (
+                      <CountUp
+                        start={0}
+                        end={item.value}
+                        duration={2.5}
+                        separator=","
+                        suffix={item.suffix}
+                        enableScrollSpy={true}
+                        scrollSpyOnce={true}
+                      />
+                    ) : (
+                      item.value + item.suffix
+                    )}
                   </h3>
                   <p className="text-sm lg:text-base text-[#5F5F5F] poppins-regular">
                     {item.label}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './HeroBanner.module.scss';
 import Image from 'next/image';
 import { getImageFallback } from '@/utils/imageFallbacks';
+import AnimatedWrapper from '../AnimatedWrapper';
 
 const HeroBanner = ({ data }) => {
     const heroData = data;
@@ -23,12 +24,14 @@ const HeroBanner = ({ data }) => {
             <div className={styles.container}>
                 {/* Left Content */}
                 <div className={styles.content}>
+                    <AnimatedWrapper>
                     <div className={styles.badge}>{heroData?.badge}</div>
                     <h1 className={styles.heading}>
                         {heroData?.heading} <br />
                         <span className={styles.highlight}>{heroData?.highlight1}</span><br />
                         <span className={styles.highlight}>{heroData?.highlight2}</span>
                     </h1>
+                    </AnimatedWrapper>
                 </div>
 
                 {/* Center Drone Image */}

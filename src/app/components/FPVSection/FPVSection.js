@@ -3,6 +3,7 @@ import styles from "./FPVSection.module.scss";
 import Image from "next/image";
 import { useState } from "react";
 import { getImageFallback } from "@/utils/imageFallbacks";
+import AnimatedWrapper from "../AnimatedWrapper";
 
 export default function DefenseSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -139,10 +140,12 @@ export default function DefenseSection() {
 
       {/* Content Section */}
       <div className={styles.contentWrapper}>
-        <div className={styles.left}>
-          <h2 className={styles.heading}>{currentSection.heading}</h2>
-          <p className={styles.subtext}>{currentSection.subtext}</p>
-        </div>
+        <AnimatedWrapper>
+          <div className={styles.left}>
+            <h2 className={styles.heading}>{currentSection.heading}</h2>
+            <p className={styles.subtext}>{currentSection.subtext}</p>
+          </div>
+        </AnimatedWrapper>
         <div className={styles.right}>
           <Image
             src={currentSection.image}

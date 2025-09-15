@@ -1,22 +1,22 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import droneImage from "../../../../../public/assets/img/defence/andhkar-img.png";
 import Image from "next/image";
 import leftWing from "../../../../../public/assets/img/defence/leftWings.png";
-import PatternBg from '../../../../../public/assets/img/defence/PatternDark.png'
+import PatternBg from "../../../../../public/assets/img/defence/PatternDark.png";
 import icon1 from "../../../../../public/assets/img/defence/icon1.png";
 import icon2 from "../../../../../public/assets/img/defence/icon2.png";
 import icon3 from "../../../../../public/assets/img/defence/iicon3.png";
 import icon4 from "../../../../../public/assets/img/defence/icon4.png";
 import icon5 from "../../../../../public/assets/img/defence/icon5.png";
 import icon6 from "../../../../../public/assets/img/defence/icon6.png";
-import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
-import leftFlap from '../../../../../public/assets/img/Defence2/leftWing.png'
+import shapeBtn from "../../../../../public/assets/img/Defence2/Subtract.png";
+import leftFlap from "../../../../../public/assets/img/Defence2/leftWing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
+import AnimatedWrapper from "../../AnimatedWrapper";
 
 const AndhkarSection = () => {
-
-  const [showMore, setShowMore] = useState(false)
+  const [showMore, setShowMore] = useState(false);
 
   const features = [
     {
@@ -51,12 +51,19 @@ const AndhkarSection = () => {
 
   return (
     //   bg-center bg-repeat-y bg-cover bg-blend-luminosity   style={{ backgroundImage: `url(${PatternBg.src})` }}
-    <div  className='relative pt-8 pb-0 bg-black bg-center bg-repeat-y mix-blend-luminosity bg-blend-luminosity bg-size-[100%]' style={{ backgroundImage: `url(${PatternBg.src})` }}>
+    <div
+      className="relative pt-8 pb-0 bg-black bg-center bg-repeat-y mix-blend-luminosity bg-blend-luminosity bg-size-[100%]"
+      style={{ backgroundImage: `url(${PatternBg.src})` }}
+    >
       {/* <div className="absolute top-0 left-0 w-full h-full">
         <Image src={PatternBg} alt='bg' className="opacity-60 bg-blend-luminosity mix-blend-luminosity" />
       </div> */}
-      <div className='relative'>
-        <Image src={leftFlap} alt='left wing' className='absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20' />
+      <div className="relative">
+        <Image
+          src={leftFlap}
+          alt="left wing"
+          className="absolute left-0 hidden object-contain md:block md:w-9 lg:w-16 top-20"
+        />
       </div>
       <div className="pt-10 mx-auto pb-18 max-w-7xl px-4 lg:px-8 relative z-[1]">
         {/* Main Content Grid */}
@@ -77,12 +84,14 @@ const AndhkarSection = () => {
           <div className="order-2 col-span-3 space-y-6 lg:order-2">
             {/* Header */}
             <div className="mt-6 mb-6 text-left sm:mb-8 md:mb-10 lg:mb-12">
-              <p className="text-[16px] md:text-[16px] text-[#F4F4F4] uppercase tracking-wider mb-2">
-                ANTI DRONE CLOAK
-              </p>
-              <h1 className="mb-4 text-3xl font-bold text-white md:text-5xl lg:text-6xl md:mb-6">
-                DV ANDHKAAR
-              </h1>
+              <AnimatedWrapper>
+                <p className="text-[16px] md:text-[16px] text-[#F4F4F4] uppercase tracking-wider mb-2">
+                  ANTI DRONE CLOAK
+                </p>
+                <h1 className="mb-4 text-3xl font-bold text-white md:text-5xl lg:text-6xl md:mb-6">
+                  DV ANDHKAAR
+                </h1>
+              </AnimatedWrapper>
             </div>
 
             {/* Description */}
@@ -100,8 +109,9 @@ const AndhkarSection = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${index === 4 ? "sm:col-span-2" : ""
-                    }`}
+                  className={`flex items-center space-x-3 md:space-x-4 w-full max-w-full ${
+                    index === 4 ? "sm:col-span-2" : ""
+                  }`}
                 >
                   <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 md:w-12 md:h-12">
                     <Image
@@ -135,9 +145,9 @@ const AndhkarSection = () => {
             myTitleColor="text-white"
             myTablebg="bg-[#1A1A1A]"
             myTableHeader="bg-[#5F5F5F]"
-            myTableHeaderTitle='text-white'
-            myTableBodyTitle='text-white'
-            myTableBB='border-[#5F5F5F66]'
+            myTableHeaderTitle="text-white"
+            myTableBodyTitle="text-white"
+            myTableBB="border-[#5F5F5F66]"
             featureBg="bg-[#303030]"
             featureBorder="border-[#303030]"
             featureText="text-white"
@@ -177,9 +187,10 @@ const AndhkarSection = () => {
                   key={index}
                   className={`
                    group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium
-                    ${tab.active
-                      ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
-                      : "border-white text-black hover:bg-[#E6E6E6] hover:text-black"
+                    ${
+                      tab.active
+                        ? "bg-gray-300 border-gray-300 text-black cursor-not-allowed"
+                        : "border-white text-black hover:bg-[#E6E6E6] hover:text-black"
                     }
                   `}
                   disabled={tab.active}

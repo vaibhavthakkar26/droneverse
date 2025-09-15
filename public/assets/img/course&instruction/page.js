@@ -7,16 +7,29 @@ import DroneOperation from "../../../../../public/assets/img/training/drone-oper
 import Maintainance from "../../../../../public/assets/img/training/maintainance.png";
 import WhoApplyBg from "../../../../../public/assets/img/training/who-apply-bg.png";
 import RightFrame from "../../../../../public/assets/img/training/right-frame.png";
-import fillShape from '../../../../../public/assets/img/training/fillShape.png'
+import fillShape from "../../../../../public/assets/img/training/fillShape.png";
 import classroom from "../../../../../public/assets/img/training/classroom.png";
 import flight from "../../../../../public/assets/img/training/flight.png";
 import flightMode from "../../../../../public/assets/img/training/flight mode.png";
 import drone from "../../../../../public/assets/img/training/drone.png";
 import newPattern from "../../../../../public/assets/img/training/bgPattern.png";
-import sectionBg from '../../../../../public/assets/img/training/SectionBg.png'
+import sectionBg from "../../../../../public/assets/img/training/SectionBg.png";
 
 const WhoApplySection = () => {
   const [activeTab, setActiveTab] = useState("Defence");
+
+  const handleTabClick = (tab) => {
+    console.log("Tab clicked:", tab);
+
+    if (tab === "Defence" || tab === "Training") {
+      // Optional: Add loading state or confirmation
+      console.log(`Redirecting to coming soon page for ${tab}`);
+      router.push("/coming-soon");
+    } else if (tab === "Student") {
+      // Only update active tab for Student
+      setActiveTab(tab);
+    }
+  };
 
   const courses = {
     Defence: [
@@ -207,12 +220,10 @@ const WhoApplySection = () => {
     },
   ];
   return (
-
     <div>
-
       <div
         className="relative py-8 bg-center bg-cover sm:py-12 lg:py-16"
-      // style={{ backgroundImage: `url(${WhoApplyBg.src})` }}
+        // style={{ backgroundImage: `url(${WhoApplyBg.src})` }}
       >
         <div className="absolute inset-0 bg-white/90" />
 
@@ -280,9 +291,9 @@ const WhoApplySection = () => {
               </h2>
               <p className="w-full max-w-4xl mx-auto text-base leading-relaxed text-[#080114] sm:text-lg poppins-regular lg:w-4/5">
                 Welcome to DroneVerse, where we redefine India's drone industry.
-                Driven by a vision to create world-class drone pilots, we go above
-                & beyond in everything we do. Recognized in the esteemed World
-                Book of Records.
+                Driven by a vision to create world-class drone pilots, we go
+                above & beyond in everything we do. Recognized in the esteemed
+                World Book of Records.
               </p>
             </div>
 
@@ -316,13 +327,24 @@ const WhoApplySection = () => {
         </div>
       </div>
 
-      <section className="relative py-8 bg-[#080114]  sm:py-12  lg:py-20 md:py-16" >
-        <Image src={sectionBg} alt="bg" className="absolute top-0 left-0 w-full h-full opacity-40" />
+      <section className="relative py-8 bg-[#080114]  sm:py-12  lg:py-20 md:py-16">
+        <Image
+          src={sectionBg}
+          alt="bg"
+          className="absolute top-0 left-0 w-full h-full opacity-40"
+        />
         <div>
           <div className="relative z-10 px-3 mx-auto max-w-7xl lg:px-8">
             <div className="mb-10 text-center">
-              <div className="mb-4 text-2xl text-white md:mb-6 lg:text-5xl md:text-4xl poppins-semibold">All training courses</div>
-              <p className="text-[#E6E6E6]">Welcome to DroneVerse, where we redefine India’s drone industry. Driven by a vision to create world-class drone pilots, we go above & beyond in everything we do. Recognized in the esteemed World Book of Records.</p>
+              <div className="mb-4 text-2xl text-white md:mb-6 lg:text-5xl md:text-4xl poppins-semibold">
+                All training courses
+              </div>
+              <p className="text-[#E6E6E6]">
+                Welcome to DroneVerse, where we redefine India’s drone industry.
+                Driven by a vision to create world-class drone pilots, we go
+                above & beyond in everything we do. Recognized in the esteemed
+                World Book of Records.
+              </p>
             </div>
             {/* Category Tabs */}
             <div className="relative flex justify-center mb-6 sm:mb-8">
@@ -330,11 +352,12 @@ const WhoApplySection = () => {
                 {["Defence", "Student", "Training"].map((tab) => (
                   <button
                     key={tab}
-                    onClick={() => setActiveTab(tab)}
-                    className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${activeTab === tab
-                      ? "bg-[#FFB801] text-black"
-                      : "bg-transparent text-white"
-                      }`}
+                     onClick={() => handleTabClick(tab)}
+                    className={`text-sm sm:text-[16px] px-3 sm:px-6 py-2 rounded-md font-medium flex-1 transition-colors ${
+                      activeTab === tab
+                        ? "bg-[#FFB801] text-black"
+                        : "bg-transparent text-white"
+                    }`}
                   >
                     {tab}
                   </button>
@@ -357,7 +380,11 @@ const WhoApplySection = () => {
                       height={207}
                       className="w-full h-40 sm:h-44 lg:h-48 object-cover bg-[#FFF1CC] rounded-t-lg"
                     />
-                    <Image src={course.image} alt={course.title} className="absolute left-0 right-0 mx-auto size-full -top-24 opacity-5" />
+                    <Image
+                      src={course.image}
+                      alt={course.title}
+                      className="absolute left-0 right-0 mx-auto size-full -top-24 opacity-5"
+                    />
                     <div className="relative rounded-b-lg  bg-[#FFDB7F] text-black text-center py-2 poppins-bold text-sm sm:text-base">
                       {course.label}
                     </div>
@@ -432,7 +459,6 @@ const WhoApplySection = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

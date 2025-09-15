@@ -75,15 +75,16 @@
 
 // export default RattlerProduct;
 
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import PatternBg from '../../../../../public/assets/img/Defence2/patternBg.png'
+import PatternBg from "../../../../../public/assets/img/Defence2/patternBg.png";
 import droneImage from "../../../../../public/assets/img/defence/dvRattlerDrone.png";
 import droneImageOld from "../../../../../public/assets/img/defence/rattler-drone.png";
 import technicalDrawing from "../../../../../public/assets/img/defence/rattler-drawing.png";
 import DefenceDataSection from "../../DefenceDataSection/page";
-import shapeBtn from '../../../../../public/assets/img/Defence2/Subtract.png'
+import shapeBtn from "../../../../../public/assets/img/Defence2/Subtract.png";
+import AnimatedWrapper from "../../AnimatedWrapper";
 
 const RattlerProduct = () => {
   const [showMore, setShowMore] = useState(false);
@@ -94,27 +95,32 @@ const RattlerProduct = () => {
       { text: "DV  RATTLER", link: "#" },
       { text: "DV VIPER", link: "#" },
     ],
-  }
+  };
 
   return (
-    <div className='relative bg-center bg-repeat-y bg-contain' style={{ backgroundImage: `url(${PatternBg.src})` }}>
-
+    <div
+      className="relative bg-center bg-repeat-y bg-contain"
+      style={{ backgroundImage: `url(${PatternBg.src})` }}
+    >
       <div className="relative px-4 py-12 pt-16 pb-40 mx-auto lg:pt-32 xl:pt-40 max-w-7xl md:px-8 lg:px-8 md:pt-24">
         {/* Header + Drone Image */}
         <div className="grid items-start grid-cols-1 gap-8 mb-12 lg:grid-cols-2 lg:gap-12">
           {/* Left Content */}
+
           <div className="">
-            <p className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
-              FPV DRONES
-            </p>
-            <h1 className="mb-10  text-4xl md:text-5xl xl:text-[64px] poppins-extrabold tracking-widest">
-              DV RATTLER
-            </h1>
-            <p className="mb-3 text-sm md:mb-6 lg:mb-8 text-black/70 md:text-base poppins-regular">
-              Rattler is our 5 inch FPV Drone, built around the intrepid minds
-              FPV parts ecosystem to allow the platform to configured with the
-              ideal system based on the use case requirements.
-            </p>
+            <AnimatedWrapper>
+              <p className="mb-4 text-sm text-black/70 lg:text-base poppins-medium">
+                FPV DRONES
+              </p>
+              <h1 className="mb-10  text-4xl md:text-5xl xl:text-[64px] poppins-extrabold tracking-widest">
+                DV RATTLER
+              </h1>
+              <p className="mb-3 text-sm md:mb-6 lg:mb-8 text-black/70 md:text-base poppins-regular">
+                Rattler is our 5 inch FPV Drone, built around the intrepid minds
+                FPV parts ecosystem to allow the platform to configured with the
+                ideal system based on the use case requirements.
+              </p>
+            </AnimatedWrapper>
 
             {/* Technical Drawing */}
             <div className="inline-block bg-white">
@@ -145,7 +151,7 @@ const RattlerProduct = () => {
             showSpecifications={true}
             showNumeric={false}
             showIcons={false}
-                          showIcons2={false}
+            showIcons2={false}
             showOperatingModes={false}
             showGunViolence={false}
           />
@@ -169,7 +175,10 @@ const RattlerProduct = () => {
         <div className="pt-6.5 overflow-x-auto sm:overflow-visible snap-x snap-mandatory">
           <div className="flex gap-3 w-max sm:w-full">
             {RattlersData.footerNav.map((footbtns, idx) => (
-              <button key={idx} className='group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium'>
+              <button
+                key={idx}
+                className="group w-60 lg:w-64 xl:w-72 bg-white hover:bg-[#E6E6E6] active:hover:bg-[#E6E6E6] duration-300 border-2 border-black hover:border-[#E6E6E6] text-base md:text-lg lg:text-xl xl:text-2xl rounded-tr-4xl xl:rounded-tr-[40px] px-3 py-4 md:py-5 xl:py-6 relative snap-start cursor-pointer tracking-widest poppins-medium"
+              >
                 <img
                   src={shapeBtn.src}
                   alt="icon"
@@ -182,8 +191,7 @@ const RattlerProduct = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-0 z-20 w-full h-20 bg-gradient-to-b from-white 0% to-black 20%">
-      </div>
+      <div className="absolute bottom-0 z-20 w-full h-20 bg-gradient-to-b from-white 0% to-black 20%"></div>
     </div>
   );
 };

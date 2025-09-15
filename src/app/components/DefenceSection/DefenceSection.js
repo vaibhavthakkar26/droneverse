@@ -1,14 +1,23 @@
 import FPVSection from "../FPVSection/FPVSection";
 import styles from "./DefenceSection.module.scss";
 import Image from "next/image";
-import iconicSHape from '../../../../public/assets/img/training/bgShapeDrone.png'
+import iconicSHape from "../../../../public/assets/img/training/bgShapeDrone.png";
 import sectionBg from "../../../../public/assets/img/training/SectionBg.png";
-import { getImageFallback } from '@/utils/imageFallbacks';
+import { getImageFallback } from "@/utils/imageFallbacks";
+import AnimatedWrapper from "../AnimatedWrapper";
 
 export default function DefenceSection() {
   // Use image fallbacks for missing images
-  const fighterJetImage = getImageFallback('/assets/img/defence/fighter-jet.svg', 'defence', 'fighterJetImage');
-  const gridBallsImage = getImageFallback('/assets/img/defence/grid-balls.svg', 'defence', 'gridBallsImage');
+  const fighterJetImage = getImageFallback(
+    "/assets/img/defence/fighter-jet.svg",
+    "defence",
+    "fighterJetImage"
+  );
+  const gridBallsImage = getImageFallback(
+    "/assets/img/defence/grid-balls.svg",
+    "defence",
+    "gridBallsImage"
+  );
 
   return (
     <section className={styles.defenceSection}>
@@ -18,10 +27,11 @@ export default function DefenceSection() {
       ></div>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h2>
-            Defence Solutions by <br />
-            <span>DroneVerse</span>
-          </h2>
+          <AnimatedWrapper>
+            <h2>
+              Defence Solutions by <br />
+              <span>DroneVerse</span>
+            </h2>
           <p>
             At DroneVerse, we are redefining modern defence operations with our
             advanced ecosystem of aerial technologies. From AI-powered
@@ -34,8 +44,9 @@ export default function DefenceSection() {
             integration, and training module setups—all aligned with national
             security needs and evolving battlefield dynamics.
           </p>
+          </AnimatedWrapper>
         </div>
-        <div className={styles.imageWrapper} >
+        <div className={styles.imageWrapper}>
           <Image
             src={iconicSHape}
             alt="fill shape"
