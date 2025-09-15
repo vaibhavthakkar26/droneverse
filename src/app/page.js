@@ -149,7 +149,7 @@ export default async function Home() {
 
         <CourseAll />
 
-        {/* <InstructorSection /> */}
+        <InstructorSection />
 
         {/* Training Section */}
         {/* {page.training && (
